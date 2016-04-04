@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<phpdox xmlns="http://xml.phpdox.net/config" silent="false">
+    <bootstrap />
+    <project name="phpdox" source="${basedir}/src" workdir="${basedir}/documentation/xml">
+        <collector publiconly="false" backend="parser" encoding="auto">
+            <include mask="*.php" />
+            <exclude mask="" />
+            <inheritance resolve="true"/>
+        </collector>
+        <generator output="${basedir}/documentation">
+            <enrich base="${basedir}/documentation"/>
+            <build engine="html" enabled="true" output="html">
+                <template dir="${phpDox.home}/templates/html" />
+                <file extension="html" />
+            </build>
+        </generator>
+    </project>
+</phpdox>

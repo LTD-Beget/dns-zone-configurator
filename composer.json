@@ -1,0 +1,35 @@
+{
+  "name": "ltd-beget/dns-zone-configurator",
+  "type": "library",
+  "description": "Php library for parsing and editing dns zones files programmatically with high level abstraction.",
+  "keywords": [
+    "dns",
+    "zone file"
+  ],
+  "authors": [
+    {
+      "name": "Viskov Sergey",
+      "homepage": "https://github.com/voksiv"
+    }
+  ],
+  "require": {
+    "php": ">=7.0",
+    "marc-mabe/php-enum" : "2.2.*",
+    "ltd-beget/ltd-beget/dns-zone-parser":"dev-master"
+  },
+  "require-dev": {
+    "theseer/phpdox": "0.8.*",
+    "phpunit/phpunit": "5.2.*",
+    "tideways/profiler": "2.0.*"
+  },
+  "autoload": {
+    "psr-0": {
+      "LTDBeget\\dns": "src"
+    }
+  },
+  "autoload-dev": {
+    "psr-0": {
+      "LTDBeget\\dev": "src"
+    }
+  }
+}
