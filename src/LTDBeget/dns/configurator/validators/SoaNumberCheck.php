@@ -27,6 +27,6 @@ class SoaNumberCheck
             $records[] = $record;
         }
 
-        return count($records) > 1;
+        return count($records) === 1;
     }
 }

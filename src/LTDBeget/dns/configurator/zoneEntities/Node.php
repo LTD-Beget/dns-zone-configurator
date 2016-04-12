@@ -175,10 +175,8 @@ class Node
             $errorsStore->add(ValidationError::makeNodeError($this, eErrorCode::WRONG_NODE_NAME()));
         }
 
-        if ($this->getName() === "@") {
-            if(! SoaNumberCheck::validate($this)) {
-                $errorsStore->add(ValidationError::makeNodeError($this, eErrorCode::SOA_ERROR()));
-            }
+        if ($this->getName() === "@" && ! SoaNumberCheck::validate($this)) {
+            $errorsStore->add(ValidationError::makeNodeError($this, eErrorCode::SOA_ERROR()));
         }
 
         foreach ($this->iterateRecords() as $record) {
