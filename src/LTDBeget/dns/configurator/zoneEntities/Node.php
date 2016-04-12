@@ -99,6 +99,24 @@ class Node
     }
 
     /**
+     * @param eRecordType|NULL $type
+     */
+    public function removeRecords(eRecordType $type = NULL)
+    {
+        foreach ($this->iterateRecords($type) as $record) {
+            $record->remove();
+        }
+    }
+
+    /**
+     * @return bool
+     */
+    public function isEmptyNode() : bool
+    {
+        return $this->getRecordsStore()->count() === 0;
+    }
+
+    /**
      * @return RecordsStore
      */
     protected function getRecordsStore() : RecordsStore

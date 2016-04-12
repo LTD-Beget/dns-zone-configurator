@@ -99,6 +99,12 @@ composer require ltd-beget/dns-zone-configurator
     
     // and make zone again from array format
     Zone::fromArray("voksiv.ru.", $array_content);
+    
+    // also you can make zone programmatically
+    $zone = new Zone("voksiv.ru.");
+    $node = $zone->getNode("@");
+    $node->getRecordAppender()->appendARecord("127.0.0.1");
+    $node->getRecordAppender()->appendNsRecord("google.com.");
 ```
 
 ### Dns zone file tokenize only

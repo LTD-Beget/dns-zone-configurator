@@ -71,6 +71,14 @@ class RecordsStore
     }
 
     /**
+     * @return int
+     */
+    public function count() : int
+    {
+        return count($this->records);
+    }
+
+    /**
      * @param eRecordType $type
      * @return record\base\Record[]
      */

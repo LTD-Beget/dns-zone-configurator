@@ -178,6 +178,32 @@ class Zone
     }
 
     /**
+     * @param eRecordType|NULL $type
+     */
+    public function removeRecords(eRecordType $type = NULL)
+    {
+        foreach ($this->iterateNodes() as $node) {
+            foreach ($node->iterateRecords($type) as $record) {
+                $record->remove();
+            }
+        }
+    }
+
+    /**
+     * @return bool
+     */
+    public function isEmptyZone() : bool
+    {
+        $result = true;
+        foreach ($this->iterateNodes() as $node) {
+            if(! $node->isEmptyNode()) {
+                $result = false;
+            }
+        }
+        return $result;
+    }
+
+    /**
      * Full validate zone via build in validators
      *
      * @return bool
