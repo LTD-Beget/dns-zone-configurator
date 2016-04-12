@@ -1,5 +1,6 @@
 {
   "name": "ltd-beget/dns-zone-configurator",
+  "license": "MIT",
   "type": "library",
   "description": "Php library for parsing and editing dns zones files programmatically with high level abstraction.",
   "keywords": [
@@ -15,7 +16,7 @@
   "require": {
     "php": ">=7.0",
     "marc-mabe/php-enum" : "2.2.*",
-    "ltd-beget/ltd-beget/dns-zone-parser":"dev-master"
+    "ltd-beget/dns-zone-parser": "dev-master"
   },
   "require-dev": {
     "theseer/phpdox": "0.8.*",
