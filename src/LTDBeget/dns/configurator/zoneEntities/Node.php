@@ -12,7 +12,6 @@ use LTDBeget\dns\configurator\traits\RecordsIterateTrait;
 use LTDBeget\dns\configurator\validators\CnameNumberCheck;
 use LTDBeget\dns\configurator\validators\ConflictTypesValidator;
 use LTDBeget\dns\configurator\validators\NodeNameValidator;
-use LTDBeget\dns\configurator\validators\NoSoaRecordValidator;
 use LTDBeget\dns\configurator\validators\SoaNumberCheck;
 use LTDBeget\dns\configurator\Zone;
 use LTDBeget\dns\configurator\zoneEntities\record\base\Record;
@@ -175,13 +174,11 @@ class Node
         if (!NodeNameValidator::validate($this->getName())) {
             $errorsStore->add(ValidationError::makeNodeError($this, eErrorCode::WRONG_NODE_NAME()));
         }
-        
-        if ($this->getName() === "@"  && (!SoaNumberCheck::validate($this) || !NoSoaRecordValidator::validate($this))) {
-            $errorsStore->add(ValidationError::makeNodeError($this, eErrorCode::SOA_ERROR()));
-        }
 
-        if ($this->getName() !== "@" && SoaNumberCheck::validate($this)) {
-            $errorsStore->add(ValidationError::makeNodeError($this, eErrorCode::SOA_ERROR()));
+        if ($this->getName() === "@") {
+            if(! SoaNumberCheck::validate($this)) {
+                $errorsStore->add(ValidationError::makeNodeError($this, eErrorCode::SOA_ERROR()));
+            }
         }
 
         foreach ($this->iterateRecords() as $record) {

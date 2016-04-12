@@ -134,6 +134,7 @@ class Zone
      */
     public function toArray() : array
     {
+        $this->sort();
         $records = [];
         foreach ($this->iterateRecords() as $record) {
             $records[] = $record->toArray();
