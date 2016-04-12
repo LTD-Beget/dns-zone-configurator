@@ -2,19 +2,18 @@
 /**
  * @author: Viskov Sergey
  * @date  : 4/12/16
- * @time  : 1:00 PM
+ * @time  : 6:25 PM
  */
 
 namespace LTDBeget\dns\configurator\validators;
-
 use LTDBeget\dns\configurator\zoneEntities\Node;
 
 /**
- * Class SoaNumberCheck
+ * Class NoSoaRecordValidator
  *
- * @package beget\lib\dns\lib\validators
+ * @package LTDBeget\dns\configurator\validators
  */
-class SoaNumberCheck
+class NoSoaRecordValidator
 {
     /**
      * @param Node $node
@@ -27,6 +26,6 @@ class SoaNumberCheck
             $records[] = $record;
         }
 
-        return count($records) > 1;
+        return count($records) === 0;
     }
 }

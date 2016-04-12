@@ -13,7 +13,6 @@ use LTDBeget\dns\configurator\errors\ErrorsStore;
 use LTDBeget\dns\configurator\errors\ValidationError;
 use LTDBeget\dns\configurator\traits\RecordsIterateTrait;
 use LTDBeget\dns\configurator\validators\OriginValidator;
-use LTDBeget\dns\configurator\validators\SoaNumberCheck;
 use LTDBeget\dns\configurator\zoneEntities\Node;
 use LTDBeget\dns\configurator\zoneEntities\record\base\Record;
 use LTDBeget\dns\enums\eErrorCode;
@@ -57,7 +56,7 @@ class Zone
      */
     public static function fromString(string $origin, string $plainData) : Zone
     {
-        return PlainDeserializer::deserialize(new self($origin), $plainData);
+        return PlainDeserializer::deserialize(new static($origin), $plainData);
     }
 
     /**
@@ -67,7 +66,7 @@ class Zone
      */
     public static function fromArray(string $origin, array $arrayData) : Zone
     {
-        return ArrayDeserializer::deserialize(new self($origin), $arrayData);
+        return ArrayDeserializer::deserialize(new static($origin), $arrayData);
     }
 
     /**
@@ -216,10 +215,6 @@ class Zone
         foreach ($this->iterateNodes() as $node) {
             /** @noinspection PhpInternalEntityUsedInspection */
             $node->validate();
-        }
-
-        if (!SoaNumberCheck::validate($this)) {
-            $errorsStore->add(ValidationError::makeZoneError($this, eErrorCode::SOA_ERROR()));
         }
 
         if (!OriginValidator::validate($this->getOrigin())) {

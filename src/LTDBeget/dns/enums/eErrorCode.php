@@ -63,7 +63,7 @@ class eErrorCode extends Enum
         self::WRONG_ORIGIN                => "Wrong origin value.",
         self::WRONG_NODE_NAME             => "Wrong node name value",
         self::CONFLICT_RECORD_TYPES_ERROR => "Conflict types records in node (A,NS,CNAME)",
-        self::SOA_ERROR                   => "Multiple SOA or no SOA in root",
+        self::SOA_ERROR                   => "Multiple SOA or no SOA",
         self::WRONG_NS_IN_ROOT            => "Wrong ns records in root",
         self::SOA_RECORD_NOT_IN_ROOT      => "SOA record not in root",
         self::MULTIPLE_CNAME_ERROR        => "Multiple cname record",
