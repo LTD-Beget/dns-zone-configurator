@@ -1,12 +1,11 @@
 <?php
 /**
  * @author: Viskov Sergey
- * @date: 05.04.16
- * @time: 1:41
+ * @date  : 4/12/16
+ * @time  : 1:00 PM
  */
 
 namespace LTDBeget\dns\configurator\zoneEntities\record;
-
 
 use LTDBeget\dns\configurator\errors\ValidationError;
 use LTDBeget\dns\configurator\validators\DomainNameValidator;
@@ -18,6 +17,7 @@ use LTDBeget\dns\enums\eRecordType;
 
 /**
  * Class PtrRecord
+ *
  * @package LTDBeget\dns\configurator\zoneEntities\record
  */
 class PtrRecord extends Record
@@ -29,8 +29,9 @@ class PtrRecord extends Record
 
     /**
      * PtrRecord constructor.
-     * @param Node $node
-     * @param int $ttl
+     *
+     * @param Node   $node
+     * @param int    $ttl
      * @param string $ptrDName
      */
     public function __construct(Node $node, int $ttl, string $ptrDName)

@@ -1,8 +1,8 @@
 <?php
 /**
  * @author: Viskov Sergey
- * @date  : 29.07.15
- * @time  : 19:26
+ * @date  : 4/12/16
+ * @time  : 1:00 PM
  */
 
 namespace LTDBeget\dns\configurator\validators;

@@ -1,12 +1,11 @@
 <?php
 /**
  * @author: Viskov Sergey
- * @date: 05.04.16
- * @time: 1:41
+ * @date  : 4/12/16
+ * @time  : 1:00 PM
  */
 
 namespace LTDBeget\dns\configurator\zoneEntities\record;
-
 
 use LTDBeget\dns\configurator\errors\ValidationError;
 use LTDBeget\dns\configurator\validators\Int32Validator;
@@ -18,6 +17,7 @@ use LTDBeget\dns\enums\eRecordType;
 
 /**
  * Class SoaRecord
+ *
  * @package LTDBeget\dns\configurator\zoneEntities\record
  */
 class SoaRecord extends Record
@@ -53,15 +53,16 @@ class SoaRecord extends Record
 
     /**
      * SoaRecord constructor.
-     * @param Node $node
-     * @param int $ttl
+     *
+     * @param Node   $node
+     * @param int    $ttl
      * @param string $mName
      * @param string $rName
-     * @param int $serial
-     * @param int $refresh
-     * @param int $retry
-     * @param int $expire
-     * @param int $minimum
+     * @param int    $serial
+     * @param int    $refresh
+     * @param int    $retry
+     * @param int    $expire
+     * @param int    $minimum
      */
     public function __construct
     (

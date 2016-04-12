@@ -1,8 +1,8 @@
 <?php
 /**
  * @author: Viskov Sergey
- * @date: 05.04.16
- * @time: 2:51
+ * @date  : 4/12/16
+ * @time  : 1:00 PM
  */
 
 namespace LTDBeget\dns\configurator\zoneEntities;
@@ -12,6 +12,7 @@ use LTDBeget\dns\enums\eRecordType;
 
 /**
  * Class RecordsStore
+ *
  * @package LTDBeget\dns\configurator\zoneEntities
  */
 class RecordsStore
@@ -73,7 +74,7 @@ class RecordsStore
      * @param eRecordType $type
      * @return record\base\Record[]
      */
-    public function iterate(eRecordType $type = null)
+    public function iterate(eRecordType $type = NULL)
     {
         foreach ($this->records as $record) {
             if (is_null($type)) {
@@ -83,7 +84,6 @@ class RecordsStore
             }
         }
     }
-
 
     public function sort()
     {

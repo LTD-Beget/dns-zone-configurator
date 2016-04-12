@@ -1,15 +1,14 @@
 <?php
 /**
  * @author: Viskov Sergey
- * @date  : 4/11/16
- * @time  : 7:54 PM
+ * @date  : 4/12/16
+ * @time  : 1:00 PM
  */
 
 namespace LTDBeget\dns\configurator\validators;
 
 use LTDBeget\dns\configurator\zoneEntities\Node;
 use LTDBeget\dns\enums\eRecordType;
-
 
 /**
  * Class ConflictTypesValidator

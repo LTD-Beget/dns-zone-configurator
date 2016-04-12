@@ -1,8 +1,8 @@
 <?php
 /**
  * @author: Viskov Sergey
- * @date  : 31.07.15
- * @time  : 19:03
+ * @date  : 4/12/16
+ * @time  : 1:00 PM
  */
 
 namespace LTDBeget\dns\configurator\validators;
@@ -14,11 +14,10 @@ namespace LTDBeget\dns\configurator\validators;
  */
 class DomainNameValidator
 {
-    const PATTERN = '/^([a-z0-9-_]+\.)*[a-z0-9-_]+$/';
-
+    const PATTERN = '/^([a-z0-9-_]+\.)*[a-z0-9-_]+\.?$/i';
+    
     /**
      * @param $value
-     *
      * @return bool
      */
     public static function validate(string $value)

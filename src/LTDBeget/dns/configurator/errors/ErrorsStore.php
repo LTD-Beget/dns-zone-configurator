@@ -1,14 +1,15 @@
 <?php
 /**
  * @author: Viskov Sergey
- * @date: 12.04.16
- * @time: 1:57
+ * @date  : 4/12/16
+ * @time  : 1:00 PM
  */
 
 namespace LTDBeget\dns\configurator\errors;
 
 /**
  * Class ErrorsStore
+ *
  * @package LTDBeget\dns\configurator\errors
  */
 class ErrorsStore

@@ -1,12 +1,11 @@
 <?php
 /**
  * @author: Viskov Sergey
- * @date: 05.04.16
- * @time: 1:41
+ * @date  : 4/12/16
+ * @time  : 1:00 PM
  */
 
 namespace LTDBeget\dns\configurator\zoneEntities\record;
-
 
 use LTDBeget\dns\configurator\errors\ValidationError;
 use LTDBeget\dns\configurator\validators\DomainNameValidator;
@@ -18,6 +17,7 @@ use LTDBeget\dns\enums\eRecordType;
 
 /**
  * Class MxRecord
+ *
  * @package LTDBeget\dns\configurator\zoneEntities\record
  */
 class MxRecord extends Record
@@ -33,9 +33,10 @@ class MxRecord extends Record
 
     /**
      * MxRecord constructor.
-     * @param Node $node
-     * @param int $ttl
-     * @param int $preference
+     *
+     * @param Node   $node
+     * @param int    $ttl
+     * @param int    $preference
      * @param string $exchange
      */
     public function __construct(Node $node, $ttl, int $preference, string $exchange)
@@ -61,6 +62,10 @@ class MxRecord extends Record
         return $this->preference;
     }
 
+    /**
+     * @param int $preference
+     * @return MxRecord
+     */
     public function setPreference(int $preference) : MxRecord
     {
         return $this->setAttribute("preference", $preference);
@@ -74,6 +79,10 @@ class MxRecord extends Record
         return $this->exchange;
     }
 
+    /**
+     * @param string $exchange
+     * @return MxRecord
+     */
     public function setExchange(string $exchange) : MxRecord
     {
         return $this->setAttribute("exchange", $exchange);

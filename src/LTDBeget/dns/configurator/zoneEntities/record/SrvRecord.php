@@ -1,12 +1,11 @@
 <?php
 /**
  * @author: Viskov Sergey
- * @date: 05.04.16
- * @time: 1:41
+ * @date  : 4/12/16
+ * @time  : 1:00 PM
  */
 
 namespace LTDBeget\dns\configurator\zoneEntities\record;
-
 
 use LTDBeget\dns\configurator\errors\ValidationError;
 use LTDBeget\dns\configurator\validators\DomainNameValidator;
@@ -16,6 +15,11 @@ use LTDBeget\dns\configurator\zoneEntities\record\base\Record;
 use LTDBeget\dns\enums\eErrorCode;
 use LTDBeget\dns\enums\eRecordType;
 
+/**
+ * Class SrvRecord
+ *
+ * @package LTDBeget\dns\configurator\zoneEntities\record
+ */
 class SrvRecord extends Record
 {
     /**
@@ -37,11 +41,12 @@ class SrvRecord extends Record
 
     /**
      * SrvRecord constructor.
-     * @param Node $node
-     * @param int $ttl
-     * @param int $priority
-     * @param int $weight
-     * @param int $port
+     *
+     * @param Node   $node
+     * @param int    $ttl
+     * @param int    $priority
+     * @param int    $weight
+     * @param int    $port
      * @param string $target
      */
     public function __construct(Node $node, int $ttl, int $priority, int $weight, int $port, string $target)

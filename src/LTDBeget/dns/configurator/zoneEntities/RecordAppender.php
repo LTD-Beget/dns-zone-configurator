@@ -1,12 +1,11 @@
 <?php
 /**
  * @author: Viskov Sergey
- * @date: 05.04.16
- * @time: 1:34
+ * @date  : 4/12/16
+ * @time  : 1:00 PM
  */
 
 namespace LTDBeget\dns\configurator\zoneEntities;
-
 
 use LTDBeget\dns\configurator\zoneEntities\record\AaaaRecord;
 use LTDBeget\dns\configurator\zoneEntities\record\ARecord;
@@ -20,6 +19,7 @@ use LTDBeget\dns\configurator\zoneEntities\record\TxtRecord;
 
 /**
  * Class RecordAppender
+ *
  * @package LTDBeget\dns\configurator\zoneEntities
  */
 class RecordAppender
@@ -32,6 +32,7 @@ class RecordAppender
     /**
      * Default value for ttl,
      * that will be set if no ttl given
+     *
      * @var int
      */
     protected $defaultTtl = 600;
@@ -45,11 +46,11 @@ class RecordAppender
     }
 
     /**
-     * @param string $address
+     * @param string   $address
      * @param int|null $ttl
      * @return RecordAppender
      */
-    public function appendARecord(string $address, int $ttl = null) : RecordAppender
+    public function appendARecord(string $address, int $ttl = NULL) : RecordAppender
     {
         new ARecord($this->node, $ttl ?? $this->defaultTtl, $address);
 
@@ -57,11 +58,11 @@ class RecordAppender
     }
 
     /**
-     * @param string $address
+     * @param string   $address
      * @param int|null $ttl
      * @return RecordAppender
      */
-    public function appendAaaaRecord(string $address, int $ttl = null) : RecordAppender
+    public function appendAaaaRecord(string $address, int $ttl = NULL) : RecordAppender
     {
         new AaaaRecord($this->node, $ttl ?? $this->defaultTtl, $address);
 
@@ -69,11 +70,11 @@ class RecordAppender
     }
 
     /**
-     * @param string $cname
+     * @param string   $cname
      * @param int|null $ttl
      * @return RecordAppender
      */
-    public function appendCNameRecord(string $cname, int $ttl = null) : RecordAppender
+    public function appendCNameRecord(string $cname, int $ttl = NULL) : RecordAppender
     {
         new CnameRecord($this->node, $ttl ?? $this->defaultTtl, $cname);
 
@@ -81,12 +82,12 @@ class RecordAppender
     }
 
     /**
-     * @param int $preference
-     * @param string $exchange
+     * @param int      $preference
+     * @param string   $exchange
      * @param int|null $ttl
      * @return RecordAppender
      */
-    public function appendMxRecord(int $preference, string $exchange, int $ttl = null) : RecordAppender
+    public function appendMxRecord(int $preference, string $exchange, int $ttl = NULL) : RecordAppender
     {
         new MxRecord($this->node, $ttl ?? $this->defaultTtl, $preference, $exchange);
 
@@ -94,11 +95,11 @@ class RecordAppender
     }
 
     /**
-     * @param string $nsdName
+     * @param string   $nsdName
      * @param int|null $ttl
      * @return RecordAppender
      */
-    public function appendNsRecord(string $nsdName, int $ttl = null) : RecordAppender
+    public function appendNsRecord(string $nsdName, int $ttl = NULL) : RecordAppender
     {
         new NsRecord($this->node, $ttl ?? $this->defaultTtl, $nsdName);
 
@@ -106,11 +107,11 @@ class RecordAppender
     }
 
     /**
-     * @param string $ptrDName
+     * @param string   $ptrDName
      * @param int|null $ttl
      * @return RecordAppender
      */
-    public function appendPtrRecord(string $ptrDName, int $ttl = null) : RecordAppender
+    public function appendPtrRecord(string $ptrDName, int $ttl = NULL) : RecordAppender
     {
         new PtrRecord($this->node, $ttl ?? $this->defaultTtl, $ptrDName);
 
@@ -118,13 +119,13 @@ class RecordAppender
     }
 
     /**
-     * @param $mName
-     * @param $rName
-     * @param $serial
-     * @param $refresh
-     * @param $retry
-     * @param $expire
-     * @param $minimum
+     * @param          $mName
+     * @param          $rName
+     * @param          $serial
+     * @param          $refresh
+     * @param          $retry
+     * @param          $expire
+     * @param          $minimum
      * @param int|null $ttl
      * @return RecordAppender
      */
@@ -137,7 +138,7 @@ class RecordAppender
         int $retry,
         int $expire,
         int $minimum,
-        int $ttl = null
+        int $ttl = NULL
     ) : RecordAppender
     {
         new SoaRecord(
@@ -156,10 +157,10 @@ class RecordAppender
     }
 
     /**
-     * @param int $priority
-     * @param int $weight
-     * @param int $port
-     * @param string $target
+     * @param int      $priority
+     * @param int      $weight
+     * @param int      $port
+     * @param string   $target
      * @param int|null $ttl
      * @return RecordAppender
      */
@@ -169,7 +170,7 @@ class RecordAppender
         int $weight,
         int $port,
         string $target,
-        int $ttl = null
+        int $ttl = NULL
     ) : RecordAppender
     {
         new SrvRecord($this->node, $ttl ?? $this->defaultTtl, $priority, $weight, $port, $target);
@@ -178,11 +179,11 @@ class RecordAppender
     }
 
     /**
-     * @param string $txtData
+     * @param string   $txtData
      * @param int|null $ttl
      * @return RecordAppender
      */
-    public function appendTxtRecord(string $txtData, int $ttl = null) : RecordAppender
+    public function appendTxtRecord(string $txtData, int $ttl = NULL) : RecordAppender
     {
         new TxtRecord($this->node, $ttl ?? $this->defaultTtl, $txtData);
 

@@ -1,12 +1,11 @@
 <?php
 /**
  * @author: Viskov Sergey
- * @date: 05.04.16
- * @time: 1:41
+ * @date  : 4/12/16
+ * @time  : 1:00 PM
  */
 
 namespace LTDBeget\dns\configurator\zoneEntities\record;
-
 
 use LTDBeget\dns\configurator\errors\ValidationError;
 use LTDBeget\dns\configurator\validators\DomainNameValidator;
@@ -17,6 +16,7 @@ use LTDBeget\dns\enums\eRecordType;
 
 /**
  * Class NsRecord
+ *
  * @package LTDBeget\dns\configurator\zoneEntities\record
  */
 class NsRecord extends Record
@@ -28,15 +28,15 @@ class NsRecord extends Record
 
     /**
      * NsRecord constructor.
-     * @param Node $node
-     * @param int $ttl
+     *
+     * @param Node   $node
+     * @param int    $ttl
      * @param string $nsdName
      */
     public function __construct(Node $node, $ttl, string $nsdName)
     {
         $this->nsdName = $nsdName;
         parent::__construct($node, eRecordType::NS(), $ttl);
-
     }
 
     /**

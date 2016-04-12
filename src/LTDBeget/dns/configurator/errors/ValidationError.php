@@ -1,8 +1,8 @@
 <?php
 /**
  * @author: Viskov Sergey
- * @date  : 12/21/15
- * @time  : 4:29 PM
+ * @date  : 4/12/16
+ * @time  : 1:00 PM
  */
 
 namespace LTDBeget\dns\configurator\errors;
@@ -12,9 +12,9 @@ use LTDBeget\dns\configurator\zoneEntities\Node;
 use LTDBeget\dns\configurator\zoneEntities\record\base\Record;
 use LTDBeget\dns\enums\eErrorCode;
 
-
 /**
  * Class ValidationError
+ *
  * @package LTDBeget\dns\configurator\errors
  */
 class ValidationError
@@ -48,7 +48,7 @@ class ValidationError
     }
 
     /**
-     * @param Zone $zone
+     * @param Zone       $zone
      * @param eErrorCode $errorCode
      * @return ValidationError
      */
@@ -62,7 +62,7 @@ class ValidationError
     }
 
     /**
-     * @param Node $node
+     * @param Node       $node
      * @param eErrorCode $errorCode
      * @return ValidationError
      */
@@ -77,9 +77,9 @@ class ValidationError
     }
 
     /**
-     * @param Record $record
+     * @param Record     $record
      * @param eErrorCode $errorCode
-     * @param $checked_atribute
+     * @param            $checked_atribute
      * @return ValidationError
      */
     public static function makeRecordError(Record $record, eErrorCode $errorCode, $checked_atribute) : ValidationError

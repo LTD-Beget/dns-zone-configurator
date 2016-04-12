@@ -1,24 +1,24 @@
 <?php
 /**
  * @author: Viskov Sergey
- * @date: 05.04.16
- * @time: 1:14
+ * @date  : 4/12/16
+ * @time  : 1:00 PM
  */
 
 namespace LTDBeget\dns\configurator\deserializer;
-
 
 use LTDBeget\dns\configurator\Zone;
 use LTDBeget\dns\enums\eRecordType;
 
 /**
  * Class ArrayDeserializer
+ *
  * @package LTDBeget\dns\configurator\deserializer
  */
 class ArrayDeserializer
 {
     /**
-     * @param Zone $zone
+     * @param Zone  $zone
      * @param array $records
      * @return Zone
      */
@@ -33,7 +33,8 @@ class ArrayDeserializer
 
     /**
      * Append result of parsing dnsZone file in zone object
-     * @param Zone $zone
+     *
+     * @param Zone  $zone
      * @param array $record result of parsing single record
      */
     protected static function appendRecord(Zone $zone, $record)

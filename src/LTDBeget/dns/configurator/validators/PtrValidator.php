@@ -1,12 +1,11 @@
 <?php
 /**
  * @author: Viskov Sergey
- * @date  : 31.07.15
- * @time  : 16:36
+ * @date  : 4/12/16
+ * @time  : 1:00 PM
  */
 
 namespace LTDBeget\dns\configurator\validators;
-
 
 /**
  * Class PtrValidator

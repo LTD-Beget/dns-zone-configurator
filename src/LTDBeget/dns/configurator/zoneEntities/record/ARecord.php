@@ -1,12 +1,6 @@
 <?php
-/**
- * @author: Viskov Sergey
- * @date: 05.04.16
- * @time: 1:40
- */
 
 namespace LTDBeget\dns\configurator\zoneEntities\record;
-
 
 use LTDBeget\dns\configurator\errors\ValidationError;
 use LTDBeget\dns\configurator\validators\Ip4Validator;
@@ -17,6 +11,7 @@ use LTDBeget\dns\enums\eRecordType;
 
 /**
  * Class ARecord
+ *
  * @package LTDBeget\dns\configurator\zoneEntities\record
  */
 class ARecord extends Record
@@ -28,8 +23,9 @@ class ARecord extends Record
 
     /**
      * ARecord constructor.
-     * @param Node $node
-     * @param int $ttl
+     *
+     * @param Node   $node
+     * @param int    $ttl
      * @param string $address
      */
     public function __construct(Node $node, $ttl, string $address)

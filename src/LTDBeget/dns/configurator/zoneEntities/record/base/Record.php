@@ -1,12 +1,11 @@
 <?php
 /**
  * @author: Viskov Sergey
- * @date: 05.04.16
- * @time: 0:46
+ * @date  : 4/12/16
+ * @time  : 1:00 PM
  */
 
 namespace LTDBeget\dns\configurator\zoneEntities\record\base;
-
 
 use LTDBeget\dns\configurator\errors\ValidationError;
 use LTDBeget\dns\configurator\validators\TtlValidator;
@@ -15,9 +14,9 @@ use LTDBeget\dns\enums\eErrorCode;
 use LTDBeget\dns\enums\eRecordNotification;
 use LTDBeget\dns\enums\eRecordType;
 
-
 /**
  * Class Record
+ *
  * @package LTDBeget\dns\configurator\zoneEntities\record\base
  */
 abstract class Record
@@ -45,9 +44,10 @@ abstract class Record
 
     /**
      * Record constructor.
-     * @param Node $node
+     *
+     * @param Node        $node
      * @param eRecordType $type
-     * @param int $ttl
+     * @param int         $ttl
      */
     public function __construct(Node $node, eRecordType $type, int $ttl)
     {
@@ -105,6 +105,7 @@ abstract class Record
 
     /**
      * Full hash of record (must be unique)
+     *
      * @return string
      */
     public function getHash()
@@ -161,7 +162,7 @@ abstract class Record
      */
     protected function setAttribute($name, $value) : self
     {
-        $this->$name = $value;
+        $this->{$name} = $value;
         $this->refreshHash();
         /** @noinspection PhpInternalEntityUsedInspection */
         $this->getNode()->notify($this, eRecordNotification::CHANGE());

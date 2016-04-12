@@ -1,8 +1,8 @@
 <?php
 /**
  * @author: Viskov Sergey
- * @date  : 31.07.15
- * @time  : 18:59
+ * @date  : 4/12/16
+ * @time  : 1:00 PM
  */
 
 namespace LTDBeget\dns\configurator\validators;
@@ -16,7 +16,6 @@ class Ip6Validator
 {
     /**
      * @param $value
-     *
      * @return bool
      */
     public static function validate(string $value)

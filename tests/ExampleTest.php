@@ -1,10 +1,14 @@
 <?php
+/**
+ * @author: Viskov Sergey
+ * @date  : 4/12/16
+ * @time  : 3:10
+ */
+
 use LTDBeget\dns\configurator\Zone;
 
 /**
- * @author: Viskov Sergey
- * @date: 12.04.16
- * @time: 3:10
+ * Class ExampleTest
  */
 class ExampleTest extends PHPUnit_Framework_TestCase
 {

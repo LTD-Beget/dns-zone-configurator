@@ -1,16 +1,14 @@
 <?php
 /**
  * @author: Viskov Sergey
- * @date: 05.04.16
- * @time: 0:45
+ * @date  : 4/12/16
+ * @time  : 1:00 PM
  */
 
 namespace LTDBeget\dns\configurator\zoneEntities;
 
-
-use BadMethodCallException;
-use InvalidArgumentException;
 use LTDBeget\dns\configurator\errors\ValidationError;
+use LTDBeget\dns\configurator\traits\RecordsIterateTrait;
 use LTDBeget\dns\configurator\validators\CnameNumberCheck;
 use LTDBeget\dns\configurator\validators\ConflictTypesValidator;
 use LTDBeget\dns\configurator\validators\NodeNameValidator;
@@ -30,22 +28,23 @@ use LTDBeget\dns\enums\eRecordNotification;
 use LTDBeget\dns\enums\eRecordType;
 
 /**
- *
  * Class Node
- * @package LTDBeget\dns\configurator\zoneEntities
  *
- * @method ARecord iterateA()
- * @method AaaaRecord iterateAaaa()
- * @method CnameRecord iterateCname()
- * @method MxRecord iterateMx()
- * @method NsRecord iterateNs()
- * @method PtrRecord iteratePtr()
- * @method SoaRecord iterateSoa()
- * @method SrvRecord iterateSrv()
- * @method TxtRecord iterateTxt()
+ * @package LTDBeget\dns\configurator\zoneEntities
+ * @method ARecord[] iterateA()
+ * @method AaaaRecord[] iterateAaaa()
+ * @method CnameRecord[] iterateCname()
+ * @method MxRecord[] iterateMx()
+ * @method NsRecord[] iterateNs()
+ * @method PtrRecord[] iteratePtr()
+ * @method SoaRecord[] iterateSoa()
+ * @method SrvRecord[] iterateSrv()
+ * @method TxtRecord[] iterateTxt()
  */
 class Node
 {
+    use RecordsIterateTrait;
+
     /**
      * @var Zone
      */
@@ -69,7 +68,7 @@ class Node
 
     /**
      * @param Zone $zone
-     * @param $name
+     * @param      $name
      */
     public function __construct(Zone $zone, string $name)
     {
@@ -107,27 +106,10 @@ class Node
     }
 
     /**
-     * @internal
-     * @param $name
-     * @param $arguments
-     * @return Record[]
-     */
-    public function __call($name, $arguments)
-    {
-        try {
-            $type = eRecordType::get(mb_strtoupper(str_replace("iterate", "", $name)));
-
-            return $this->iterateRecords($type);
-        } catch (InvalidArgumentException $e) {
-            throw new BadMethodCallException("Method {$name} not found");
-        }
-    }
-
-    /**
      * @param eRecordType|null $type
      * @return Record[]
      */
-    public function iterateRecords(eRecordType $type = null)
+    public function iterateRecords(eRecordType $type = NULL)
     {
         foreach ($this->getRecordsStore()->iterate($type) as $record) {
             yield $record;
@@ -144,7 +126,7 @@ class Node
 
     /**
      * @internal
-     * @param Record $record
+     * @param Record              $record
      * @param eRecordNotification $notification
      * @return Node
      */

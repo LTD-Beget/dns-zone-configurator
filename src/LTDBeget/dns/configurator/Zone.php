@@ -1,19 +1,17 @@
 <?php
 /**
  * @author: Viskov Sergey
- * @date: 05.04.16
- * @time: 0:43
+ * @date  : 4/12/16
+ * @time  : 1:00 PM
  */
 
 namespace LTDBeget\dns\configurator;
 
-
-use BadMethodCallException;
-use InvalidArgumentException;
 use LTDBeget\dns\configurator\deserializer\ArrayDeserializer;
 use LTDBeget\dns\configurator\deserializer\PlainDeserializer;
-use LTDBeget\dns\configurator\errors\ValidationError;
 use LTDBeget\dns\configurator\errors\ErrorsStore;
+use LTDBeget\dns\configurator\errors\ValidationError;
+use LTDBeget\dns\configurator\traits\RecordsIterateTrait;
 use LTDBeget\dns\configurator\validators\OriginValidator;
 use LTDBeget\dns\configurator\validators\SoaNumberCheck;
 use LTDBeget\dns\configurator\zoneEntities\Node;
@@ -32,19 +30,22 @@ use LTDBeget\dns\enums\eRecordType;
 
 /**
  * Class Zone
+ *
  * @package LTDBeget\dns\configurator
- * @method ARecord iterateA()
- * @method AaaaRecord iterateAaaa()
- * @method CnameRecord iterateCname()
- * @method MxRecord iterateMx()
- * @method NsRecord iterateNs()
- * @method PtrRecord iteratePtr()
- * @method SoaRecord iterateSoa()
- * @method SrvRecord iterateSrv()
- * @method TxtRecord iterateTxt()
+ * @method ARecord[] iterateA()
+ * @method AaaaRecord[] iterateAaaa()
+ * @method CnameRecord[] iterateCname()
+ * @method MxRecord[] iterateMx()
+ * @method NsRecord[] iterateNs()
+ * @method PtrRecord[] iteratePtr()
+ * @method SoaRecord[] iterateSoa()
+ * @method SrvRecord[] iterateSrv()
+ * @method TxtRecord[] iterateTxt()
  */
 class Zone
 {
+    use RecordsIterateTrait;
+
     /**
      * @var String
      */
@@ -79,7 +80,7 @@ class Zone
 
     /**
      * @param string $origin
-     * @param array $arrayData
+     * @param array  $arrayData
      * @return Zone
      */
     public static function fromArray(string $origin, array $arrayData) : Zone
@@ -106,7 +107,8 @@ class Zone
      */
     public function sort()
     {
-        $nodes  = $this->nodes;
+        $nodes = $this->nodes;
+        /** @var Node[] $_nodes */
         $_nodes = [];
         foreach (['@', 'www', '*'] as $node_name) {
             if (isset($nodes[$node_name])) {
@@ -137,7 +139,7 @@ class Zone
      * @param eRecordType|null $type
      * @return Record[]
      */
-    public function iterateRecords(eRecordType $type = null)
+    public function iterateRecords(eRecordType $type = NULL)
     {
         foreach ($this->iterateNodes() as $node) {
             foreach ($node->iterateRecords($type) as $record) {
@@ -184,6 +186,7 @@ class Zone
 
     /**
      * Check is node by given name already exists
+     *
      * @param $name
      * @return bool
      */
@@ -193,24 +196,8 @@ class Zone
     }
 
     /**
-     * @internal
-     * @param $name
-     * @param $arguments
-     * @return zoneEntities\record\base\Record[]
-     */
-    public function __call($name, $arguments)
-    {
-        try {
-            $type = eRecordType::get(mb_strtoupper(str_replace("iterate", "", $name)));
-
-            return $this->iterateRecords($type);
-        } catch (InvalidArgumentException $e) {
-            throw new BadMethodCallException("Method {$name} not found");
-        }
-    }
-
-    /**
      * Full validate zone via build in validators
+     *
      * @return bool
      */
     public function validate() : bool

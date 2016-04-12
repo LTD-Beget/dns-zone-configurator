@@ -1,8 +1,8 @@
 <?php
 /**
  * @author: Viskov Sergey
- * @date  : 12/21/15
- * @time  : 5:01 PM
+ * @date  : 4/12/16
+ * @time  : 1:00 PM
  */
 
 namespace LTDBeget\dns\enums;

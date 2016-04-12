@@ -1,11 +1,10 @@
 <?php
 /**
  * @author: echern@beget.ru
- * @date  :   02.11.15
+ * @date  : 4/12/16
  */
 
 namespace LTDBeget\dns\configurator\validators;
-
 
 /**
  * Class Int32Validator

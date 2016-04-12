@@ -1,12 +1,11 @@
 <?php
 /**
  * @author: Viskov Sergey
- * @date: 05.04.16
- * @time: 1:42
+ * @date  : 4/12/16
+ * @time  : 1:00 PM
  */
 
 namespace LTDBeget\dns\configurator\zoneEntities\record;
-
 
 use LTDBeget\dns\configurator\errors\ValidationError;
 use LTDBeget\dns\configurator\zoneEntities\Node;
@@ -16,6 +15,7 @@ use LTDBeget\dns\enums\eRecordType;
 
 /**
  * Class TxtRecord
+ *
  * @package LTDBeget\dns\configurator\zoneEntities\record
  */
 class TxtRecord extends Record
@@ -27,8 +27,9 @@ class TxtRecord extends Record
 
     /**
      * TxtRecord constructor.
-     * @param Node $node
-     * @param int $ttl
+     *
+     * @param Node   $node
+     * @param int    $ttl
      * @param string $txtData
      */
     public function __construct(Node $node, int $ttl, string $txtData)
