@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<class xmlns="http://xml.phpdox.net/src" full="LTDBeget\dns\enums\eRecordType" namespace="LTDBeget\dns\enums" name="eRecordType" abstract="false" final="false" start="26" end="37">
+  <file path="/home/damien/projects/dns-zone-configurator/src/LTDBeget/dns/enums" file="eRecordType.php" realpath="/home/damien/projects/dns-zone-configurator/src/LTDBeget/dns/enums/eRecordType.php" size="772" time="2016-04-12T10:10:40+00:00" unixtime="1460455840" sha1="14ab266baa0a49d92b40ee01d08e4605f2825dc3" relative="LTDBeget/dns/enums/eRecordType.php"/>
+  <docblock>
+    <description compact="Class eRecord"/>
+    <package value="LTDBeget\dns\enums"/>
+    <method value="static eRecordType SOA()"/>
+    <method value="static eRecordType A()"/>
+    <method value="static eRecordType AAAA()"/>
+    <method value="static eRecordType CNAME()"/>
+    <method value="static eRecordType MX()"/>
+    <method value="static eRecordType NS()"/>
+    <method value="static eRecordType PTR()"/>
+    <method value="static eRecordType TXT()"/>
+    <method value="static eRecordType SRV()"/>
+  </docblock>
+  <extends full="MabeEnum\Enum" namespace="MabeEnum" name="Enum" unresolved="true"/>
+  <constant type="string" name="SOA" value="&quot;SOA&quot;"/>
+  <constant type="string" name="A" value="&quot;A&quot;"/>
+  <constant type="string" name="AAAA" value="&quot;AAAA&quot;"/>
+  <constant type="string" name="CNAME" value="&quot;CNAME&quot;"/>
+  <constant type="string" name="MX" value="&quot;MX&quot;"/>
+  <constant type="string" name="NS" value="&quot;NS&quot;"/>
+  <constant type="string" name="PTR" value="&quot;PTR&quot;"/>
+  <constant type="string" name="TXT" value="&quot;TXT&quot;"/>
+  <constant type="string" name="SRV" value="&quot;SRV&quot;"/>
+</class>

@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<class xmlns="http://xml.phpdox.net/src" full="LTDBeget\dns\configurator\validators\Int32Validator" namespace="LTDBeget\dns\configurator\validators" name="Int32Validator" abstract="false" final="false" start="14" end="24">
+  <file path="/home/damien/projects/dns-zone-configurator/src/LTDBeget/dns/configurator/validators" file="Int32Validator.php" realpath="/home/damien/projects/dns-zone-configurator/src/LTDBeget/dns/configurator/validators/Int32Validator.php" size="386" time="2016-04-12T10:10:40+00:00" unixtime="1460455840" sha1="fb2eee6c66d89d9de00aa09ed733e8f4e462a6c4" relative="LTDBeget/dns/configurator/validators/Int32Validator.php"/>
+  <docblock>
+    <description compact="Class Int32Validator"/>
+    <package value="beget\lib\dns\lib\validators"/>
+  </docblock>
+  <method name="validate" start="20" end="23" abstract="false" final="false" static="true" visibility="public">
+    <docblock>
+      <description/>
+      <param type="int" variable="$value"/>
+      <return type="object">
+        <type full="LTDBeget\dns\configurator\validators\bool" namespace="LTDBeget\dns\configurator\validators" name="bool"/>
+      </return>
+    </docblock>
+    <parameter name="value" byreference="false" type="object">
+      <type full="LTDBeget\dns\configurator\validators\int" namespace="LTDBeget\dns\configurator\validators" name="int"/>
+    </parameter>
+  </method>
+</class>

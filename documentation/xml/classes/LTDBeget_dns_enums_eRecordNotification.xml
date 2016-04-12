@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<class xmlns="http://xml.phpdox.net/src" full="LTDBeget\dns\enums\eRecordNotification" namespace="LTDBeget\dns\enums" name="eRecordNotification" abstract="false" final="false" start="20" end="25">
+  <file path="/home/damien/projects/dns-zone-configurator/src/LTDBeget/dns/enums" file="eRecordNotification.php" realpath="/home/damien/projects/dns-zone-configurator/src/LTDBeget/dns/enums/eRecordNotification.php" size="467" time="2016-04-12T10:10:41+00:00" unixtime="1460455841" sha1="41a8a88310e3dd00be2d72886ec6d8777a0accd6" relative="LTDBeget/dns/enums/eRecordNotification.php"/>
+  <docblock>
+    <description compact="Class eRecordNotification"/>
+    <package value="LTDBeget\dns\enums"/>
+    <method value="static eRecordNotification ADD()"/>
+    <method value="static eRecordNotification REMOVE()"/>
+    <method value="static eRecordNotification CHANGE()"/>
+  </docblock>
+  <extends full="MabeEnum\Enum" namespace="MabeEnum" name="Enum" unresolved="true"/>
+  <constant type="string" name="ADD" value="&quot;ADD&quot;"/>
+  <constant type="string" name="REMOVE" value="&quot;REMOVE&quot;"/>
+  <constant type="string" name="CHANGE" value="&quot;CHANGE&quot;"/>
+</class>

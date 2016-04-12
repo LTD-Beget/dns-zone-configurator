@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<class xmlns="http://xml.phpdox.net/src" full="LTDBeget\dns\configurator\validators\SoaNumberCheck" namespace="LTDBeget\dns\configurator\validators" name="SoaNumberCheck" abstract="false" final="false" start="17" end="32">
+  <file path="/home/damien/projects/dns-zone-configurator/src/LTDBeget/dns/configurator/validators" file="SoaNumberCheck.php" realpath="/home/damien/projects/dns-zone-configurator/src/LTDBeget/dns/configurator/validators/SoaNumberCheck.php" size="545" time="2016-04-12T10:10:40+00:00" unixtime="1460455840" sha1="1b4cfcf9c735471fb0da26a934a295b25ff565db" relative="LTDBeget/dns/configurator/validators/SoaNumberCheck.php"/>
+  <docblock>
+    <description compact="Class SoaNumberCheck"/>
+    <package value="beget\lib\dns\lib\validators"/>
+  </docblock>
+  <method name="validate" start="23" end="31" abstract="false" final="false" static="true" visibility="public">
+    <docblock>
+      <description/>
+      <param type="object" variable="$zone">
+        <type full="LTDBeget\dns\configurator\Zone" namespace="LTDBeget\dns\configurator" name="Zone"/>
+      </param>
+      <return type="object">
+        <type full="LTDBeget\dns\configurator\validators\bool" namespace="LTDBeget\dns\configurator\validators" name="bool"/>
+      </return>
+    </docblock>
+    <parameter name="zone" byreference="false" type="object">
+      <type full="LTDBeget\dns\configurator\Zone" namespace="LTDBeget\dns\configurator" name="Zone"/>
+    </parameter>
+  </method>
+</class>

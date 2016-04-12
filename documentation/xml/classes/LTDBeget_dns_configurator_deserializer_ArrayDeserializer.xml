@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<class xmlns="http://xml.phpdox.net/src" full="LTDBeget\dns\configurator\deserializer\ArrayDeserializer" namespace="LTDBeget\dns\configurator\deserializer" name="ArrayDeserializer" abstract="false" final="false" start="18" end="111">
+  <file path="/home/damien/projects/dns-zone-configurator/src/LTDBeget/dns/configurator/deserializer" file="ArrayDeserializer.php" realpath="/home/damien/projects/dns-zone-configurator/src/LTDBeget/dns/configurator/deserializer/ArrayDeserializer.php" size="3380" time="2016-04-12T10:10:41+00:00" unixtime="1460455841" sha1="bec3faff01b1d8d97f1bb8d885a9c9db2302e5e2" relative="LTDBeget/dns/configurator/deserializer/ArrayDeserializer.php"/>
+  <docblock>
+    <description compact="Class ArrayDeserializer"/>
+    <package value="LTDBeget\dns\configurator\deserializer"/>
+  </docblock>
+  <method name="deserialize" start="25" end="32" abstract="false" final="false" static="true" visibility="public">
+    <docblock>
+      <description/>
+      <param type="object" variable="$zone">
+        <type full="LTDBeget\dns\configurator\Zone" namespace="LTDBeget\dns\configurator" name="Zone"/>
+      </param>
+      <param type="array" variable="$records"/>
+      <return type="object">
+        <type full="LTDBeget\dns\configurator\Zone" namespace="LTDBeget\dns\configurator" name="Zone"/>
+      </return>
+    </docblock>
+    <parameter name="zone" byreference="false" type="object">
+      <type full="LTDBeget\dns\configurator\Zone" namespace="LTDBeget\dns\configurator" name="Zone"/>
+    </parameter>
+    <parameter name="records" byreference="false" type="array"/>
+  </method>
+  <method name="appendRecord" start="40" end="109" abstract="false" final="false" static="true" visibility="protected">
+    <docblock>
+      <description compact="Append result of parsing dnsZone file in zone object"/>
+      <param type="object" variable="$zone">
+        <type full="LTDBeget\dns\configurator\Zone" namespace="LTDBeget\dns\configurator" name="Zone"/>
+      </param>
+      <param description="result of parsing single record" type="array" variable="$record"/>
+    </docblock>
+    <parameter name="zone" byreference="false" type="object">
+      <type full="LTDBeget\dns\configurator\Zone" namespace="LTDBeget\dns\configurator" name="Zone"/>
+    </parameter>
+    <parameter name="record" byreference="false" type="{unknown}"/>
+  </method>
+</class>

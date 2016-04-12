@@ -1,0 +1,235 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<class xmlns="http://xml.phpdox.net/src" full="LTDBeget\dns\configurator\zoneEntities\RecordAppender" namespace="LTDBeget\dns\configurator\zoneEntities" name="RecordAppender" abstract="false" final="false" start="25" end="192">
+  <file path="/home/damien/projects/dns-zone-configurator/src/LTDBeget/dns/configurator/zoneEntities" file="RecordAppender.php" realpath="/home/damien/projects/dns-zone-configurator/src/LTDBeget/dns/configurator/zoneEntities/RecordAppender.php" size="4611" time="2016-04-12T10:10:40+00:00" unixtime="1460455840" sha1="53baacbdbe5bacfea85cdf3103f753f18285a187" relative="LTDBeget/dns/configurator/zoneEntities/RecordAppender.php"/>
+  <docblock>
+    <description compact="Class RecordAppender"/>
+    <package value="LTDBeget\dns\configurator\zoneEntities"/>
+  </docblock>
+  <member name="node" visibility="protected" static="false" line="30">
+    <docblock>
+      <description/>
+      <var type="object">
+        <type full="LTDBeget\dns\configurator\zoneEntities\Node" namespace="LTDBeget\dns\configurator\zoneEntities" name="Node"/>
+      </var>
+    </docblock>
+  </member>
+  <member name="defaultTtl" type="integer" default="600" visibility="protected" static="false" line="38">
+    <docblock>
+      <description compact="Default value for ttl, that will be set if no ttl given"/>
+      <var type="int"/>
+    </docblock>
+  </member>
+  <constructor name="__construct" start="43" end="46" abstract="false" final="false" static="false" visibility="public">
+    <docblock>
+      <description/>
+      <param type="object" variable="$node">
+        <type full="LTDBeget\dns\configurator\zoneEntities\Node" namespace="LTDBeget\dns\configurator\zoneEntities" name="Node"/>
+      </param>
+    </docblock>
+    <parameter name="node" byreference="false" type="object">
+      <type full="LTDBeget\dns\configurator\zoneEntities\Node" namespace="LTDBeget\dns\configurator\zoneEntities" name="Node"/>
+    </parameter>
+  </constructor>
+  <method name="appendARecord" start="53" end="58" abstract="false" final="false" static="false" visibility="public">
+    <docblock>
+      <description/>
+      <param type="string" variable="$address"/>
+      <param type="object" variable="$ttl">
+        <type full="LTDBeget\dns\configurator\zoneEntities\int|null" namespace="LTDBeget\dns\configurator\zoneEntities" name="int|null"/>
+      </param>
+      <return type="object">
+        <type full="LTDBeget\dns\configurator\zoneEntities\RecordAppender" namespace="LTDBeget\dns\configurator\zoneEntities" name="RecordAppender"/>
+      </return>
+    </docblock>
+    <parameter name="address" byreference="false" type="object">
+      <type full="LTDBeget\dns\configurator\zoneEntities\string" namespace="LTDBeget\dns\configurator\zoneEntities" name="string"/>
+    </parameter>
+    <parameter name="ttl" byreference="false" type="{unknown}" default="" constant="NULL">
+      <type full="LTDBeget\dns\configurator\zoneEntities\int" namespace="LTDBeget\dns\configurator\zoneEntities" name="int"/>
+    </parameter>
+  </method>
+  <method name="appendAaaaRecord" start="65" end="70" abstract="false" final="false" static="false" visibility="public">
+    <docblock>
+      <description/>
+      <param type="string" variable="$address"/>
+      <param type="object" variable="$ttl">
+        <type full="LTDBeget\dns\configurator\zoneEntities\int|null" namespace="LTDBeget\dns\configurator\zoneEntities" name="int|null"/>
+      </param>
+      <return type="object">
+        <type full="LTDBeget\dns\configurator\zoneEntities\RecordAppender" namespace="LTDBeget\dns\configurator\zoneEntities" name="RecordAppender"/>
+      </return>
+    </docblock>
+    <parameter name="address" byreference="false" type="object">
+      <type full="LTDBeget\dns\configurator\zoneEntities\string" namespace="LTDBeget\dns\configurator\zoneEntities" name="string"/>
+    </parameter>
+    <parameter name="ttl" byreference="false" type="{unknown}" default="" constant="NULL">
+      <type full="LTDBeget\dns\configurator\zoneEntities\int" namespace="LTDBeget\dns\configurator\zoneEntities" name="int"/>
+    </parameter>
+  </method>
+  <method name="appendCNameRecord" start="77" end="82" abstract="false" final="false" static="false" visibility="public">
+    <docblock>
+      <description/>
+      <param type="string" variable="$cname"/>
+      <param type="object" variable="$ttl">
+        <type full="LTDBeget\dns\configurator\zoneEntities\int|null" namespace="LTDBeget\dns\configurator\zoneEntities" name="int|null"/>
+      </param>
+      <return type="object">
+        <type full="LTDBeget\dns\configurator\zoneEntities\RecordAppender" namespace="LTDBeget\dns\configurator\zoneEntities" name="RecordAppender"/>
+      </return>
+    </docblock>
+    <parameter name="cname" byreference="false" type="object">
+      <type full="LTDBeget\dns\configurator\zoneEntities\string" namespace="LTDBeget\dns\configurator\zoneEntities" name="string"/>
+    </parameter>
+    <parameter name="ttl" byreference="false" type="{unknown}" default="" constant="NULL">
+      <type full="LTDBeget\dns\configurator\zoneEntities\int" namespace="LTDBeget\dns\configurator\zoneEntities" name="int"/>
+    </parameter>
+  </method>
+  <method name="appendMxRecord" start="90" end="95" abstract="false" final="false" static="false" visibility="public">
+    <docblock>
+      <description/>
+      <param type="int" variable="$preference"/>
+      <param type="string" variable="$exchange"/>
+      <param type="object" variable="$ttl">
+        <type full="LTDBeget\dns\configurator\zoneEntities\int|null" namespace="LTDBeget\dns\configurator\zoneEntities" name="int|null"/>
+      </param>
+      <return type="object">
+        <type full="LTDBeget\dns\configurator\zoneEntities\RecordAppender" namespace="LTDBeget\dns\configurator\zoneEntities" name="RecordAppender"/>
+      </return>
+    </docblock>
+    <parameter name="preference" byreference="false" type="object">
+      <type full="LTDBeget\dns\configurator\zoneEntities\int" namespace="LTDBeget\dns\configurator\zoneEntities" name="int"/>
+    </parameter>
+    <parameter name="exchange" byreference="false" type="object">
+      <type full="LTDBeget\dns\configurator\zoneEntities\string" namespace="LTDBeget\dns\configurator\zoneEntities" name="string"/>
+    </parameter>
+    <parameter name="ttl" byreference="false" type="{unknown}" default="" constant="NULL">
+      <type full="LTDBeget\dns\configurator\zoneEntities\int" namespace="LTDBeget\dns\configurator\zoneEntities" name="int"/>
+    </parameter>
+  </method>
+  <method name="appendNsRecord" start="102" end="107" abstract="false" final="false" static="false" visibility="public">
+    <docblock>
+      <description/>
+      <param type="string" variable="$nsdName"/>
+      <param type="object" variable="$ttl">
+        <type full="LTDBeget\dns\configurator\zoneEntities\int|null" namespace="LTDBeget\dns\configurator\zoneEntities" name="int|null"/>
+      </param>
+      <return type="object">
+        <type full="LTDBeget\dns\configurator\zoneEntities\RecordAppender" namespace="LTDBeget\dns\configurator\zoneEntities" name="RecordAppender"/>
+      </return>
+    </docblock>
+    <parameter name="nsdName" byreference="false" type="object">
+      <type full="LTDBeget\dns\configurator\zoneEntities\string" namespace="LTDBeget\dns\configurator\zoneEntities" name="string"/>
+    </parameter>
+    <parameter name="ttl" byreference="false" type="{unknown}" default="" constant="NULL">
+      <type full="LTDBeget\dns\configurator\zoneEntities\int" namespace="LTDBeget\dns\configurator\zoneEntities" name="int"/>
+    </parameter>
+  </method>
+  <method name="appendPtrRecord" start="114" end="119" abstract="false" final="false" static="false" visibility="public">
+    <docblock>
+      <description/>
+      <param type="string" variable="$ptrDName"/>
+      <param type="object" variable="$ttl">
+        <type full="LTDBeget\dns\configurator\zoneEntities\int|null" namespace="LTDBeget\dns\configurator\zoneEntities" name="int|null"/>
+      </param>
+      <return type="object">
+        <type full="LTDBeget\dns\configurator\zoneEntities\RecordAppender" namespace="LTDBeget\dns\configurator\zoneEntities" name="RecordAppender"/>
+      </return>
+    </docblock>
+    <parameter name="ptrDName" byreference="false" type="object">
+      <type full="LTDBeget\dns\configurator\zoneEntities\string" namespace="LTDBeget\dns\configurator\zoneEntities" name="string"/>
+    </parameter>
+    <parameter name="ttl" byreference="false" type="{unknown}" default="" constant="NULL">
+      <type full="LTDBeget\dns\configurator\zoneEntities\int" namespace="LTDBeget\dns\configurator\zoneEntities" name="int"/>
+    </parameter>
+  </method>
+  <method name="appendSoaRecord" start="132" end="157" abstract="false" final="false" static="false" visibility="public">
+    <docblock>
+      <description/>
+      <param variable="$mName"/>
+      <param variable="$rName"/>
+      <param variable="$serial"/>
+      <param variable="$refresh"/>
+      <param variable="$retry"/>
+      <param variable="$expire"/>
+      <param variable="$minimum"/>
+      <param type="object" variable="$ttl">
+        <type full="LTDBeget\dns\configurator\zoneEntities\int|null" namespace="LTDBeget\dns\configurator\zoneEntities" name="int|null"/>
+      </param>
+      <return type="object">
+        <type full="LTDBeget\dns\configurator\zoneEntities\RecordAppender" namespace="LTDBeget\dns\configurator\zoneEntities" name="RecordAppender"/>
+      </return>
+    </docblock>
+    <parameter name="mName" byreference="false" type="object">
+      <type full="LTDBeget\dns\configurator\zoneEntities\string" namespace="LTDBeget\dns\configurator\zoneEntities" name="string"/>
+    </parameter>
+    <parameter name="rName" byreference="false" type="object">
+      <type full="LTDBeget\dns\configurator\zoneEntities\string" namespace="LTDBeget\dns\configurator\zoneEntities" name="string"/>
+    </parameter>
+    <parameter name="serial" byreference="false" type="object">
+      <type full="LTDBeget\dns\configurator\zoneEntities\int" namespace="LTDBeget\dns\configurator\zoneEntities" name="int"/>
+    </parameter>
+    <parameter name="refresh" byreference="false" type="object">
+      <type full="LTDBeget\dns\configurator\zoneEntities\int" namespace="LTDBeget\dns\configurator\zoneEntities" name="int"/>
+    </parameter>
+    <parameter name="retry" byreference="false" type="object">
+      <type full="LTDBeget\dns\configurator\zoneEntities\int" namespace="LTDBeget\dns\configurator\zoneEntities" name="int"/>
+    </parameter>
+    <parameter name="expire" byreference="false" type="object">
+      <type full="LTDBeget\dns\configurator\zoneEntities\int" namespace="LTDBeget\dns\configurator\zoneEntities" name="int"/>
+    </parameter>
+    <parameter name="minimum" byreference="false" type="object">
+      <type full="LTDBeget\dns\configurator\zoneEntities\int" namespace="LTDBeget\dns\configurator\zoneEntities" name="int"/>
+    </parameter>
+    <parameter name="ttl" byreference="false" type="{unknown}" default="" constant="NULL">
+      <type full="LTDBeget\dns\configurator\zoneEntities\int" namespace="LTDBeget\dns\configurator\zoneEntities" name="int"/>
+    </parameter>
+  </method>
+  <method name="appendSrvRecord" start="167" end="179" abstract="false" final="false" static="false" visibility="public">
+    <docblock>
+      <description/>
+      <param type="int" variable="$priority"/>
+      <param type="int" variable="$weight"/>
+      <param type="int" variable="$port"/>
+      <param type="string" variable="$target"/>
+      <param type="object" variable="$ttl">
+        <type full="LTDBeget\dns\configurator\zoneEntities\int|null" namespace="LTDBeget\dns\configurator\zoneEntities" name="int|null"/>
+      </param>
+      <return type="object">
+        <type full="LTDBeget\dns\configurator\zoneEntities\RecordAppender" namespace="LTDBeget\dns\configurator\zoneEntities" name="RecordAppender"/>
+      </return>
+    </docblock>
+    <parameter name="priority" byreference="false" type="object">
+      <type full="LTDBeget\dns\configurator\zoneEntities\int" namespace="LTDBeget\dns\configurator\zoneEntities" name="int"/>
+    </parameter>
+    <parameter name="weight" byreference="false" type="object">
+      <type full="LTDBeget\dns\configurator\zoneEntities\int" namespace="LTDBeget\dns\configurator\zoneEntities" name="int"/>
+    </parameter>
+    <parameter name="port" byreference="false" type="object">
+      <type full="LTDBeget\dns\configurator\zoneEntities\int" namespace="LTDBeget\dns\configurator\zoneEntities" name="int"/>
+    </parameter>
+    <parameter name="target" byreference="false" type="object">
+      <type full="LTDBeget\dns\configurator\zoneEntities\string" namespace="LTDBeget\dns\configurator\zoneEntities" name="string"/>
+    </parameter>
+    <parameter name="ttl" byreference="false" type="{unknown}" default="" constant="NULL">
+      <type full="LTDBeget\dns\configurator\zoneEntities\int" namespace="LTDBeget\dns\configurator\zoneEntities" name="int"/>
+    </parameter>
+  </method>
+  <method name="appendTxtRecord" start="186" end="191" abstract="false" final="false" static="false" visibility="public">
+    <docblock>
+      <description/>
+      <param type="string" variable="$txtData"/>
+      <param type="object" variable="$ttl">
+        <type full="LTDBeget\dns\configurator\zoneEntities\int|null" namespace="LTDBeget\dns\configurator\zoneEntities" name="int|null"/>
+      </param>
+      <return type="object">
+        <type full="LTDBeget\dns\configurator\zoneEntities\RecordAppender" namespace="LTDBeget\dns\configurator\zoneEntities" name="RecordAppender"/>
+      </return>
+    </docblock>
+    <parameter name="txtData" byreference="false" type="object">
+      <type full="LTDBeget\dns\configurator\zoneEntities\string" namespace="LTDBeget\dns\configurator\zoneEntities" name="string"/>
+    </parameter>
+    <parameter name="ttl" byreference="false" type="{unknown}" default="" constant="NULL">
+      <type full="LTDBeget\dns\configurator\zoneEntities\int" namespace="LTDBeget\dns\configurator\zoneEntities" name="int"/>
+    </parameter>
+  </method>
+</class>

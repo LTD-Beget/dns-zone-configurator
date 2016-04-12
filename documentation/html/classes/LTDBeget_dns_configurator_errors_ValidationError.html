@@ -1,0 +1,155 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html SYSTEM "about:legacy-compat">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en">
+  <head>
+    <title>phpDox - LTDBeget\dns\configurator\errors\ValidationError</title>
+    <link rel="stylesheet" type="text/css" href="../css/style.css" media="screen"/>
+    <meta http-equiv="content-type" content="text/html; charset=utf-8"/>
+  </head>
+  <body>
+    <nav class="topnav">
+      <ul>
+        <li>
+          <div class="logo"><span>/**</span>phpDox</div>
+        </li>
+        <li class="separator">
+          <a href="../index.html">Overview</a>
+        </li>
+        <li class="separator">
+          <a href="../namespaces.html">Namespaces</a>
+        </li>
+        <li>
+          <a href="../classes.html">Classes</a>
+        </li>
+        <li>
+          <a href="../traits.html">Traits</a>
+        </li>
+        <li class="separator">
+          <a href="../source/index.html">Source</a>
+        </li>
+      </ul>
+    </nav>
+    <div id="mainstage">
+      <div class="box">
+        <ul class="breadcrumb">
+          <li>
+            <a href="../index.html">Overview</a>
+          </li>
+          <li class="separator">
+            <a href="../classes.html">Classes</a>
+          </li>
+          <li class="separator">
+            <a href="../classes.html#LTDBeget_dns_configurator_errors">LTDBeget\dns\configurator\errors</a>
+          </li>
+          <li class="separator">ValidationError</li>
+        </ul>
+      </div>
+      <nav class="box">
+        <ul>
+          <li>
+            <a href="#introduction">Introduction</a>
+          </li>
+          <li>
+            <a href="#synopsis">Synopsis</a>
+          </li>
+          <li>
+            <a href="#members">Members</a>
+          </li>
+          <li>
+            <a href="#methods">Methods</a>
+          </li>
+          <li>
+            <a href="../source/LTDBeget/dns/configurator/errors/ValidationError.php.html#line20">Source</a>
+          </li>
+        </ul>
+      </nav>
+      <section>
+        <h1 id="introduction"><small>LTDBeget\dns\configurator\errors\</small>ValidationError</h1>
+        <h4>Class ValidationError</h4>
+        <p/>
+        <ul/>
+        <h2 id="synopsis">Synopsis</h2>
+        <div class="synopsis">class ValidationError
+            {<br/><ul class="none"><li>// members</li><li>private <span title="LTDBeget\dns\configurator\Zone">Zone</span> <a href="#members">$zone</a> =
+                        NULL;
+                    </li><li>private <span title="LTDBeget\dns\configurator\zoneEntities\Node">Node</span> <a href="#members">$node</a> =
+                        NULL;
+                    </li><li>private <span title="LTDBeget\dns\configurator\zoneEntities\record\base\Record">Record</span> <a href="#members">$record</a> =
+                        NULL;
+                    </li><li>private <span title="LTDBeget\dns\enums\eErrorCode">eErrorCode</span> <a href="#members">$errorCode</a>;
+                    </li><li>private <span title="LTDBeget\dns\configurator\errors\String">String</span> <a href="#members">$checkedAttribute</a> =
+                        NULL;
+                    </li></ul><ul class="none"><li>// methods</li><li>private void <a title="LTDBeget\dns\configurator\errors\ValidationError" href="../classes/LTDBeget_dns_configurator_errors_ValidationError/__construct.html">__construct</a>()
+                    </li><li>public static ValidationError <a title="LTDBeget\dns\configurator\errors\ValidationError" href="../classes/LTDBeget_dns_configurator_errors_ValidationError/makeZoneError.html">makeZoneError</a>()
+                    </li><li>public static ValidationError <a title="LTDBeget\dns\configurator\errors\ValidationError" href="../classes/LTDBeget_dns_configurator_errors_ValidationError/makeNodeError.html">makeNodeError</a>()
+                    </li><li>public static ValidationError <a title="LTDBeget\dns\configurator\errors\ValidationError" href="../classes/LTDBeget_dns_configurator_errors_ValidationError/makeRecordError.html">makeRecordError</a>()
+                    </li><li>public array <a title="LTDBeget\dns\configurator\errors\ValidationError" href="../classes/LTDBeget_dns_configurator_errors_ValidationError/toArray.html">toArray</a>()
+                    </li><li>public Zone <a title="LTDBeget\dns\configurator\errors\ValidationError" href="../classes/LTDBeget_dns_configurator_errors_ValidationError/getZone.html">getZone</a>()
+                    </li><li>public Node <a title="LTDBeget\dns\configurator\errors\ValidationError" href="../classes/LTDBeget_dns_configurator_errors_ValidationError/getNode.html">getNode</a>()
+                    </li><li>public bool <a title="LTDBeget\dns\configurator\errors\ValidationError" href="../classes/LTDBeget_dns_configurator_errors_ValidationError/isHasNode.html">isHasNode</a>()
+                    </li><li>public Record <a title="LTDBeget\dns\configurator\errors\ValidationError" href="../classes/LTDBeget_dns_configurator_errors_ValidationError/getRecord.html">getRecord</a>()
+                    </li><li>public bool <a title="LTDBeget\dns\configurator\errors\ValidationError" href="../classes/LTDBeget_dns_configurator_errors_ValidationError/isHasRecord.html">isHasRecord</a>()
+                    </li></ul>
+
+            }<br/></div>
+        <h2 id="members">Members</h2>
+        <div class="styled members">
+          <h4>private</h4>
+          <ul class="members">
+            <li id="checkedAttribute"><strong>$checkedAttribute</strong>
+                —
+                <a title="LTDBeget\dns\configurator\errors\String" href="../classes/LTDBeget_dns_configurator_errors_String.html">LTDBeget\dns\configurator\errors\String</a></li>
+            <li id="errorCode"><strong>$errorCode</strong>
+                —
+                <a title="LTDBeget\dns\enums\eErrorCode" href="../classes/LTDBeget_dns_enums_eErrorCode.html">LTDBeget\dns\enums\eErrorCode</a></li>
+            <li id="node"><strong>$node</strong>
+                —
+                <a title="LTDBeget\dns\configurator\zoneEntities\Node" href="../classes/LTDBeget_dns_configurator_zoneEntities_Node.html">LTDBeget\dns\configurator\zoneEntities\Node</a></li>
+            <li id="record"><strong>$record</strong>
+                —
+                <a title="LTDBeget\dns\configurator\zoneEntities\record\base\Record" href="../classes/LTDBeget_dns_configurator_zoneEntities_record_base_Record.html">LTDBeget\dns\configurator\zoneEntities\record\base\Record</a></li>
+            <li id="zone"><strong>$zone</strong>
+                —
+                <a title="LTDBeget\dns\configurator\Zone" href="../classes/LTDBeget_dns_configurator_Zone.html">LTDBeget\dns\configurator\Zone</a></li>
+          </ul>
+        </div>
+        <h2 id="methods">Methods</h2>
+        <div class="styled">
+          <h4>public</h4>
+          <ul>
+            <li id="getNode">
+              <a title="LTDBeget\dns\configurator\errors\ValidationError" href="../classes/LTDBeget_dns_configurator_errors_ValidationError/getNode.html">getNode()</a>
+            </li>
+            <li id="getRecord">
+              <a title="LTDBeget\dns\configurator\errors\ValidationError" href="../classes/LTDBeget_dns_configurator_errors_ValidationError/getRecord.html">getRecord()</a>
+            </li>
+            <li id="getZone">
+              <a title="LTDBeget\dns\configurator\errors\ValidationError" href="../classes/LTDBeget_dns_configurator_errors_ValidationError/getZone.html">getZone()</a>
+            </li>
+            <li id="isHasNode">
+              <a title="LTDBeget\dns\configurator\errors\ValidationError" href="../classes/LTDBeget_dns_configurator_errors_ValidationError/isHasNode.html">isHasNode()</a>
+            </li>
+            <li id="isHasRecord">
+              <a title="LTDBeget\dns\configurator\errors\ValidationError" href="../classes/LTDBeget_dns_configurator_errors_ValidationError/isHasRecord.html">isHasRecord()</a>
+            </li>
+            <li id="makeNodeError">
+              <a title="LTDBeget\dns\configurator\errors\ValidationError" href="../classes/LTDBeget_dns_configurator_errors_ValidationError/makeNodeError.html">makeNodeError()</a>
+            </li>
+            <li id="makeRecordError">
+              <a title="LTDBeget\dns\configurator\errors\ValidationError" href="../classes/LTDBeget_dns_configurator_errors_ValidationError/makeRecordError.html">makeRecordError()</a>
+            </li>
+            <li id="makeZoneError">
+              <a title="LTDBeget\dns\configurator\errors\ValidationError" href="../classes/LTDBeget_dns_configurator_errors_ValidationError/makeZoneError.html">makeZoneError()</a>
+            </li>
+            <li id="toArray">
+              <a title="LTDBeget\dns\configurator\errors\ValidationError" href="../classes/LTDBeget_dns_configurator_errors_ValidationError/toArray.html">toArray()</a>
+            </li>
+          </ul>
+        </div>
+      </section>
+    </div>
+    <footer>
+      <span>Generated using phpDox 0.8.2-dev - Copyright (C) 2010 - 2016 by Arne Blankerts</span>
+    </footer>
+  </body>
+</html>

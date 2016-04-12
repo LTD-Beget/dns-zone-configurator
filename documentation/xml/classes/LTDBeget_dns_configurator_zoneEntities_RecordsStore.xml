@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<class xmlns="http://xml.phpdox.net/src" full="LTDBeget\dns\configurator\zoneEntities\RecordsStore" namespace="LTDBeget\dns\configurator\zoneEntities" name="RecordsStore" abstract="false" final="false" start="18" end="100">
+  <file path="/home/damien/projects/dns-zone-configurator/src/LTDBeget/dns/configurator/zoneEntities" file="RecordsStore.php" realpath="/home/damien/projects/dns-zone-configurator/src/LTDBeget/dns/configurator/zoneEntities/RecordsStore.php" size="2173" time="2016-04-12T10:10:41+00:00" unixtime="1460455841" sha1="57bfe8549e7323145c5bbcdaf4df5780f2d6fabb" relative="LTDBeget/dns/configurator/zoneEntities/RecordsStore.php"/>
+  <docblock>
+    <description compact="Class RecordsStore"/>
+    <package value="LTDBeget\dns\configurator\zoneEntities"/>
+  </docblock>
+  <member name="records" type="array" default="" visibility="protected" static="false" line="23">
+    <docblock>
+      <description/>
+      <var type="array" of="object">
+        <type full="LTDBeget\dns\configurator\zoneEntities\Record" namespace="LTDBeget\dns\configurator\zoneEntities" name="Record"/>
+      </var>
+    </docblock>
+  </member>
+  <method name="isContain" start="29" end="32" abstract="false" final="false" static="false" visibility="public">
+    <docblock>
+      <description/>
+      <param type="object" variable="$record">
+        <type full="LTDBeget\dns\configurator\zoneEntities\record\base\Record" namespace="LTDBeget\dns\configurator\zoneEntities\record\base" name="Record"/>
+      </param>
+      <return type="object">
+        <type full="LTDBeget\dns\configurator\zoneEntities\bool" namespace="LTDBeget\dns\configurator\zoneEntities" name="bool"/>
+      </return>
+    </docblock>
+    <parameter name="record" byreference="false" type="object">
+      <type full="LTDBeget\dns\configurator\zoneEntities\record\base\Record" namespace="LTDBeget\dns\configurator\zoneEntities\record\base" name="Record"/>
+    </parameter>
+  </method>
+  <method name="remove" start="38" end="43" abstract="false" final="false" static="false" visibility="public">
+    <docblock>
+      <description/>
+      <param type="object" variable="$record">
+        <type full="LTDBeget\dns\configurator\zoneEntities\record\base\Record" namespace="LTDBeget\dns\configurator\zoneEntities\record\base" name="Record"/>
+      </param>
+      <return type="object">
+        <type full="LTDBeget\dns\configurator\zoneEntities\RecordsStore" namespace="LTDBeget\dns\configurator\zoneEntities" name="RecordsStore"/>
+      </return>
+    </docblock>
+    <parameter name="record" byreference="false" type="object">
+      <type full="LTDBeget\dns\configurator\zoneEntities\record\base\Record" namespace="LTDBeget\dns\configurator\zoneEntities\record\base" name="Record"/>
+    </parameter>
+  </method>
+  <method name="change" start="49" end="60" abstract="false" final="false" static="false" visibility="public">
+    <docblock>
+      <description/>
+      <param type="object" variable="$record">
+        <type full="LTDBeget\dns\configurator\zoneEntities\record\base\Record" namespace="LTDBeget\dns\configurator\zoneEntities\record\base" name="Record"/>
+      </param>
+      <return type="object">
+        <type full="LTDBeget\dns\configurator\zoneEntities\RecordsStore" namespace="LTDBeget\dns\configurator\zoneEntities" name="RecordsStore"/>
+      </return>
+    </docblock>
+    <parameter name="record" byreference="false" type="object">
+      <type full="LTDBeget\dns\configurator\zoneEntities\record\base\Record" namespace="LTDBeget\dns\configurator\zoneEntities\record\base" name="Record"/>
+    </parameter>
+  </method>
+  <method name="append" start="66" end="71" abstract="false" final="false" static="false" visibility="public">
+    <docblock>
+      <description/>
+      <param type="object" variable="$record">
+        <type full="LTDBeget\dns\configurator\zoneEntities\record\base\Record" namespace="LTDBeget\dns\configurator\zoneEntities\record\base" name="Record"/>
+      </param>
+      <return type="object">
+        <type full="LTDBeget\dns\configurator\zoneEntities\RecordsStore" namespace="LTDBeget\dns\configurator\zoneEntities" name="RecordsStore"/>
+      </return>
+    </docblock>
+    <parameter name="record" byreference="false" type="object">
+      <type full="LTDBeget\dns\configurator\zoneEntities\record\base\Record" namespace="LTDBeget\dns\configurator\zoneEntities\record\base" name="Record"/>
+    </parameter>
+  </method>
+  <method name="iterate" start="77" end="86" abstract="false" final="false" static="false" visibility="public">
+    <docblock>
+      <description/>
+      <param type="object" variable="$type">
+        <type full="LTDBeget\dns\enums\eRecordType" namespace="LTDBeget\dns\enums" name="eRecordType"/>
+      </param>
+      <return type="array" of="object">
+        <type full="LTDBeget\dns\configurator\zoneEntities\record\base\Record" namespace="LTDBeget\dns\configurator\zoneEntities\record\base" name="Record"/>
+      </return>
+    </docblock>
+    <parameter name="type" byreference="false" type="{unknown}" default="" constant="NULL">
+      <type full="LTDBeget\dns\enums\eRecordType" namespace="LTDBeget\dns\enums" name="eRecordType"/>
+    </parameter>
+  </method>
+  <method name="sort" start="88" end="99" abstract="false" final="false" static="false" visibility="public"/>
+</class>

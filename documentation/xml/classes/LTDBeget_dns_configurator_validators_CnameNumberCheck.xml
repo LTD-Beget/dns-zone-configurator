@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<class xmlns="http://xml.phpdox.net/src" full="LTDBeget\dns\configurator\validators\CnameNumberCheck" namespace="LTDBeget\dns\configurator\validators" name="CnameNumberCheck" abstract="false" final="false" start="17" end="32">
+  <file path="/home/damien/projects/dns-zone-configurator/src/LTDBeget/dns/configurator/validators" file="CnameNumberCheck.php" realpath="/home/damien/projects/dns-zone-configurator/src/LTDBeget/dns/configurator/validators/CnameNumberCheck.php" size="563" time="2016-04-12T10:10:40+00:00" unixtime="1460455840" sha1="6f727c5ae7e1c1318f53581b979cb1cedcecbf83" relative="LTDBeget/dns/configurator/validators/CnameNumberCheck.php"/>
+  <docblock>
+    <description compact="Class CnameNumberCheck"/>
+    <package value="beget\lib\dns\lib\validators"/>
+  </docblock>
+  <method name="validate" start="23" end="31" abstract="false" final="false" static="true" visibility="public">
+    <docblock>
+      <description/>
+      <param type="object" variable="$node">
+        <type full="LTDBeget\dns\configurator\zoneEntities\Node" namespace="LTDBeget\dns\configurator\zoneEntities" name="Node"/>
+      </param>
+      <return type="object">
+        <type full="LTDBeget\dns\configurator\validators\bool" namespace="LTDBeget\dns\configurator\validators" name="bool"/>
+      </return>
+    </docblock>
+    <parameter name="node" byreference="false" type="object">
+      <type full="LTDBeget\dns\configurator\zoneEntities\Node" namespace="LTDBeget\dns\configurator\zoneEntities" name="Node"/>
+    </parameter>
+  </method>
+</class>

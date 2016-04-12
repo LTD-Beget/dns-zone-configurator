@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<class xmlns="http://xml.phpdox.net/src" full="LTDBeget\dns\configurator\validators\Int16Validator" namespace="LTDBeget\dns\configurator\validators" name="Int16Validator" abstract="false" final="false" start="14" end="24">
+  <file path="/home/damien/projects/dns-zone-configurator/src/LTDBeget/dns/configurator/validators" file="Int16Validator.php" realpath="/home/damien/projects/dns-zone-configurator/src/LTDBeget/dns/configurator/validators/Int16Validator.php" size="377" time="2016-04-12T10:10:41+00:00" unixtime="1460455841" sha1="554bb154d0f5a02152a9432da01a7ec490771b3a" relative="LTDBeget/dns/configurator/validators/Int16Validator.php"/>
+  <docblock>
+    <description compact="Class Int16Validator"/>
+    <package value="beget\lib\dns\lib\validators"/>
+  </docblock>
+  <method name="validate" start="20" end="23" abstract="false" final="false" static="true" visibility="public">
+    <docblock>
+      <description/>
+      <param variable="$value"/>
+      <return type="object">
+        <type full="LTDBeget\dns\configurator\validators\bool" namespace="LTDBeget\dns\configurator\validators" name="bool"/>
+      </return>
+    </docblock>
+    <parameter name="value" byreference="false" type="object">
+      <type full="LTDBeget\dns\configurator\validators\int" namespace="LTDBeget\dns\configurator\validators" name="int"/>
+    </parameter>
+  </method>
+</class>

@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<trait xmlns="http://xml.phpdox.net/src" full="LTDBeget\dns\configurator\traits\RecordsIterateTrait" namespace="LTDBeget\dns\configurator\traits" name="RecordsIterateTrait" abstract="false" final="false" start="38" end="62">
+  <file path="/home/damien/projects/dns-zone-configurator/src/LTDBeget/dns/configurator/traits" file="RecordsIterateTrait.php" realpath="/home/damien/projects/dns-zone-configurator/src/LTDBeget/dns/configurator/traits/RecordsIterateTrait.php" size="1846" time="2016-04-12T11:07:39+00:00" unixtime="1460459259" sha1="c82c5531c9dd2c086d24e2ab01405a240c8bcfc0" relative="LTDBeget/dns/configurator/traits/RecordsIterateTrait.php"/>
+  <docblock>
+    <description compact="Class RecordsIterateTrait"/>
+    <package value="LTDBeget\dns\configurator\tarits"/>
+    <method value="ARecord[] iterateA()"/>
+    <method value="AaaaRecord[] iterateAaaa()"/>
+    <method value="CnameRecord[] iterateCname()"/>
+    <method value="MxRecord[] iterateMx()"/>
+    <method value="NsRecord[] iterateNs()"/>
+    <method value="PtrRecord[] iteratePtr()"/>
+    <method value="SoaRecord[] iterateSoa()"/>
+    <method value="SrvRecord[] iterateSrv()"/>
+    <method value="TxtRecord[] iterateTxt()"/>
+  </docblock>
+  <method name="__call" start="46" end="55" abstract="false" final="false" static="false" visibility="public">
+    <docblock>
+      <description/>
+      <internal/>
+      <param variable="$name"/>
+      <param variable="$arguments"/>
+      <return type="array" of="object">
+        <type full="LTDBeget\dns\configurator\traits\Record" namespace="LTDBeget\dns\configurator\traits" name="Record"/>
+      </return>
+    </docblock>
+    <parameter name="name" byreference="false" type="{unknown}"/>
+    <parameter name="arguments" byreference="false" type="{unknown}"/>
+  </method>
+  <method name="iterateRecords" start="61" end="61" abstract="true" final="false" static="false" visibility="public">
+    <docblock>
+      <description/>
+      <param type="object" variable="$type">
+        <type full="LTDBeget\dns\enums\eRecordType" namespace="LTDBeget\dns\enums" name="eRecordType"/>
+      </param>
+      <return type="mixed"/>
+    </docblock>
+    <parameter name="type" byreference="false" type="object">
+      <type full="LTDBeget\dns\enums\eRecordType" namespace="LTDBeget\dns\enums" name="eRecordType"/>
+    </parameter>
+  </method>
+  <users>
+    <class full="LTDBeget\dns\configurator\Zone" namespace="LTDBeget\dns\configurator" name="Zone"/>
+    <class full="LTDBeget\dns\configurator\zoneEntities\Node" namespace="LTDBeget\dns\configurator\zoneEntities" name="Node"/>
+  </users>
+</trait>

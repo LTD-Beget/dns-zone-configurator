@@ -1,0 +1,233 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<class xmlns="http://xml.phpdox.net/src" full="LTDBeget\dns\configurator\zoneEntities\record\PtrRecord" namespace="LTDBeget\dns\configurator\zoneEntities\record" name="PtrRecord" abstract="false" final="false" start="23" end="104">
+  <file path="/home/damien/projects/dns-zone-configurator/src/LTDBeget/dns/configurator/zoneEntities/record" file="PtrRecord.php" realpath="/home/damien/projects/dns-zone-configurator/src/LTDBeget/dns/configurator/zoneEntities/record/PtrRecord.php" size="2455" time="2016-04-12T11:23:46+00:00" unixtime="1460460226" sha1="14018ca2d4f0b5814de087473756aff92ddb4cf7" relative="LTDBeget/dns/configurator/zoneEntities/record/PtrRecord.php"/>
+  <docblock>
+    <description compact="Class PtrRecord"/>
+    <package value="LTDBeget\dns\configurator\zoneEntities\record"/>
+  </docblock>
+  <extends full="LTDBeget\dns\configurator\zoneEntities\record\base\Record" namespace="LTDBeget\dns\configurator\zoneEntities\record\base" name="Record"/>
+  <member name="ptrDName" visibility="protected" static="false" line="28">
+    <docblock>
+      <description/>
+      <var type="object">
+        <type full="LTDBeget\dns\configurator\zoneEntities\record\String" namespace="LTDBeget\dns\configurator\zoneEntities\record" name="String"/>
+      </var>
+    </docblock>
+  </member>
+  <constructor name="__construct" start="37" end="41" abstract="false" final="false" static="false" visibility="public">
+    <docblock>
+      <description compact="PtrRecord constructor."/>
+      <param type="object" variable="$node">
+        <type full="LTDBeget\dns\configurator\zoneEntities\Node" namespace="LTDBeget\dns\configurator\zoneEntities" name="Node"/>
+      </param>
+      <param type="int" variable="$ttl"/>
+      <param type="string" variable="$ptrDName"/>
+    </docblock>
+    <parameter name="node" byreference="false" type="object">
+      <type full="LTDBeget\dns\configurator\zoneEntities\Node" namespace="LTDBeget\dns\configurator\zoneEntities" name="Node"/>
+    </parameter>
+    <parameter name="ttl" byreference="false" type="object">
+      <type full="LTDBeget\dns\configurator\zoneEntities\record\int" namespace="LTDBeget\dns\configurator\zoneEntities\record" name="int"/>
+    </parameter>
+    <parameter name="ptrDName" byreference="false" type="object">
+      <type full="LTDBeget\dns\configurator\zoneEntities\record\string" namespace="LTDBeget\dns\configurator\zoneEntities\record" name="string"/>
+    </parameter>
+  </constructor>
+  <method name="__toString" start="46" end="49" abstract="false" final="false" static="false" visibility="public">
+    <docblock>
+      <description/>
+      <return type="string"/>
+    </docblock>
+  </method>
+  <method name="getPtrDName" start="54" end="57" abstract="false" final="false" static="false" visibility="public">
+    <docblock>
+      <description/>
+      <return type="object">
+        <type full="LTDBeget\dns\configurator\zoneEntities\record\String" namespace="LTDBeget\dns\configurator\zoneEntities\record" name="String"/>
+      </return>
+    </docblock>
+  </method>
+  <method name="setPtrDName" start="62" end="65" abstract="false" final="false" static="false" visibility="public">
+    <docblock>
+      <description/>
+      <param type="object" variable="$ptrDName">
+        <type full="LTDBeget\dns\configurator\zoneEntities\record\String" namespace="LTDBeget\dns\configurator\zoneEntities\record" name="String"/>
+      </param>
+    </docblock>
+    <parameter name="ptrDName" byreference="false" type="object">
+      <type full="LTDBeget\dns\configurator\zoneEntities\record\string" namespace="LTDBeget\dns\configurator\zoneEntities\record" name="string"/>
+    </parameter>
+  </method>
+  <method name="validate" start="71" end="85" abstract="false" final="false" static="false" visibility="public">
+    <docblock>
+      <description/>
+      <internal/>
+      <return type="object">
+        <type full="LTDBeget\dns\configurator\zoneEntities\record\bool" namespace="LTDBeget\dns\configurator\zoneEntities\record" name="bool"/>
+      </return>
+    </docblock>
+    <inline>
+      <comment value="@noinspection PhpInternalEntityUsedInspection" line="83"/>
+    </inline>
+  </method>
+  <method name="getPtrValue" start="90" end="93" abstract="false" final="false" static="false" visibility="private">
+    <docblock>
+      <description/>
+      <return type="string"/>
+    </docblock>
+  </method>
+  <method name="recordDataToArray" start="98" end="103" abstract="false" final="false" static="false" visibility="protected">
+    <docblock>
+      <description/>
+      <return type="array"/>
+    </docblock>
+  </method>
+  <parent full="LTDBeget\dns\configurator\zoneEntities\record\base\Record" namespace="LTDBeget\dns\configurator\zoneEntities\record\base" name="Record">
+    <constructor name="__construct" start="52" end="61" abstract="false" final="false" static="false" visibility="public">
+      <docblock>
+        <description compact="Record constructor."/>
+        <param type="object" variable="$node">
+          <type full="LTDBeget\dns\configurator\zoneEntities\Node" namespace="LTDBeget\dns\configurator\zoneEntities" name="Node"/>
+        </param>
+        <param type="object" variable="$type">
+          <type full="LTDBeget\dns\enums\eRecordType" namespace="LTDBeget\dns\enums" name="eRecordType"/>
+        </param>
+        <param type="int" variable="$ttl"/>
+      </docblock>
+      <parameter name="node" byreference="false" type="object">
+        <type full="LTDBeget\dns\configurator\zoneEntities\Node" namespace="LTDBeget\dns\configurator\zoneEntities" name="Node"/>
+      </parameter>
+      <parameter name="type" byreference="false" type="object">
+        <type full="LTDBeget\dns\enums\eRecordType" namespace="LTDBeget\dns\enums" name="eRecordType"/>
+      </parameter>
+      <parameter name="ttl" byreference="false" type="object">
+        <type full="LTDBeget\dns\configurator\zoneEntities\record\base\int" namespace="LTDBeget\dns\configurator\zoneEntities\record\base" name="int"/>
+      </parameter>
+      <inline>
+        <comment value="@noinspection PhpInternalEntityUsedInspection" line="59"/>
+      </inline>
+    </constructor>
+    <method name="refreshHash" start="66" end="69" abstract="false" final="false" static="false" visibility="protected">
+      <docblock>
+        <description compact="rebuild hash of record"/>
+      </docblock>
+    </method>
+    <method name="getNode" start="74" end="77" abstract="false" final="false" static="false" visibility="public">
+      <docblock>
+        <description/>
+        <return type="object">
+          <type full="LTDBeget\dns\configurator\zoneEntities\Node" namespace="LTDBeget\dns\configurator\zoneEntities" name="Node"/>
+        </return>
+      </docblock>
+    </method>
+    <method name="remove" start="82" end="87" abstract="false" final="false" static="false" visibility="public">
+      <docblock>
+        <description compact="Marks this record as needed to remove"/>
+      </docblock>
+      <inline>
+        <comment value="@noinspection PhpInternalEntityUsedInspection" line="85"/>
+      </inline>
+    </method>
+    <method name="isRemoved" start="92" end="95" abstract="false" final="false" static="false" visibility="public">
+      <docblock>
+        <description/>
+        <return type="object">
+          <type full="LTDBeget\dns\configurator\zoneEntities\record\base\Bool" namespace="LTDBeget\dns\configurator\zoneEntities\record\base" name="Bool"/>
+        </return>
+      </docblock>
+    </method>
+    <method name="isEqual" start="101" end="104" abstract="false" final="false" static="false" visibility="public">
+      <docblock>
+        <description/>
+        <param type="object" variable="$record">
+          <type full="LTDBeget\dns\configurator\zoneEntities\record\base\Record" namespace="LTDBeget\dns\configurator\zoneEntities\record\base" name="Record"/>
+        </param>
+        <return type="object">
+          <type full="LTDBeget\dns\configurator\zoneEntities\record\base\bool" namespace="LTDBeget\dns\configurator\zoneEntities\record\base" name="bool"/>
+        </return>
+      </docblock>
+      <parameter name="record" byreference="false" type="object">
+        <type full="LTDBeget\dns\configurator\zoneEntities\record\base\Record" namespace="LTDBeget\dns\configurator\zoneEntities\record\base" name="Record"/>
+      </parameter>
+    </method>
+    <method name="getHash" start="111" end="114" abstract="false" final="false" static="false" visibility="public">
+      <docblock>
+        <description compact="Full hash of record (must be unique)"/>
+        <return type="string"/>
+      </docblock>
+    </method>
+    <method name="toArray" start="119" end="127" abstract="false" final="false" static="false" visibility="public">
+      <docblock>
+        <description/>
+        <return type="array"/>
+      </docblock>
+    </method>
+    <method name="getTtl" start="132" end="135" abstract="false" final="false" static="false" visibility="public">
+      <docblock>
+        <description/>
+        <return type="object">
+          <type full="LTDBeget\dns\configurator\zoneEntities\record\base\Int" namespace="LTDBeget\dns\configurator\zoneEntities\record\base" name="Int"/>
+        </return>
+      </docblock>
+    </method>
+    <method name="setTtl" start="140" end="143" abstract="false" final="false" static="false" visibility="public">
+      <docblock>
+        <description/>
+        <param type="int" variable="$value"/>
+      </docblock>
+      <parameter name="value" byreference="false" type="object">
+        <type full="LTDBeget\dns\configurator\zoneEntities\record\base\int" namespace="LTDBeget\dns\configurator\zoneEntities\record\base" name="int"/>
+      </parameter>
+    </method>
+    <method name="getType" start="148" end="151" abstract="false" final="false" static="false" visibility="public">
+      <docblock>
+        <description/>
+        <return type="object">
+          <type full="LTDBeget\dns\enums\eRecordType" namespace="LTDBeget\dns\enums" name="eRecordType"/>
+        </return>
+      </docblock>
+    </method>
+    <method name="recordDataToArray" start="156" end="156" abstract="true" final="false" static="false" visibility="protected">
+      <docblock>
+        <description/>
+        <return type="array"/>
+      </docblock>
+    </method>
+    <method name="setAttribute" start="163" end="171" abstract="false" final="false" static="false" visibility="protected">
+      <docblock>
+        <description/>
+        <param variable="$name"/>
+        <param variable="$value"/>
+        <return type="object">
+          <type full="LTDBeget\dns\configurator\zoneEntities\record\base\Record" namespace="LTDBeget\dns\configurator\zoneEntities\record\base" name="Record"/>
+        </return>
+      </docblock>
+      <parameter name="name" byreference="false" type="{unknown}"/>
+      <parameter name="value" byreference="false" type="{unknown}"/>
+      <inline>
+        <comment value="@noinspection PhpInternalEntityUsedInspection" line="167"/>
+      </inline>
+    </method>
+    <method name="__toString" start="176" end="176" abstract="true" final="false" static="false" visibility="public">
+      <docblock>
+        <description/>
+        <return type="string"/>
+      </docblock>
+    </method>
+    <method name="validate" start="182" end="191" abstract="false" final="false" static="false" visibility="public">
+      <docblock>
+        <description/>
+        <internal/>
+        <return type="object">
+          <type full="LTDBeget\dns\configurator\zoneEntities\record\base\bool" namespace="LTDBeget\dns\configurator\zoneEntities\record\base" name="bool"/>
+        </return>
+      </docblock>
+    </method>
+    <method name="getMainRecordPart" start="196" end="199" abstract="false" final="false" static="false" visibility="protected">
+      <docblock>
+        <description/>
+        <return type="string"/>
+      </docblock>
+    </method>
+  </parent>
+</class>

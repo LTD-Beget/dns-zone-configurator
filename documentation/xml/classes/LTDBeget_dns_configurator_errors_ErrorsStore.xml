@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<class xmlns="http://xml.phpdox.net/src" full="LTDBeget\dns\configurator\errors\ErrorsStore" namespace="LTDBeget\dns\configurator\errors" name="ErrorsStore" abstract="false" final="false" start="15" end="70">
+  <file path="/home/damien/projects/dns-zone-configurator/src/LTDBeget/dns/configurator/errors" file="ErrorsStore.php" realpath="/home/damien/projects/dns-zone-configurator/src/LTDBeget/dns/configurator/errors/ErrorsStore.php" size="1149" time="2016-04-12T11:07:39+00:00" unixtime="1460459259" sha1="d0aa0766051d1a460e13eda4774f7200b890c5a1" relative="LTDBeget/dns/configurator/errors/ErrorsStore.php"/>
+  <docblock>
+    <description compact="Class ErrorsStore"/>
+    <package value="LTDBeget\dns\configurator\errors"/>
+  </docblock>
+  <member name="errors" type="array" default="" visibility="private" static="false" line="20">
+    <docblock>
+      <description/>
+      <var type="array" of="object">
+        <type full="LTDBeget\dns\configurator\errors\ValidationError" namespace="LTDBeget\dns\configurator\errors" name="ValidationError"/>
+      </var>
+    </docblock>
+  </member>
+  <method name="clear" start="25" end="30" abstract="false" final="false" static="false" visibility="public">
+    <docblock>
+      <description/>
+      <return type="object">
+        <type full="LTDBeget\dns\configurator\errors\ErrorsStore" namespace="LTDBeget\dns\configurator\errors" name="ErrorsStore"/>
+      </return>
+    </docblock>
+  </method>
+  <method name="add" start="35" end="38" abstract="false" final="false" static="false" visibility="public">
+    <docblock>
+      <description/>
+      <param type="object" variable="$error">
+        <type full="LTDBeget\dns\configurator\errors\ValidationError" namespace="LTDBeget\dns\configurator\errors" name="ValidationError"/>
+      </param>
+    </docblock>
+    <parameter name="error" byreference="false" type="object">
+      <type full="LTDBeget\dns\configurator\errors\ValidationError" namespace="LTDBeget\dns\configurator\errors" name="ValidationError"/>
+    </parameter>
+  </method>
+  <method name="isHasErrors" start="43" end="46" abstract="false" final="false" static="false" visibility="public">
+    <docblock>
+      <description/>
+      <return type="object">
+        <type full="LTDBeget\dns\configurator\errors\bool" namespace="LTDBeget\dns\configurator\errors" name="bool"/>
+      </return>
+    </docblock>
+  </method>
+  <method name="iterate" start="51" end="56" abstract="false" final="false" static="false" visibility="public">
+    <docblock>
+      <description/>
+      <return type="array" of="object">
+        <type full="LTDBeget\dns\configurator\errors\ValidationError" namespace="LTDBeget\dns\configurator\errors" name="ValidationError"/>
+      </return>
+    </docblock>
+  </method>
+  <method name="toArray" start="61" end="69" abstract="false" final="false" static="false" visibility="public">
+    <docblock>
+      <description/>
+      <return type="array"/>
+    </docblock>
+  </method>
+</class>

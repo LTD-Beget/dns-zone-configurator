@@ -1,0 +1,190 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<class xmlns="http://xml.phpdox.net/src" full="LTDBeget\dns\configurator\Zone" namespace="LTDBeget\dns\configurator" name="Zone" abstract="false" final="false" start="27" end="221">
+  <file path="/home/damien/projects/dns-zone-configurator/src/LTDBeget/dns/configurator" file="Zone.php" realpath="/home/damien/projects/dns-zone-configurator/src/LTDBeget/dns/configurator/Zone.php" size="5032" time="2016-04-12T11:07:39+00:00" unixtime="1460459259" sha1="82e2866ffaf17966959d2f86a559e663af807460" relative="LTDBeget/dns/configurator/Zone.php"/>
+  <docblock>
+    <description compact="Class Zone"/>
+    <package value="LTDBeget\dns\configurator"/>
+  </docblock>
+  <uses full="LTDBeget\dns\configurator\traits\RecordsIterateTrait" namespace="LTDBeget\dns\configurator\traits" name="RecordsIterateTrait" start="29" end="29"/>
+  <member name="origin" visibility="private" static="false" line="34">
+    <docblock>
+      <description/>
+      <var type="object">
+        <type full="LTDBeget\dns\configurator\String" namespace="LTDBeget\dns\configurator" name="String"/>
+      </var>
+    </docblock>
+  </member>
+  <member name="nodes" type="array" default="" visibility="private" static="false" line="38">
+    <docblock>
+      <description/>
+      <var description="$nodes" type="array" of="object">
+        <type full="LTDBeget\dns\configurator\Node" namespace="LTDBeget\dns\configurator" name="Node"/>
+      </var>
+    </docblock>
+  </member>
+  <member name="errorsStore" visibility="private" static="false" line="42">
+    <docblock>
+      <description/>
+      <var type="object">
+        <type full="LTDBeget\dns\configurator\errors\ErrorsStore" namespace="LTDBeget\dns\configurator\errors" name="ErrorsStore"/>
+      </var>
+    </docblock>
+  </member>
+  <constructor name="__construct" start="47" end="51" abstract="false" final="false" static="false" visibility="public">
+    <docblock>
+      <description/>
+      <param variable="$origin"/>
+    </docblock>
+    <parameter name="origin" byreference="false" type="object">
+      <type full="LTDBeget\dns\configurator\string" namespace="LTDBeget\dns\configurator" name="string"/>
+    </parameter>
+  </constructor>
+  <method name="fromString" start="58" end="61" abstract="false" final="false" static="true" visibility="public">
+    <docblock>
+      <description/>
+      <param type="string" variable="$origin"/>
+      <param type="string" variable="$plainData"/>
+      <return type="object">
+        <type full="LTDBeget\dns\configurator\Zone" namespace="LTDBeget\dns\configurator" name="Zone"/>
+      </return>
+    </docblock>
+    <parameter name="origin" byreference="false" type="object">
+      <type full="LTDBeget\dns\configurator\string" namespace="LTDBeget\dns\configurator" name="string"/>
+    </parameter>
+    <parameter name="plainData" byreference="false" type="object">
+      <type full="LTDBeget\dns\configurator\string" namespace="LTDBeget\dns\configurator" name="string"/>
+    </parameter>
+  </method>
+  <method name="fromArray" start="68" end="71" abstract="false" final="false" static="true" visibility="public">
+    <docblock>
+      <description/>
+      <param type="string" variable="$origin"/>
+      <param type="array" variable="$arrayData"/>
+      <return type="object">
+        <type full="LTDBeget\dns\configurator\Zone" namespace="LTDBeget\dns\configurator" name="Zone"/>
+      </return>
+    </docblock>
+    <parameter name="origin" byreference="false" type="object">
+      <type full="LTDBeget\dns\configurator\string" namespace="LTDBeget\dns\configurator" name="string"/>
+    </parameter>
+    <parameter name="arrayData" byreference="false" type="array"/>
+  </method>
+  <method name="__toString" start="76" end="85" abstract="false" final="false" static="false" visibility="public">
+    <docblock>
+      <description/>
+      <return type="string"/>
+    </docblock>
+  </method>
+  <method name="sort" start="90" end="108" abstract="false" final="false" static="false" visibility="public">
+    <docblock>
+      <description compact="Sort zone by node names and record types"/>
+    </docblock>
+  </method>
+  <method name="iterateNodes" start="113" end="118" abstract="false" final="false" static="false" visibility="public">
+    <docblock>
+      <description/>
+      <return type="array" of="object">
+        <type full="LTDBeget\dns\configurator\Node" namespace="LTDBeget\dns\configurator" name="Node"/>
+      </return>
+    </docblock>
+  </method>
+  <method name="iterateRecords" start="124" end="131" abstract="false" final="false" static="false" visibility="public">
+    <docblock>
+      <description/>
+      <param type="object" variable="$type">
+        <type full="LTDBeget\dns\configurator\eRecordType|null" namespace="LTDBeget\dns\configurator" name="eRecordType|null"/>
+      </param>
+      <return type="array" of="object">
+        <type full="LTDBeget\dns\configurator\Record" namespace="LTDBeget\dns\configurator" name="Record"/>
+      </return>
+    </docblock>
+    <parameter name="type" byreference="false" type="{unknown}" default="" constant="NULL">
+      <type full="LTDBeget\dns\enums\eRecordType" namespace="LTDBeget\dns\enums" name="eRecordType"/>
+    </parameter>
+  </method>
+  <method name="toArray" start="136" end="144" abstract="false" final="false" static="false" visibility="public">
+    <docblock>
+      <description/>
+      <return type="array"/>
+    </docblock>
+  </method>
+  <method name="getNodeNames" start="149" end="152" abstract="false" final="false" static="false" visibility="public">
+    <docblock>
+      <description/>
+      <return type="array"/>
+    </docblock>
+  </method>
+  <method name="getNode" start="158" end="167" abstract="false" final="false" static="false" visibility="public">
+    <docblock>
+      <description/>
+      <param variable="$name"/>
+      <return type="object">
+        <type full="LTDBeget\dns\configurator\zoneEntities\Node" namespace="LTDBeget\dns\configurator\zoneEntities" name="Node"/>
+      </return>
+    </docblock>
+    <parameter name="name" byreference="false" type="object">
+      <type full="LTDBeget\dns\configurator\string" namespace="LTDBeget\dns\configurator" name="string"/>
+    </parameter>
+  </method>
+  <method name="isNodeExist" start="175" end="178" abstract="false" final="false" static="false" visibility="public">
+    <docblock>
+      <description compact="Check is node by given name already exists"/>
+      <param variable="$name"/>
+      <return type="object">
+        <type full="LTDBeget\dns\configurator\bool" namespace="LTDBeget\dns\configurator" name="bool"/>
+      </return>
+    </docblock>
+    <parameter name="name" byreference="false" type="{unknown}"/>
+  </method>
+  <method name="validate" start="185" end="204" abstract="false" final="false" static="false" visibility="public">
+    <docblock>
+      <description compact="Full validate zone via build in validators"/>
+      <return type="object">
+        <type full="LTDBeget\dns\configurator\bool" namespace="LTDBeget\dns\configurator" name="bool"/>
+      </return>
+    </docblock>
+  </method>
+  <method name="getErrorsStore" start="209" end="212" abstract="false" final="false" static="false" visibility="public">
+    <docblock>
+      <description/>
+      <return type="object">
+        <type full="LTDBeget\dns\configurator\errors\ErrorsStore" namespace="LTDBeget\dns\configurator\errors" name="ErrorsStore"/>
+      </return>
+    </docblock>
+  </method>
+  <method name="getOrigin" start="217" end="220" abstract="false" final="false" static="false" visibility="public">
+    <docblock>
+      <description/>
+      <return type="object">
+        <type full="LTDBeget\dns\configurator\String" namespace="LTDBeget\dns\configurator" name="String"/>
+      </return>
+    </docblock>
+  </method>
+  <trait full="LTDBeget\dns\configurator\traits\RecordsIterateTrait" namespace="LTDBeget\dns\configurator\traits" name="RecordsIterateTrait">
+    <method name="__call" start="46" end="55" abstract="false" final="false" static="false" visibility="public">
+      <docblock>
+        <description/>
+        <internal/>
+        <param variable="$name"/>
+        <param variable="$arguments"/>
+        <return type="array" of="object">
+          <type full="LTDBeget\dns\configurator\traits\Record" namespace="LTDBeget\dns\configurator\traits" name="Record"/>
+        </return>
+      </docblock>
+      <parameter name="name" byreference="false" type="{unknown}"/>
+      <parameter name="arguments" byreference="false" type="{unknown}"/>
+    </method>
+    <method name="iterateRecords" start="61" end="61" abstract="true" final="false" static="false" visibility="public">
+      <docblock>
+        <description/>
+        <param type="object" variable="$type">
+          <type full="LTDBeget\dns\enums\eRecordType" namespace="LTDBeget\dns\enums" name="eRecordType"/>
+        </param>
+        <return type="mixed"/>
+      </docblock>
+      <parameter name="type" byreference="false" type="object">
+        <type full="LTDBeget\dns\enums\eRecordType" namespace="LTDBeget\dns\enums" name="eRecordType"/>
+      </parameter>
+    </method>
+  </trait>
+</class>

@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<index xmlns="http://xml.phpdox.net/src" basedir="/home/damien/projects/dns-zone-configurator/src">
+  <namespace name="LTDBeget\dns\enums">
+    <class name="eRecordType" src="LTDBeget/dns/enums/eRecordType.php" description="Class eRecord" xml="classes/LTDBeget_dns_enums_eRecordType.xml"/>
+    <class name="eRecordNotification" src="LTDBeget/dns/enums/eRecordNotification.php" description="Class eRecordNotification" xml="classes/LTDBeget_dns_enums_eRecordNotification.xml"/>
+    <class name="eErrorCode" src="LTDBeget/dns/enums/eErrorCode.php" description="Class ErrorCode" xml="classes/LTDBeget_dns_enums_eErrorCode.xml"/>
+  </namespace>
+  <namespace name="LTDBeget\dns\configurator\deserializer">
+    <class name="PlainDeserializer" src="LTDBeget/dns/configurator/deserializer/PlainDeserializer.php" description="Class PlainDeserializer" xml="classes/LTDBeget_dns_configurator_deserializer_PlainDeserializer.xml"/>
+    <class name="ArrayDeserializer" src="LTDBeget/dns/configurator/deserializer/ArrayDeserializer.php" description="Class ArrayDeserializer" xml="classes/LTDBeget_dns_configurator_deserializer_ArrayDeserializer.xml"/>
+  </namespace>
+  <namespace name="LTDBeget\dns\configurator">
+    <class name="Zone" src="LTDBeget/dns/configurator/Zone.php" description="Class Zone" xml="classes/LTDBeget_dns_configurator_Zone.xml"/>
+  </namespace>
+  <namespace name="LTDBeget\dns\configurator\zoneEntities">
+    <class name="Node" src="LTDBeget/dns/configurator/zoneEntities/Node.php" description="Class Node" xml="classes/LTDBeget_dns_configurator_zoneEntities_Node.xml"/>
+    <class name="RecordsStore" src="LTDBeget/dns/configurator/zoneEntities/RecordsStore.php" description="Class RecordsStore" xml="classes/LTDBeget_dns_configurator_zoneEntities_RecordsStore.xml"/>
+    <class name="RecordAppender" src="LTDBeget/dns/configurator/zoneEntities/RecordAppender.php" description="Class RecordAppender" xml="classes/LTDBeget_dns_configurator_zoneEntities_RecordAppender.xml"/>
+  </namespace>
+  <namespace name="LTDBeget\dns\configurator\zoneEntities\record">
+    <class name="SrvRecord" src="LTDBeget/dns/configurator/zoneEntities/record/SrvRecord.php" description="Class SrvRecord" xml="classes/LTDBeget_dns_configurator_zoneEntities_record_SrvRecord.xml"/>
+    <class name="TxtRecord" src="LTDBeget/dns/configurator/zoneEntities/record/TxtRecord.php" description="Class TxtRecord" xml="classes/LTDBeget_dns_configurator_zoneEntities_record_TxtRecord.xml"/>
+    <class name="AaaaRecord" src="LTDBeget/dns/configurator/zoneEntities/record/AaaaRecord.php" description="Class AaaaRecord" xml="classes/LTDBeget_dns_configurator_zoneEntities_record_AaaaRecord.xml"/>
+    <class name="ARecord" src="LTDBeget/dns/configurator/zoneEntities/record/ARecord.php" description="Class ARecord" xml="classes/LTDBeget_dns_configurator_zoneEntities_record_ARecord.xml"/>
+    <class name="NsRecord" src="LTDBeget/dns/configurator/zoneEntities/record/NsRecord.php" description="Class NsRecord" xml="classes/LTDBeget_dns_configurator_zoneEntities_record_NsRecord.xml"/>
+    <class name="CnameRecord" src="LTDBeget/dns/configurator/zoneEntities/record/CnameRecord.php" description="Class CnameRecord" xml="classes/LTDBeget_dns_configurator_zoneEntities_record_CnameRecord.xml"/>
+    <class name="SoaRecord" src="LTDBeget/dns/configurator/zoneEntities/record/SoaRecord.php" description="Class SoaRecord" xml="classes/LTDBeget_dns_configurator_zoneEntities_record_SoaRecord.xml"/>
+    <class name="MxRecord" src="LTDBeget/dns/configurator/zoneEntities/record/MxRecord.php" description="Class MxRecord" xml="classes/LTDBeget_dns_configurator_zoneEntities_record_MxRecord.xml"/>
+    <class name="PtrRecord" src="LTDBeget/dns/configurator/zoneEntities/record/PtrRecord.php" description="Class PtrRecord" xml="classes/LTDBeget_dns_configurator_zoneEntities_record_PtrRecord.xml"/>
+  </namespace>
+  <namespace name="LTDBeget\dns\configurator\zoneEntities\record\base">
+    <class name="Record" src="LTDBeget/dns/configurator/zoneEntities/record/base/Record.php" description="Class Record" xml="classes/LTDBeget_dns_configurator_zoneEntities_record_base_Record.xml"/>
+  </namespace>
+  <namespace name="LTDBeget\dns\configurator\validators">
+    <class name="PtrValidator" src="LTDBeget/dns/configurator/validators/PtrValidator.php" description="Class PtrValidator" xml="classes/LTDBeget_dns_configurator_validators_PtrValidator.xml"/>
+    <class name="SoaNumberCheck" src="LTDBeget/dns/configurator/validators/SoaNumberCheck.php" description="Class SoaNumberCheck" xml="classes/LTDBeget_dns_configurator_validators_SoaNumberCheck.xml"/>
+    <class name="Ip6Validator" src="LTDBeget/dns/configurator/validators/Ip6Validator.php" description="Class Ip6Validator" xml="classes/LTDBeget_dns_configurator_validators_Ip6Validator.xml"/>
+    <class name="Int32Validator" src="LTDBeget/dns/configurator/validators/Int32Validator.php" description="Class Int32Validator" xml="classes/LTDBeget_dns_configurator_validators_Int32Validator.xml"/>
+    <class name="Int16Validator" src="LTDBeget/dns/configurator/validators/Int16Validator.php" description="Class Int16Validator" xml="classes/LTDBeget_dns_configurator_validators_Int16Validator.xml"/>
+    <class name="ConflictTypesValidator" src="LTDBeget/dns/configurator/validators/ConflictTypesValidator.php" description="Class ConflictTypesValidator" xml="classes/LTDBeget_dns_configurator_validators_ConflictTypesValidator.xml"/>
+    <class name="NodeNameValidator" src="LTDBeget/dns/configurator/validators/NodeNameValidator.php" description="Class NodeNameValidator" xml="classes/LTDBeget_dns_configurator_validators_NodeNameValidator.xml"/>
+    <class name="DomainNameValidator" src="LTDBeget/dns/configurator/validators/DomainNameValidator.php" description="Class DomainNameValidator" xml="classes/LTDBeget_dns_configurator_validators_DomainNameValidator.xml"/>
+    <class name="TtlValidator" src="LTDBeget/dns/configurator/validators/TtlValidator.php" description="Class TtlValidator" xml="classes/LTDBeget_dns_configurator_validators_TtlValidator.xml"/>
+    <class name="SoaNotInRootValidator" src="LTDBeget/dns/configurator/validators/SoaNotInRootValidator.php" description="Class SoaNotInRootValidator" xml="classes/LTDBeget_dns_configurator_validators_SoaNotInRootValidator.xml"/>
+    <class name="OriginValidator" src="LTDBeget/dns/configurator/validators/OriginValidator.php" description="Class OriginValidator" xml="classes/LTDBeget_dns_configurator_validators_OriginValidator.xml"/>
+    <class name="Ip4Validator" src="LTDBeget/dns/configurator/validators/Ip4Validator.php" description="Class Ip4Validator" xml="classes/LTDBeget_dns_configurator_validators_Ip4Validator.xml"/>
+    <class name="CnameNumberCheck" src="LTDBeget/dns/configurator/validators/CnameNumberCheck.php" description="Class CnameNumberCheck" xml="classes/LTDBeget_dns_configurator_validators_CnameNumberCheck.xml"/>
+  </namespace>
+  <namespace name="LTDBeget\dns\configurator\errors">
+    <class name="ValidationError" src="LTDBeget/dns/configurator/errors/ValidationError.php" description="Class ValidationError" xml="classes/LTDBeget_dns_configurator_errors_ValidationError.xml"/>
+    <class name="ErrorsStore" src="LTDBeget/dns/configurator/errors/ErrorsStore.php" description="Class ErrorsStore" xml="classes/LTDBeget_dns_configurator_errors_ErrorsStore.xml"/>
+  </namespace>
+  <namespace name="LTDBeget\dns\configurator\traits">
+    <trait name="RecordsIterateTrait" src="LTDBeget/dns/configurator/traits/RecordsIterateTrait.php" description="Class RecordsIterateTrait" xml="traits/LTDBeget_dns_configurator_traits_RecordsIterateTrait.xml"/>
+  </namespace>
+</index>

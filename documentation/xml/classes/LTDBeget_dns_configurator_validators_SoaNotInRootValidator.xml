@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<class xmlns="http://xml.phpdox.net/src" full="LTDBeget\dns\configurator\validators\SoaNotInRootValidator" namespace="LTDBeget\dns\configurator\validators" name="SoaNotInRootValidator" abstract="false" final="false" start="17" end="27">
+  <file path="/home/damien/projects/dns-zone-configurator/src/LTDBeget/dns/configurator/validators" file="SoaNotInRootValidator.php" realpath="/home/damien/projects/dns-zone-configurator/src/LTDBeget/dns/configurator/validators/SoaNotInRootValidator.php" size="495" time="2016-04-12T10:10:40+00:00" unixtime="1460455840" sha1="d19cd281b9517ef0efb2444c0b49c4b4a30a5c38" relative="LTDBeget/dns/configurator/validators/SoaNotInRootValidator.php"/>
+  <docblock>
+    <description compact="Class SoaNotInRootValidator"/>
+    <package value="beget\lib\dns\lib\validators"/>
+  </docblock>
+  <method name="validate" start="23" end="26" abstract="false" final="false" static="true" visibility="public">
+    <docblock>
+      <description/>
+      <param type="object" variable="$record">
+        <type full="LTDBeget\dns\configurator\zoneEntities\record\SoaRecord" namespace="LTDBeget\dns\configurator\zoneEntities\record" name="SoaRecord"/>
+      </param>
+      <return type="object">
+        <type full="LTDBeget\dns\configurator\validators\bool" namespace="LTDBeget\dns\configurator\validators" name="bool"/>
+      </return>
+    </docblock>
+    <parameter name="record" byreference="false" type="object">
+      <type full="LTDBeget\dns\configurator\zoneEntities\record\SoaRecord" namespace="LTDBeget\dns\configurator\zoneEntities\record" name="SoaRecord"/>
+    </parameter>
+  </method>
+</class>

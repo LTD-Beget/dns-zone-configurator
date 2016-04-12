@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<class xmlns="http://xml.phpdox.net/src" full="LTDBeget\dns\configurator\validators\Ip4Validator" namespace="LTDBeget\dns\configurator\validators" name="Ip4Validator" abstract="false" final="false" start="15" end="25">
+  <file path="/home/damien/projects/dns-zone-configurator/src/LTDBeget/dns/configurator/validators" file="Ip4Validator.php" realpath="/home/damien/projects/dns-zone-configurator/src/LTDBeget/dns/configurator/validators/Ip4Validator.php" size="420" time="2016-04-12T10:10:41+00:00" unixtime="1460455841" sha1="93d17187e46b0f935779ec06cb821c0adfd52ec6" relative="LTDBeget/dns/configurator/validators/Ip4Validator.php"/>
+  <docblock>
+    <description compact="Class Ip4Validator"/>
+    <package value="beget\lib\dns\lib\validators"/>
+  </docblock>
+  <method name="validate" start="21" end="24" abstract="false" final="false" static="true" visibility="public">
+    <docblock>
+      <description/>
+      <param variable="$value"/>
+      <return type="object">
+        <type full="LTDBeget\dns\configurator\validators\bool" namespace="LTDBeget\dns\configurator\validators" name="bool"/>
+      </return>
+    </docblock>
+    <parameter name="value" byreference="false" type="object">
+      <type full="LTDBeget\dns\configurator\validators\string" namespace="LTDBeget\dns\configurator\validators" name="string"/>
+    </parameter>
+  </method>
+</class>

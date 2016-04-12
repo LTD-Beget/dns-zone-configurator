@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<class xmlns="http://xml.phpdox.net/src" full="LTDBeget\dns\configurator\validators\DomainNameValidator" namespace="LTDBeget\dns\configurator\validators" name="DomainNameValidator" abstract="false" final="false" start="15" end="37">
+  <file path="/home/damien/projects/dns-zone-configurator/src/LTDBeget/dns/configurator/validators" file="DomainNameValidator.php" realpath="/home/damien/projects/dns-zone-configurator/src/LTDBeget/dns/configurator/validators/DomainNameValidator.php" size="651" time="2016-04-12T10:30:10+00:00" unixtime="1460457010" sha1="534eb0916ad058db403bd721525743a944b1524c" relative="LTDBeget/dns/configurator/validators/DomainNameValidator.php"/>
+  <docblock>
+    <description compact="Class DomainNameValidator"/>
+    <package value="beget\lib\dns\lib\validators"/>
+  </docblock>
+  <constant type="string" name="PATTERN" value="'/^([a-z0-9-_]+\.)*[a-z0-9-_]+\.?$/i'"/>
+  <method name="validate" start="23" end="36" abstract="false" final="false" static="true" visibility="public">
+    <docblock>
+      <description/>
+      <param variable="$value"/>
+      <return type="object">
+        <type full="LTDBeget\dns\configurator\validators\bool" namespace="LTDBeget\dns\configurator\validators" name="bool"/>
+      </return>
+    </docblock>
+    <parameter name="value" byreference="false" type="object">
+      <type full="LTDBeget\dns\configurator\validators\string" namespace="LTDBeget\dns\configurator\validators" name="string"/>
+    </parameter>
+  </method>
+</class>

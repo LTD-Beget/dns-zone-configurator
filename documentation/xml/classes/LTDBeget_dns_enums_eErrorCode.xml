@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<class xmlns="http://xml.phpdox.net/src" full="LTDBeget\dns\enums\eErrorCode" namespace="LTDBeget\dns\enums" name="eErrorCode" abstract="false" final="false" start="33" end="88">
+  <file path="/home/damien/projects/dns-zone-configurator/src/LTDBeget/dns/enums" file="eErrorCode.php" realpath="/home/damien/projects/dns-zone-configurator/src/LTDBeget/dns/enums/eErrorCode.php" size="3224" time="2016-04-12T10:10:41+00:00" unixtime="1460455841" sha1="ac8142b8f98b9196a29c781673c906739632e461" relative="LTDBeget/dns/enums/eErrorCode.php"/>
+  <docblock>
+    <description compact="Class ErrorCode"/>
+    <package value="beget\lib\dns\lib\errors"/>
+    <method value="static eErrorCode WRONG_ORIGIN()"/>
+    <method value="static eErrorCode WRONG_NODE_NAME()"/>
+    <method value="static eErrorCode CONFLICT_RECORD_TYPES_ERROR()"/>
+    <method value="static eErrorCode SOA_ERROR()"/>
+    <method value="static eErrorCode WRONG_NS_IN_ROOT()"/>
+    <method value="static eErrorCode SOA_RECORD_NOT_IN_ROOT()"/>
+    <method value="static eErrorCode MULTIPLE_CNAME_ERROR()"/>
+    <method value="static eErrorCode NO_NS_IN_ROOT()"/>
+    <method value="static eErrorCode WRONG_TTL()"/>
+    <method value="static eErrorCode WRONG_IP_V4()"/>
+    <method value="static eErrorCode WRONG_IP_V6()"/>
+    <method value="static eErrorCode WRONG_DOMAIN_NAME()"/>
+    <method value="static eErrorCode WRONG_INT16()"/>
+    <method value="static eErrorCode WRONG_PTR_NAME()"/>
+    <method value="static eErrorCode EMPTY_TXT()"/>
+    <method value="static eErrorCode WRONG_INT32()"/>
+  </docblock>
+  <extends full="MabeEnum\Enum" namespace="MabeEnum" name="Enum" unresolved="true"/>
+  <constant type="integer" name="WRONG_ORIGIN" value="1">
+    <docblock>
+      <description compact="Error codes for DNS validation errors.">Change current codes are forbidden.
+Only add new.</description>
+    </docblock>
+  </constant>
+  <constant type="integer" name="WRONG_NODE_NAME" value="2"/>
+  <constant type="integer" name="CONFLICT_RECORD_TYPES_ERROR" value="3"/>
+  <constant type="integer" name="SOA_ERROR" value="4"/>
+  <constant type="integer" name="WRONG_NS_IN_ROOT" value="5"/>
+  <constant type="integer" name="SOA_RECORD_NOT_IN_ROOT" value="6"/>
+  <constant type="integer" name="MULTIPLE_CNAME_ERROR" value="7"/>
+  <constant type="integer" name="NO_NS_IN_ROOT" value="8"/>
+  <constant type="integer" name="WRONG_TTL" value="9"/>
+  <constant type="integer" name="WRONG_IP_V4" value="10"/>
+  <constant type="integer" name="WRONG_IP_V6" value="11"/>
+  <constant type="integer" name="WRONG_DOMAIN_NAME" value="12"/>
+  <constant type="integer" name="WRONG_INT16" value="13"/>
+  <constant type="integer" name="WRONG_PTR_NAME" value="14"/>
+  <constant type="integer" name="EMPTY_TXT" value="15"/>
+  <constant type="integer" name="WRONG_INT32" value="16"/>
+  <member name="textForCode" type="array" default="" visibility="protected" static="true" line="62">
+    <docblock>
+      <description compact="Preset text for known error codes"/>
+      <var type="array"/>
+    </docblock>
+  </member>
+  <method name="getText" start="84" end="87" abstract="false" final="false" static="false" visibility="public">
+    <docblock>
+      <description/>
+      <return type="string"/>
+    </docblock>
+  </method>
+</class>

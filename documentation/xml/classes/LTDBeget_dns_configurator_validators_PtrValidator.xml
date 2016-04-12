@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<class xmlns="http://xml.phpdox.net/src" full="LTDBeget\dns\configurator\validators\PtrValidator" namespace="LTDBeget\dns\configurator\validators" name="PtrValidator" abstract="false" final="false" start="15" end="38">
+  <file path="/home/damien/projects/dns-zone-configurator/src/LTDBeget/dns/configurator/validators" file="PtrValidator.php" realpath="/home/damien/projects/dns-zone-configurator/src/LTDBeget/dns/configurator/validators/PtrValidator.php" size="893" time="2016-04-12T10:10:41+00:00" unixtime="1460455841" sha1="c9d2ac257bf98c448a7020575cf5461b31feacf1" relative="LTDBeget/dns/configurator/validators/PtrValidator.php"/>
+  <docblock>
+    <description compact="Class PtrValidator"/>
+    <package value="beget\lib\dns\lib\validators"/>
+  </docblock>
+  <constant type="string" name="IP4_HOST_RE" value="'/\.in-addr\.arpa\.$/'"/>
+  <constant type="string" name="IP6_FULL_RE" value="'/^([0-9a-f]\.){32}ip6\.arpa\.$/'"/>
+  <method name="validate" start="24" end="37" abstract="false" final="false" static="true" visibility="public">
+    <docblock>
+      <description/>
+      <param type="string" variable="$value"/>
+      <return type="object">
+        <type full="LTDBeget\dns\configurator\validators\bool" namespace="LTDBeget\dns\configurator\validators" name="bool"/>
+      </return>
+    </docblock>
+    <parameter name="value" byreference="false" type="object">
+      <type full="LTDBeget\dns\configurator\validators\string" namespace="LTDBeget\dns\configurator\validators" name="string"/>
+    </parameter>
+  </method>
+</class>

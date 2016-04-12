@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<source xmlns="http://xml.phpdox.net/src">
+  <dir name="/home/damien/projects/dns-zone-configurator/src">
+    <dir name="LTDBeget">
+      <dir name="dns">
+        <dir name="enums">
+          <file name="eRecordType.php" size="772" time="2016-04-12T10:10:40+00:00" unixtime="1460455840" sha1="14ab266baa0a49d92b40ee01d08e4605f2825dc3" xml="tokens/LTDBeget/dns/enums/eRecordType.php.xml"/>
+          <file name="eRecordNotification.php" size="467" time="2016-04-12T10:10:41+00:00" unixtime="1460455841" sha1="41a8a88310e3dd00be2d72886ec6d8777a0accd6" xml="tokens/LTDBeget/dns/enums/eRecordNotification.php.xml"/>
+          <file name="eErrorCode.php" size="3224" time="2016-04-12T10:10:41+00:00" unixtime="1460455841" sha1="ac8142b8f98b9196a29c781673c906739632e461" xml="tokens/LTDBeget/dns/enums/eErrorCode.php.xml"/>
+        </dir>
+        <dir name="configurator">
+          <dir name="deserializer">
+            <file name="PlainDeserializer.php" size="584" time="2016-04-12T10:10:41+00:00" unixtime="1460455841" sha1="ef22c92de780f25703c2384b39a571ce571537e8" xml="tokens/LTDBeget/dns/configurator/deserializer/PlainDeserializer.php.xml"/>
+            <file name="ArrayDeserializer.php" size="3380" time="2016-04-12T10:10:41+00:00" unixtime="1460455841" sha1="bec3faff01b1d8d97f1bb8d885a9c9db2302e5e2" xml="tokens/LTDBeget/dns/configurator/deserializer/ArrayDeserializer.php.xml"/>
+          </dir>
+          <file name="Zone.php" size="5032" time="2016-04-12T11:07:39+00:00" unixtime="1460459259" sha1="82e2866ffaf17966959d2f86a559e663af807460" xml="tokens/LTDBeget/dns/configurator/Zone.php.xml"/>
+          <dir name="zoneEntities">
+            <file name="Node.php" size="4417" time="2016-04-12T11:07:39+00:00" unixtime="1460459259" sha1="a1e87de80ee92c298fabe20ca6e153973d4afada" xml="tokens/LTDBeget/dns/configurator/zoneEntities/Node.php.xml"/>
+            <file name="RecordsStore.php" size="2173" time="2016-04-12T10:10:41+00:00" unixtime="1460455841" sha1="57bfe8549e7323145c5bbcdaf4df5780f2d6fabb" xml="tokens/LTDBeget/dns/configurator/zoneEntities/RecordsStore.php.xml"/>
+            <dir name="record">
+              <file name="SrvRecord.php" size="4093" time="2016-04-12T11:23:46+00:00" unixtime="1460460226" sha1="654dfa25e02fce867a59e335ce695b1916e30e40" xml="tokens/LTDBeget/dns/configurator/zoneEntities/record/SrvRecord.php.xml"/>
+              <dir name="base">
+                <file name="Record.php" size="4114" time="2016-04-12T10:39:59+00:00" unixtime="1460457599" sha1="668b9b253fdba33d7687203329ee083125e7bdea" xml="tokens/LTDBeget/dns/configurator/zoneEntities/record/base/Record.php.xml"/>
+              </dir>
+              <file name="TxtRecord.php" size="2210" time="2016-04-12T11:25:33+00:00" unixtime="1460460333" sha1="6ec3eb2fcf4a2e4197beac8414bc7c6f3239ea23" xml="tokens/LTDBeget/dns/configurator/zoneEntities/record/TxtRecord.php.xml"/>
+              <file name="AaaaRecord.php" size="2039" time="2016-04-12T11:23:46+00:00" unixtime="1460460226" sha1="d26dbe809b97a7bd55f31c0f4e969ab78da57d10" xml="tokens/LTDBeget/dns/configurator/zoneEntities/record/AaaaRecord.php.xml"/>
+              <file name="ARecord.php" size="1932" time="2016-04-12T11:23:46+00:00" unixtime="1460460226" sha1="dd947bb54ee85e06f2016d18d0972fe2bc39ae70" xml="tokens/LTDBeget/dns/configurator/zoneEntities/record/ARecord.php.xml"/>
+              <file name="NsRecord.php" size="2014" time="2016-04-12T11:23:46+00:00" unixtime="1460460226" sha1="136a7b5dea7901000cf27e44a94014aff124bbe1" xml="tokens/LTDBeget/dns/configurator/zoneEntities/record/NsRecord.php.xml"/>
+              <file name="CnameRecord.php" size="2027" time="2016-04-12T11:23:46+00:00" unixtime="1460460226" sha1="8c5c2958831fb95d1a1e42ebbffd14538139c296" xml="tokens/LTDBeget/dns/configurator/zoneEntities/record/CnameRecord.php.xml"/>
+              <file name="SoaRecord.php" size="5795" time="2016-04-12T11:23:46+00:00" unixtime="1460460226" sha1="9221ac5687a44328006caa96461a72c6e8b86aea" xml="tokens/LTDBeget/dns/configurator/zoneEntities/record/SoaRecord.php.xml"/>
+              <file name="MxRecord.php" size="2883" time="2016-04-12T11:23:46+00:00" unixtime="1460460226" sha1="b90e8be2a27269447a4b7c2694651e34375efc8b" xml="tokens/LTDBeget/dns/configurator/zoneEntities/record/MxRecord.php.xml"/>
+              <file name="PtrRecord.php" size="2455" time="2016-04-12T11:23:46+00:00" unixtime="1460460226" sha1="14018ca2d4f0b5814de087473756aff92ddb4cf7" xml="tokens/LTDBeget/dns/configurator/zoneEntities/record/PtrRecord.php.xml"/>
+            </dir>
+            <file name="RecordAppender.php" size="4611" time="2016-04-12T10:10:40+00:00" unixtime="1460455840" sha1="53baacbdbe5bacfea85cdf3103f753f18285a187" xml="tokens/LTDBeget/dns/configurator/zoneEntities/RecordAppender.php.xml"/>
+          </dir>
+          <dir name="validators">
+            <file name="PtrValidator.php" size="893" time="2016-04-12T10:10:41+00:00" unixtime="1460455841" sha1="c9d2ac257bf98c448a7020575cf5461b31feacf1" xml="tokens/LTDBeget/dns/configurator/validators/PtrValidator.php.xml"/>
+            <file name="SoaNumberCheck.php" size="545" time="2016-04-12T10:10:40+00:00" unixtime="1460455840" sha1="1b4cfcf9c735471fb0da26a934a295b25ff565db" xml="tokens/LTDBeget/dns/configurator/validators/SoaNumberCheck.php.xml"/>
+            <file name="Ip6Validator.php" size="420" time="2016-04-12T10:10:41+00:00" unixtime="1460455841" sha1="1abe140c975ecaaeb30c50b01149dd1f56c675ad" xml="tokens/LTDBeget/dns/configurator/validators/Ip6Validator.php.xml"/>
+            <file name="Int32Validator.php" size="386" time="2016-04-12T10:10:40+00:00" unixtime="1460455840" sha1="fb2eee6c66d89d9de00aa09ed733e8f4e462a6c4" xml="tokens/LTDBeget/dns/configurator/validators/Int32Validator.php.xml"/>
+            <file name="Int16Validator.php" size="377" time="2016-04-12T10:10:41+00:00" unixtime="1460455841" sha1="554bb154d0f5a02152a9432da01a7ec490771b3a" xml="tokens/LTDBeget/dns/configurator/validators/Int16Validator.php.xml"/>
+            <file name="ConflictTypesValidator.php" size="913" time="2016-04-12T10:10:41+00:00" unixtime="1460455841" sha1="13b80ab8dd27b30a61f73578b034a94dee10a426" xml="tokens/LTDBeget/dns/configurator/validators/ConflictTypesValidator.php.xml"/>
+            <file name="NodeNameValidator.php" size="470" time="2016-04-12T10:30:10+00:00" unixtime="1460457010" sha1="13e3d44151d83b0d1532b6533d74e5620cac8f95" xml="tokens/LTDBeget/dns/configurator/validators/NodeNameValidator.php.xml"/>
+            <file name="DomainNameValidator.php" size="651" time="2016-04-12T10:30:10+00:00" unixtime="1460457010" sha1="534eb0916ad058db403bd721525743a944b1524c" xml="tokens/LTDBeget/dns/configurator/validators/DomainNameValidator.php.xml"/>
+            <file name="TtlValidator.php" size="396" time="2016-04-12T10:10:40+00:00" unixtime="1460455840" sha1="5e9f33e8720b3429f6dd22dda21c70413acee583" xml="tokens/LTDBeget/dns/configurator/validators/TtlValidator.php.xml"/>
+            <file name="SoaNotInRootValidator.php" size="495" time="2016-04-12T10:10:40+00:00" unixtime="1460455840" sha1="d19cd281b9517ef0efb2444c0b49c4b4a30a5c38" xml="tokens/LTDBeget/dns/configurator/validators/SoaNotInRootValidator.php.xml"/>
+            <file name="OriginValidator.php" size="465" time="2016-04-12T10:10:40+00:00" unixtime="1460455840" sha1="1d0197dfa55cc953d02dbddd9904c70351f50549" xml="tokens/LTDBeget/dns/configurator/validators/OriginValidator.php.xml"/>
+            <file name="Ip4Validator.php" size="420" time="2016-04-12T10:10:41+00:00" unixtime="1460455841" sha1="93d17187e46b0f935779ec06cb821c0adfd52ec6" xml="tokens/LTDBeget/dns/configurator/validators/Ip4Validator.php.xml"/>
+            <file name="CnameNumberCheck.php" size="563" time="2016-04-12T10:10:40+00:00" unixtime="1460455840" sha1="6f727c5ae7e1c1318f53581b979cb1cedcecbf83" xml="tokens/LTDBeget/dns/configurator/validators/CnameNumberCheck.php.xml"/>
+          </dir>
+          <dir name="errors">
+            <file name="ValidationError.php" size="3720" time="2016-04-12T11:24:19+00:00" unixtime="1460460259" sha1="c59cf8f815f288b7041019da462c89695b3b57ec" xml="tokens/LTDBeget/dns/configurator/errors/ValidationError.php.xml"/>
+            <file name="ErrorsStore.php" size="1149" time="2016-04-12T11:07:39+00:00" unixtime="1460459259" sha1="d0aa0766051d1a460e13eda4774f7200b890c5a1" xml="tokens/LTDBeget/dns/configurator/errors/ErrorsStore.php.xml"/>
+          </dir>
+          <dir name="traits">
+            <file name="RecordsIterateTrait.php" size="1846" time="2016-04-12T11:07:39+00:00" unixtime="1460459259" sha1="c82c5531c9dd2c086d24e2ab01405a240c8bcfc0" xml="tokens/LTDBeget/dns/configurator/traits/RecordsIterateTrait.php.xml"/>
+          </dir>
+        </dir>
+      </dir>
+    </dir>
+  </dir>
+</source>

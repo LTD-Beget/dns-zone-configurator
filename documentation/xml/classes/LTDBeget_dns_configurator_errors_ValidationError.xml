@@ -1,0 +1,161 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<class xmlns="http://xml.phpdox.net/src" full="LTDBeget\dns\configurator\errors\ValidationError" namespace="LTDBeget\dns\configurator\errors" name="ValidationError" abstract="false" final="false" start="20" end="164">
+  <file path="/home/damien/projects/dns-zone-configurator/src/LTDBeget/dns/configurator/errors" file="ValidationError.php" realpath="/home/damien/projects/dns-zone-configurator/src/LTDBeget/dns/configurator/errors/ValidationError.php" size="3720" time="2016-04-12T11:24:19+00:00" unixtime="1460460259" sha1="c59cf8f815f288b7041019da462c89695b3b57ec" relative="LTDBeget/dns/configurator/errors/ValidationError.php"/>
+  <docblock>
+    <description compact="Class ValidationError"/>
+    <package value="LTDBeget\dns\configurator\errors"/>
+  </docblock>
+  <member name="zone" type="{unknown}" default="" constant="NULL" visibility="private" static="false" line="25">
+    <docblock>
+      <description/>
+      <var type="object">
+        <type full="LTDBeget\dns\configurator\Zone" namespace="LTDBeget\dns\configurator" name="Zone"/>
+      </var>
+    </docblock>
+  </member>
+  <member name="node" type="{unknown}" default="" constant="NULL" visibility="private" static="false" line="29">
+    <docblock>
+      <description/>
+      <var type="object">
+        <type full="LTDBeget\dns\configurator\zoneEntities\Node" namespace="LTDBeget\dns\configurator\zoneEntities" name="Node"/>
+      </var>
+    </docblock>
+  </member>
+  <member name="record" type="{unknown}" default="" constant="NULL" visibility="private" static="false" line="33">
+    <docblock>
+      <description/>
+      <var type="object">
+        <type full="LTDBeget\dns\configurator\zoneEntities\record\base\Record" namespace="LTDBeget\dns\configurator\zoneEntities\record\base" name="Record"/>
+      </var>
+    </docblock>
+  </member>
+  <member name="errorCode" visibility="private" static="false" line="37">
+    <docblock>
+      <description/>
+      <var type="object">
+        <type full="LTDBeget\dns\enums\eErrorCode" namespace="LTDBeget\dns\enums" name="eErrorCode"/>
+      </var>
+    </docblock>
+  </member>
+  <member name="checkedAttribute" type="{unknown}" default="" constant="NULL" visibility="private" static="false" line="41">
+    <docblock>
+      <description/>
+      <var type="object">
+        <type full="LTDBeget\dns\configurator\errors\String" namespace="LTDBeget\dns\configurator\errors" name="String"/>
+      </var>
+    </docblock>
+  </member>
+  <constructor name="__construct" start="46" end="48" abstract="false" final="false" static="false" visibility="private">
+    <docblock>
+      <description compact="closed. Make instance only via static methods"/>
+    </docblock>
+  </constructor>
+  <method name="makeZoneError" start="55" end="62" abstract="false" final="false" static="true" visibility="public">
+    <docblock>
+      <description/>
+      <param type="object" variable="$zone">
+        <type full="LTDBeget\dns\configurator\Zone" namespace="LTDBeget\dns\configurator" name="Zone"/>
+      </param>
+      <param type="object" variable="$errorCode">
+        <type full="LTDBeget\dns\enums\eErrorCode" namespace="LTDBeget\dns\enums" name="eErrorCode"/>
+      </param>
+      <return type="object">
+        <type full="LTDBeget\dns\configurator\errors\ValidationError" namespace="LTDBeget\dns\configurator\errors" name="ValidationError"/>
+      </return>
+    </docblock>
+    <parameter name="zone" byreference="false" type="object">
+      <type full="LTDBeget\dns\configurator\Zone" namespace="LTDBeget\dns\configurator" name="Zone"/>
+    </parameter>
+    <parameter name="errorCode" byreference="false" type="object">
+      <type full="LTDBeget\dns\enums\eErrorCode" namespace="LTDBeget\dns\enums" name="eErrorCode"/>
+    </parameter>
+  </method>
+  <method name="makeNodeError" start="69" end="77" abstract="false" final="false" static="true" visibility="public">
+    <docblock>
+      <description/>
+      <param type="object" variable="$node">
+        <type full="LTDBeget\dns\configurator\zoneEntities\Node" namespace="LTDBeget\dns\configurator\zoneEntities" name="Node"/>
+      </param>
+      <param type="object" variable="$errorCode">
+        <type full="LTDBeget\dns\enums\eErrorCode" namespace="LTDBeget\dns\enums" name="eErrorCode"/>
+      </param>
+      <return type="object">
+        <type full="LTDBeget\dns\configurator\errors\ValidationError" namespace="LTDBeget\dns\configurator\errors" name="ValidationError"/>
+      </return>
+    </docblock>
+    <parameter name="node" byreference="false" type="object">
+      <type full="LTDBeget\dns\configurator\zoneEntities\Node" namespace="LTDBeget\dns\configurator\zoneEntities" name="Node"/>
+    </parameter>
+    <parameter name="errorCode" byreference="false" type="object">
+      <type full="LTDBeget\dns\enums\eErrorCode" namespace="LTDBeget\dns\enums" name="eErrorCode"/>
+    </parameter>
+  </method>
+  <method name="makeRecordError" start="85" end="95" abstract="false" final="false" static="true" visibility="public">
+    <docblock>
+      <description/>
+      <param type="object" variable="$record">
+        <type full="LTDBeget\dns\configurator\zoneEntities\record\base\Record" namespace="LTDBeget\dns\configurator\zoneEntities\record\base" name="Record"/>
+      </param>
+      <param type="object" variable="$errorCode">
+        <type full="LTDBeget\dns\enums\eErrorCode" namespace="LTDBeget\dns\enums" name="eErrorCode"/>
+      </param>
+      <param variable="$checked_atribute"/>
+      <return type="object">
+        <type full="LTDBeget\dns\configurator\errors\ValidationError" namespace="LTDBeget\dns\configurator\errors" name="ValidationError"/>
+      </return>
+    </docblock>
+    <parameter name="record" byreference="false" type="object">
+      <type full="LTDBeget\dns\configurator\zoneEntities\record\base\Record" namespace="LTDBeget\dns\configurator\zoneEntities\record\base" name="Record"/>
+    </parameter>
+    <parameter name="errorCode" byreference="false" type="object">
+      <type full="LTDBeget\dns\enums\eErrorCode" namespace="LTDBeget\dns\enums" name="eErrorCode"/>
+    </parameter>
+    <parameter name="checked_atribute" byreference="false" type="{unknown}"/>
+  </method>
+  <method name="toArray" start="100" end="117" abstract="false" final="false" static="false" visibility="public">
+    <docblock>
+      <description/>
+      <return type="array"/>
+    </docblock>
+  </method>
+  <method name="getZone" start="122" end="125" abstract="false" final="false" static="false" visibility="public">
+    <docblock>
+      <description/>
+      <return type="object">
+        <type full="LTDBeget\dns\configurator\Zone" namespace="LTDBeget\dns\configurator" name="Zone"/>
+      </return>
+    </docblock>
+  </method>
+  <method name="getNode" start="130" end="136" abstract="false" final="false" static="false" visibility="public">
+    <docblock>
+      <description/>
+      <return type="object">
+        <type full="LTDBeget\dns\configurator\zoneEntities\Node" namespace="LTDBeget\dns\configurator\zoneEntities" name="Node"/>
+      </return>
+    </docblock>
+  </method>
+  <method name="isHasNode" start="141" end="144" abstract="false" final="false" static="false" visibility="public">
+    <docblock>
+      <description/>
+      <return type="object">
+        <type full="LTDBeget\dns\configurator\errors\bool" namespace="LTDBeget\dns\configurator\errors" name="bool"/>
+      </return>
+    </docblock>
+  </method>
+  <method name="getRecord" start="149" end="155" abstract="false" final="false" static="false" visibility="public">
+    <docblock>
+      <description/>
+      <return type="object">
+        <type full="LTDBeget\dns\configurator\zoneEntities\record\base\Record" namespace="LTDBeget\dns\configurator\zoneEntities\record\base" name="Record"/>
+      </return>
+    </docblock>
+  </method>
+  <method name="isHasRecord" start="160" end="163" abstract="false" final="false" static="false" visibility="public">
+    <docblock>
+      <description/>
+      <return type="object">
+        <type full="LTDBeget\dns\configurator\errors\bool" namespace="LTDBeget\dns\configurator\errors" name="bool"/>
+      </return>
+    </docblock>
+  </method>
+</class>

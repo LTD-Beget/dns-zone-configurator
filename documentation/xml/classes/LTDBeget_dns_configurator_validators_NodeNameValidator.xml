@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<class xmlns="http://xml.phpdox.net/src" full="LTDBeget\dns\configurator\validators\NodeNameValidator" namespace="LTDBeget\dns\configurator\validators" name="NodeNameValidator" abstract="false" final="false" start="15" end="29">
+  <file path="/home/damien/projects/dns-zone-configurator/src/LTDBeget/dns/configurator/validators" file="NodeNameValidator.php" realpath="/home/damien/projects/dns-zone-configurator/src/LTDBeget/dns/configurator/validators/NodeNameValidator.php" size="470" time="2016-04-12T10:30:10+00:00" unixtime="1460457010" sha1="13e3d44151d83b0d1532b6533d74e5620cac8f95" relative="LTDBeget/dns/configurator/validators/NodeNameValidator.php"/>
+  <docblock>
+    <description compact="Class NodeNameValidator"/>
+    <package value="beget\lib\dns\lib\validators"/>
+  </docblock>
+  <method name="validate" start="21" end="28" abstract="false" final="false" static="true" visibility="public">
+    <docblock>
+      <description/>
+      <param variable="$value"/>
+      <return type="object">
+        <type full="LTDBeget\dns\configurator\validators\bool" namespace="LTDBeget\dns\configurator\validators" name="bool"/>
+      </return>
+    </docblock>
+    <parameter name="value" byreference="false" type="{unknown}"/>
+  </method>
+</class>

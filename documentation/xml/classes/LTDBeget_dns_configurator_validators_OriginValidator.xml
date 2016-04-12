@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<class xmlns="http://xml.phpdox.net/src" full="LTDBeget\dns\configurator\validators\OriginValidator" namespace="LTDBeget\dns\configurator\validators" name="OriginValidator" abstract="false" final="false" start="15" end="27">
+  <file path="/home/damien/projects/dns-zone-configurator/src/LTDBeget/dns/configurator/validators" file="OriginValidator.php" realpath="/home/damien/projects/dns-zone-configurator/src/LTDBeget/dns/configurator/validators/OriginValidator.php" size="465" time="2016-04-12T10:10:40+00:00" unixtime="1460455840" sha1="1d0197dfa55cc953d02dbddd9904c70351f50549" relative="LTDBeget/dns/configurator/validators/OriginValidator.php"/>
+  <docblock>
+    <description compact="Class OriginValidator"/>
+    <package value="beget\lib\dns\lib\validators"/>
+  </docblock>
+  <constant type="string" name="ORIGIN" value="&quot;/^([a-z0-9-_]+\.)+[a-z0-9-_]+$/&quot;"/>
+  <method name="validate" start="23" end="26" abstract="false" final="false" static="true" visibility="public">
+    <docblock>
+      <description/>
+      <param type="string" variable="$value"/>
+      <return type="mixed"/>
+    </docblock>
+    <parameter name="value" byreference="false" type="object">
+      <type full="LTDBeget\dns\configurator\validators\string" namespace="LTDBeget\dns\configurator\validators" name="string"/>
+    </parameter>
+  </method>
+</class>
