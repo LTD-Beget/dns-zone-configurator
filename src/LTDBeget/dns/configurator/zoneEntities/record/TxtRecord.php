@@ -23,7 +23,7 @@ class TxtRecord extends Record
     /**
      * @var String
      */
-    private $txtData;
+    protected $txtData;
 
     /**
      * TxtRecord constructor.
@@ -49,7 +49,7 @@ class TxtRecord extends Record
         }, $spited_string);
         $char_sets          = implode("\n", $spited_with_quotes);
 
-        return $this->getMainRecordPart() . "$char_sets";
+        return $this->getMainRecordPart() . " " . "$char_sets";
     }
 
     /**

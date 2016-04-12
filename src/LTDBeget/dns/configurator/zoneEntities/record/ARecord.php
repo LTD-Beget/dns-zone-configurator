@@ -19,7 +19,7 @@ class ARecord extends Record
     /**
      * @var string
      */
-    private $address;
+    protected $address;
 
     /**
      * ARecord constructor.

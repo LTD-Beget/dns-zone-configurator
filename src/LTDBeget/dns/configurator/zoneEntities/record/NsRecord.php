@@ -24,7 +24,7 @@ class NsRecord extends Record
     /**
      * @var String
      */
-    private $nsdName;
+    protected $nsdName;
 
     /**
      * NsRecord constructor.

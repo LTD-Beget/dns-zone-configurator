@@ -25,19 +25,19 @@ class SrvRecord extends Record
     /**
      * @var Int
      */
-    private $priority;
+    protected $priority;
     /**
      * @var Int
      */
-    private $weight;
+    protected $weight;
     /**
      * @var int
      */
-    private $port;
+    protected $port;
     /**
      * @var String
      */
-    private $target;
+    protected $target;
 
     /**
      * SrvRecord constructor.

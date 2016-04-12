@@ -25,7 +25,7 @@ class PtrRecord extends Record
     /**
      * @var String
      */
-    private $ptrDName;
+    protected $ptrDName;
 
     /**
      * PtrRecord constructor.

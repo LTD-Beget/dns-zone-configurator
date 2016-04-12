@@ -25,31 +25,31 @@ class SoaRecord extends Record
     /**
      * @var String
      */
-    private $mName;
+    protected $mName;
     /**
      * @var String
      */
-    private $rName;
+    protected $rName;
     /**
      * @var Int
      */
-    private $serial;
+    protected $serial;
     /**
      * @var Int
      */
-    private $refresh;
+    protected $refresh;
     /**
      * @var Int
      */
-    private $retry;
+    protected $retry;
     /**
      * @var Int
      */
-    private $expire;
+    protected $expire;
     /**
      * @var Int
      */
-    private $minimum;
+    protected $minimum;
 
     /**
      * SoaRecord constructor.

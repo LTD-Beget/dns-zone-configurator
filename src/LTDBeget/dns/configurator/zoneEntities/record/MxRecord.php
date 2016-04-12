@@ -25,11 +25,11 @@ class MxRecord extends Record
     /**
      * @var Int
      */
-    private $preference;
+    protected $preference;
     /**
      * @var String
      */
-    private $exchange;
+    protected $exchange;
 
     /**
      * MxRecord constructor.

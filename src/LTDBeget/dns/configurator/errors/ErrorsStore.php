@@ -46,6 +46,16 @@ class ErrorsStore
     }
 
     /**
+     * @return ValidationError[]
+     */
+    public function iterate()
+    {
+        foreach ($this->errors as $error) {
+            yield $error;
+        }
+    }
+
+    /**
      * @return array
      */
     public function toArray() : array

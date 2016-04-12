@@ -24,7 +24,7 @@ class CnameRecord extends Record
     /**
      * @var string
      */
-    private $cname;
+    protected $cname;
 
     /**
      * CnameRecord constructor.

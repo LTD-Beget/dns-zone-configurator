@@ -115,4 +115,50 @@ class ValidationError
 
         return $errorArray;
     }
+
+    /**
+     * @return Zone
+     */
+    public function getZone()
+    {
+        return $this->zone;
+    }
+
+    /**
+     * @return Node
+     */
+    public function getNode() : Node
+    {
+        if(! $this->isHasNode()) {
+            throw new \RuntimeException("ValidationError has no Node");
+        }
+        return $this->node;
+    }
+
+    /**
+     * @return bool
+     */
+    public function isHasNode() : bool
+    {
+        return !is_null($this->node);
+    }
+
+    /**
+     * @return Record
+     */
+    public function getRecord() : Record
+    {
+        if(! $this->isHasRecord()) {
+            throw new \RuntimeException("ValidationError has no Record");
+        }
+        return $this->record;
+    }
+
+    /**
+     * @return bool
+     */
+    public function isHasRecord() : bool
+    {
+        return !is_null($this->record);
+    }
 }

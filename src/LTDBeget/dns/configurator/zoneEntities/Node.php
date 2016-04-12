@@ -13,16 +13,7 @@ use LTDBeget\dns\configurator\validators\CnameNumberCheck;
 use LTDBeget\dns\configurator\validators\ConflictTypesValidator;
 use LTDBeget\dns\configurator\validators\NodeNameValidator;
 use LTDBeget\dns\configurator\Zone;
-use LTDBeget\dns\configurator\zoneEntities\record\AaaaRecord;
-use LTDBeget\dns\configurator\zoneEntities\record\ARecord;
 use LTDBeget\dns\configurator\zoneEntities\record\base\Record;
-use LTDBeget\dns\configurator\zoneEntities\record\CnameRecord;
-use LTDBeget\dns\configurator\zoneEntities\record\MxRecord;
-use LTDBeget\dns\configurator\zoneEntities\record\NsRecord;
-use LTDBeget\dns\configurator\zoneEntities\record\PtrRecord;
-use LTDBeget\dns\configurator\zoneEntities\record\SoaRecord;
-use LTDBeget\dns\configurator\zoneEntities\record\SrvRecord;
-use LTDBeget\dns\configurator\zoneEntities\record\TxtRecord;
 use LTDBeget\dns\enums\eErrorCode;
 use LTDBeget\dns\enums\eRecordNotification;
 use LTDBeget\dns\enums\eRecordType;
@@ -31,15 +22,6 @@ use LTDBeget\dns\enums\eRecordType;
  * Class Node
  *
  * @package LTDBeget\dns\configurator\zoneEntities
- * @method ARecord[] iterateA()
- * @method AaaaRecord[] iterateAaaa()
- * @method CnameRecord[] iterateCname()
- * @method MxRecord[] iterateMx()
- * @method NsRecord[] iterateNs()
- * @method PtrRecord[] iteratePtr()
- * @method SoaRecord[] iterateSoa()
- * @method SrvRecord[] iterateSrv()
- * @method TxtRecord[] iterateTxt()
  */
 class Node
 {
