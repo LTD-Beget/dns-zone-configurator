@@ -12,7 +12,7 @@ use LTDBeget\dns\configurator\deserializer\PlainDeserializer;
 use LTDBeget\dns\configurator\errors\ErrorsStore;
 use LTDBeget\dns\configurator\errors\ValidationError;
 use LTDBeget\dns\configurator\traits\RecordsIterateTrait;
-use LTDBeget\dns\configurator\validators\OriginValidator;
+use LTDBeget\dns\configurator\validators\HostnameValidator;
 use LTDBeget\dns\configurator\zoneEntities\Node;
 use LTDBeget\dns\configurator\zoneEntities\record\base\Record;
 use LTDBeget\dns\enums\eErrorCode;
@@ -218,7 +218,7 @@ class Zone
             $node->validate();
         }
 
-        if (!OriginValidator::validate($this->getOrigin())) {
+        if (!HostnameValidator::validate($this->getOrigin())) {
             $errorsStore->add(ValidationError::makeZoneError($this, eErrorCode::WRONG_ORIGIN()));
         }
 

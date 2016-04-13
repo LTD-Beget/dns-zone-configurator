@@ -77,7 +77,7 @@ class PtrRecord extends Record
         }
 
         if (!DnsZoneDomainNameValidator::validate($this->getPtrDName())) {
-            $errorStorage->add(ValidationError::makeRecordError($this, eErrorCode::WRONG_PTR_NAME(), "ptrDName"));
+            $errorStorage->add(ValidationError::makeRecordError($this, eErrorCode::WRONG_DOMAIN_NAME(), "ptrDName"));
         }
 
         /** @noinspection PhpInternalEntityUsedInspection */

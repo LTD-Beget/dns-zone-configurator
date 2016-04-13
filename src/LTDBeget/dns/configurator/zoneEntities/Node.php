@@ -171,15 +171,15 @@ class Node
             $errorsStore->add(ValidationError::makeNodeError($this, eErrorCode::MULTIPLE_CNAME_ERROR()));
         }
 
-        if (!DnsZoneDomainNameValidator::validate($this->getName())) {
-            $errorsStore->add(ValidationError::makeNodeError($this, eErrorCode::WRONG_NODE_NAME()));
-        }
-
         if ($this->getName() === "@" && ! SoaNumberCheck::validate($this)) {
             $errorsStore->add(ValidationError::makeNodeError($this, eErrorCode::SOA_ERROR()));
         }
 
+        $isValidNodeName = DnsZoneDomainNameValidator::validate($this->getName());
         foreach ($this->iterateRecords() as $record) {
+            if(!$isValidNodeName) {
+                $errorsStore->add(ValidationError::makeRecordError($record, eErrorCode::WRONG_NODE_NAME(), "name"));
+            }
             /** @noinspection PhpInternalEntityUsedInspection */
             $record->validate();
         }

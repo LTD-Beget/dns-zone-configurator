@@ -20,11 +20,16 @@ class DnsZoneDomainNameValidator
      */
     public static function validate(string $hostname) : bool 
     {
-        $hostname = preg_replace('/^\*\./', '', $hostname);
+        $hostname = preg_replace('/^\*\./', '', $hostname); // wild card allowed in hostname
+
+        /** @see http://stackoverflow.com/questions/2180465/can-domain-name-subdomains-have-an-underscore-in-it */
+        $hostname = preg_replace('/^_/', '', $hostname);
+        $hostname = preg_replace('/\._/', '.', $hostname);
+
         if(in_array($hostname, ['@', '*', '.'])) {
             return true;
         }
 
-        return OriginValidator::validate($hostname);
+        return HostnameValidator::validate($hostname);
     }
 }

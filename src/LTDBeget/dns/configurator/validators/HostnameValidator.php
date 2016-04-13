@@ -10,14 +10,14 @@ namespace LTDBeget\dns\configurator\validators;
 use Zend\Validator\Hostname;
 
 /**
- * Class OriginValidator
+ * Class HostnameValidator
  *
  * @package beget\lib\dns\lib\validators
  */
-class OriginValidator
+class HostnameValidator
 {
     /**
-     * @var OriginValidator
+     * @var HostnameValidator
      */
     static private $instance = null;
 
@@ -38,7 +38,7 @@ class OriginValidator
     }
 
     /**
-     * @return OriginValidator
+     * @return HostnameValidator
      */
     static private function getInstance() {
         return self::$instance ?? self::$instance = new static();
