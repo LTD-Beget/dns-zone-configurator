@@ -21,7 +21,7 @@ class PtrValidator
      * @param string $value
      * @return bool
      */
-    public static function validate(string $value)
+    public static function validate(string $value) : bool 
     {
         if (preg_match(self::IP4_HOST_RE, $value)) {
             $flip_ip = preg_replace(self::IP4_HOST_RE, '', $value);

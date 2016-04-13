@@ -18,7 +18,7 @@ class Ip4Validator
      * @param $value
      * @return bool
      */
-    public static function validate(string $value)
+    public static function validate(string $value) : bool 
     {
         return filter_var($value, FILTER_VALIDATE_IP, FILTER_FLAG_IPV4);
     }

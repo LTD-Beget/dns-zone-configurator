@@ -11,7 +11,7 @@ use LTDBeget\dns\configurator\errors\ValidationError;
 use LTDBeget\dns\configurator\traits\RecordsIterateTrait;
 use LTDBeget\dns\configurator\validators\CnameNumberCheck;
 use LTDBeget\dns\configurator\validators\ConflictTypesValidator;
-use LTDBeget\dns\configurator\validators\NodeNameValidator;
+use LTDBeget\dns\configurator\validators\DnsZoneDomainNameValidator;
 use LTDBeget\dns\configurator\validators\SoaNumberCheck;
 use LTDBeget\dns\configurator\Zone;
 use LTDBeget\dns\configurator\zoneEntities\record\base\Record;
@@ -171,7 +171,7 @@ class Node
             $errorsStore->add(ValidationError::makeNodeError($this, eErrorCode::MULTIPLE_CNAME_ERROR()));
         }
 
-        if (!NodeNameValidator::validate($this->getName())) {
+        if (!DnsZoneDomainNameValidator::validate($this->getName())) {
             $errorsStore->add(ValidationError::makeNodeError($this, eErrorCode::WRONG_NODE_NAME()));
         }
 

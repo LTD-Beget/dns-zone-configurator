@@ -7,6 +7,8 @@
 
 namespace LTDBeget\dns\configurator\validators;
 
+use Zend\Validator\Hostname;
+
 /**
  * Class OriginValidator
  *
@@ -14,14 +16,40 @@ namespace LTDBeget\dns\configurator\validators;
  */
 class OriginValidator
 {
-    const ORIGIN = "/^([a-z0-9-_]+\.)+[a-z0-9-_]+$/";
+    /**
+     * @var OriginValidator
+     */
+    static private $instance = null;
 
     /**
-     * @param string $value
-     * @return mixed
+     * @var Hostname
      */
-    public static function validate(string $value)
+    private        $validator;
+
+    /**
+     * DomainNameValidator constructor.
+     */
+    private function __construct() {
+        $this->validator = new Hostname([
+            'allow'         => Hostname::ALLOW_DNS | Hostname::ALLOW_LOCAL,
+            'useIdnCheck'   => false,
+            'useTldCheck'   => false
+        ]);
+    }
+
+    /**
+     * @return OriginValidator
+     */
+    static private function getInstance() {
+        return self::$instance ?? self::$instance = new static();
+    }
+
+    /**
+     * @param $hostname
+     * @return bool
+     */
+    public static function validate(string $hostname) : bool
     {
-        return preg_match(self::ORIGIN, $value);
+        return self::getInstance()->validator->isValid($hostname);
     }
 }

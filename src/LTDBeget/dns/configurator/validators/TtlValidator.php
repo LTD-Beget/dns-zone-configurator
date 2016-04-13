@@ -18,7 +18,7 @@ class TtlValidator
      * @param int $value
      * @return bool
      */
-    public static function validate(int $value)
+    public static function validate(int $value) : bool 
     {
         return $value >= 10 && $value <= 86400;
     }

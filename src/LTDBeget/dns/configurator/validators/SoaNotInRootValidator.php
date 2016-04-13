@@ -20,7 +20,7 @@ class SoaNotInRootValidator
      * @param SoaRecord $record
      * @return bool
      */
-    public static function validate(SoaRecord $record)
+    public static function validate(SoaRecord $record) : bool 
     {
         return $record->getNode()->getName() === "@";
     }

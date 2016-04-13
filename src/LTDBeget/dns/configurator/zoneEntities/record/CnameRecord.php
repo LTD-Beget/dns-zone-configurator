@@ -8,7 +8,7 @@
 namespace LTDBeget\dns\configurator\zoneEntities\record;
 
 use LTDBeget\dns\configurator\errors\ValidationError;
-use LTDBeget\dns\configurator\validators\DomainNameValidator;
+use LTDBeget\dns\configurator\validators\DnsZoneDomainNameValidator;
 use LTDBeget\dns\configurator\zoneEntities\Node;
 use LTDBeget\dns\configurator\zoneEntities\record\base\Record;
 use LTDBeget\dns\enums\eErrorCode;
@@ -72,7 +72,7 @@ class CnameRecord extends Record
     {
         $errorStorage = $this->getNode()->getZone()->getErrorsStore();
 
-        if (!DomainNameValidator::validate($this->getCname())) {
+        if (!DnsZoneDomainNameValidator::validate($this->getCname())) {
             $errorStorage->add(ValidationError::makeRecordError($this, eErrorCode::WRONG_DOMAIN_NAME(), "cname"));
         }
 

@@ -16,6 +16,7 @@
   "require": {
     "php": ">=7.0",
     "marc-mabe/php-enum" : "2.2.*",
+    "zendframework/zend-validator" : "2.7.*",
     "ltd-beget/dns-zone-parser": "dev-master"
   },
   "require-dev": {

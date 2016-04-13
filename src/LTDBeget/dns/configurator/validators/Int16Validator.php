@@ -17,7 +17,7 @@ class Int16Validator
      * @param $value
      * @return bool
      */
-    public static function validate(int $value)
+    public static function validate(int $value) : bool 
     {
         return $value >= 0 && $value <= 65535;
     }

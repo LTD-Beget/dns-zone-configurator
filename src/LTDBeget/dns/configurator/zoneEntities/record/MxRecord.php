@@ -8,7 +8,7 @@
 namespace LTDBeget\dns\configurator\zoneEntities\record;
 
 use LTDBeget\dns\configurator\errors\ValidationError;
-use LTDBeget\dns\configurator\validators\DomainNameValidator;
+use LTDBeget\dns\configurator\validators\DnsZoneDomainNameValidator;
 use LTDBeget\dns\configurator\validators\Int16Validator;
 use LTDBeget\dns\configurator\zoneEntities\Node;
 use LTDBeget\dns\configurator\zoneEntities\record\base\Record;
@@ -100,7 +100,7 @@ class MxRecord extends Record
             $errorStorage->add(ValidationError::makeRecordError($this, eErrorCode::WRONG_INT16(), "preference"));
         }
 
-        if (!DomainNameValidator::validate($this->getExchange())) {
+        if (!DnsZoneDomainNameValidator::validate($this->getExchange())) {
             $errorStorage->add(ValidationError::makeRecordError($this, eErrorCode::WRONG_DOMAIN_NAME(), "exchange"));
         }
 

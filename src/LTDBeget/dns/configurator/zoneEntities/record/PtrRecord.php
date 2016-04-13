@@ -8,7 +8,7 @@
 namespace LTDBeget\dns\configurator\zoneEntities\record;
 
 use LTDBeget\dns\configurator\errors\ValidationError;
-use LTDBeget\dns\configurator\validators\DomainNameValidator;
+use LTDBeget\dns\configurator\validators\DnsZoneDomainNameValidator;
 use LTDBeget\dns\configurator\validators\PtrValidator;
 use LTDBeget\dns\configurator\zoneEntities\Node;
 use LTDBeget\dns\configurator\zoneEntities\record\base\Record;
@@ -76,7 +76,7 @@ class PtrRecord extends Record
             $errorStorage->add(ValidationError::makeRecordError($this, eErrorCode::WRONG_PTR_NAME(), "ptrName"));
         }
 
-        if (!DomainNameValidator::validate($this->getPtrDName())) {
+        if (!DnsZoneDomainNameValidator::validate($this->getPtrDName())) {
             $errorStorage->add(ValidationError::makeRecordError($this, eErrorCode::WRONG_PTR_NAME(), "ptrDName"));
         }
 

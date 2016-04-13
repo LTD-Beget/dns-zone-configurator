@@ -21,7 +21,7 @@ class ConflictTypesValidator
      * @param Node $node
      * @return bool
      */
-    public static function validate(Node $node)
+    public static function validate(Node $node) : bool 
     {
         $conflictRecordsTypes = [];
         foreach ($node->iterateRecords() as $record) {

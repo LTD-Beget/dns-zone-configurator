@@ -20,7 +20,7 @@ class CnameNumberCheck
      * @param Node $node
      * @return bool
      */
-    public static function validate(Node $node)
+    public static function validate(Node $node) : bool 
     {
         $records = [];
         foreach ($node->iterateCname() as $record) {
