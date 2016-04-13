@@ -240,4 +240,27 @@ class Zone
     {
         return $this->origin;
     }
+
+    /**
+     * @return Zone
+     */
+    public function clear() : Zone
+    {
+        $this
+            ->dropNodes()
+            ->getErrorsStore()
+            ->clear();
+
+        return $this;
+    }
+
+    /**
+     * @return Zone
+     */
+    private function dropNodes() : Zone
+    {
+        $this->nodes = [];
+
+        return $this;
+    }
 }
