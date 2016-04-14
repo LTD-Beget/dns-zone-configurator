@@ -8,7 +8,7 @@
 namespace LTDBeget\dns\configurator\deserializer;
 
 use LTDBeget\dns\configurator\Zone;
-use LTDBeget\dnsZoneParser\DnsZoneParser;
+use LTDBeget\dns\Tokenizer;
 
 /**
  * Class PlainDeserializer
@@ -24,6 +24,6 @@ class PlainDeserializer
      */
     public static function deserialize(Zone $zone, string $data) : Zone
     {
-        return ArrayDeserializer::deserialize($zone, DnsZoneParser::parse($data));
+        return ArrayDeserializer::deserialize($zone, Tokenizer::tokenize($data));
     }
 }
