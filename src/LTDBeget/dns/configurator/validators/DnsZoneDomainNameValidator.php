@@ -26,6 +26,10 @@ class DnsZoneDomainNameValidator
         $hostname = preg_replace('/^_/', '', $hostname);
         $hostname = preg_replace('/\._/', '.', $hostname);
 
+        /** @see https://www.ietf.org/rfc/rfc1033.txt */
+        /** @see https://www.ietf.org/rfc/rfc1912.txt */
+        $hostname = preg_replace('/_/', '-', $hostname);
+
         if(in_array($hostname, ['@', '*', '.'])) {
             return true;
         }
