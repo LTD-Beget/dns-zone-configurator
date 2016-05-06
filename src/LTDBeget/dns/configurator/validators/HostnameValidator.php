@@ -38,18 +38,27 @@ class HostnameValidator
     }
 
     /**
-     * @return HostnameValidator
-     */
-    static private function getInstance() {
-        return self::$instance ?? self::$instance = new static();
-    }
-
-    /**
      * @param $hostname
      * @return bool
      */
     public static function validate(string $hostname) : bool
     {
+        /** @see http://stackoverflow.com/questions/2180465/can-domain-name-subdomains-have-an-underscore-in-it */
+        $hostname = preg_replace('/^_/', '', $hostname);
+        $hostname = preg_replace('/\._/', '.', $hostname);
+
+        /** @see https://www.ietf.org/rfc/rfc1033.txt */
+        /** @see https://www.ietf.org/rfc/rfc1912.txt */
+        $hostname = str_replace('_', '-', $hostname);
+        
         return self::getInstance()->validator->isValid($hostname);
+    }
+
+    /**
+     * @return HostnameValidator
+     */
+    static private function getInstance()
+    {
+        return self::$instance ?? self::$instance = new static();
     }
 }

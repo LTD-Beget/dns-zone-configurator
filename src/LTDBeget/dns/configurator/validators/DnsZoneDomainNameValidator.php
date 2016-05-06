@@ -22,18 +22,22 @@ class DnsZoneDomainNameValidator
     {
         $hostname = preg_replace('/^\*\./', '', $hostname); // wild card allowed in hostname
 
-        /** @see http://stackoverflow.com/questions/2180465/can-domain-name-subdomains-have-an-underscore-in-it */
-        $hostname = preg_replace('/^_/', '', $hostname);
-        $hostname = preg_replace('/\._/', '.', $hostname);
-
-        /** @see https://www.ietf.org/rfc/rfc1033.txt */
-        /** @see https://www.ietf.org/rfc/rfc1912.txt */
-        $hostname = preg_replace('/_/', '-', $hostname);
-
         if(in_array($hostname, ['@', '*', '.'])) {
             return true;
         }
 
-        return HostnameValidator::validate($hostname);
+        $hostnameValidation = HostnameValidator::validate($hostname);
+
+        if ($hostnameValidation) {
+            return true;
+        }
+        
+        $ipValidation = Ip4Validator::validate($hostname);
+
+        if ($ipValidation) {
+            return true;
+        }
+
+        return false;
     }
 }

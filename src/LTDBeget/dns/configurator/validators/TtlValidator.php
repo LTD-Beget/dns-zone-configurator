@@ -20,6 +20,6 @@ class TtlValidator
      */
     public static function validate(int $value) : bool 
     {
-        return $value >= 10 && $value <= 86400;
+        return $value >= 0 && $value <= 2147483647;
     }
 }
