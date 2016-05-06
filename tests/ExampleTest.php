@@ -14,10 +14,10 @@ class ExampleTest extends PHPUnit_Framework_TestCase
 {
     public function testZone()
     {
-        $data = file_get_contents(__DIR__ . "/../dns/zones/zone.conf");
-        $zone = Zone::fromString("voksiv.ru.", $data);
+        $data = file_get_contents(__DIR__ . '/../dns/zones/zone.conf');
+        $zone = Zone::fromString('voksiv.ru.', $data);
         $zone->toArray();
-        $zone->__toString();
+        $zone = Zone::fromString('voksiv.ru.', (string) $zone);
         $zone->validate();
     }
 }

@@ -46,7 +46,7 @@ trait RecordsIterateTrait
     public function __call($name, $arguments)
     {
         try {
-            $type = eRecordType::get(mb_strtoupper(str_replace("iterate", "", $name)));
+            $type = eRecordType::get(mb_strtoupper(str_replace('iterate', '', $name)));
 
             return $this->iterateRecords($type);
         } catch (InvalidArgumentException $e) {

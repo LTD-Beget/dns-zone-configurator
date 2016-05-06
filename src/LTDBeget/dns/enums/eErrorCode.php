@@ -60,22 +60,22 @@ class eErrorCode extends Enum
      * @var array
      */
     protected static $textForCode = [
-        self::WRONG_ORIGIN                => "Wrong origin value.",
-        self::WRONG_NODE_NAME             => "Wrong node name value",
-        self::CONFLICT_RECORD_TYPES_ERROR => "Conflict types records in node (A,NS,CNAME)",
-        self::SOA_ERROR                   => "Multiple SOA or no SOA",
-        self::WRONG_NS_IN_ROOT            => "Wrong ns records in root",
-        self::SOA_RECORD_NOT_IN_ROOT      => "SOA record not in root",
-        self::MULTIPLE_CNAME_ERROR        => "Multiple cname record",
-        self::NO_NS_IN_ROOT               => "No NS records in root",
-        self::WRONG_TTL                   => "Wrong value for TTL",
-        self::WRONG_IP_V4                 => "Value must be IP v4",
-        self::WRONG_IP_V6                 => "Value must be IP v6",
-        self::WRONG_DOMAIN_NAME           => "Value must be correct domain name",
-        self::WRONG_INT16                 => "Value must be int 16 bit",
-        self::WRONG_PTR_NAME              => "Wrong PTR record name",
-        self::EMPTY_TXT                   => "Empty txt record",
-        self::WRONG_INT32                 => "Value must be int 32 bit",
+        self::WRONG_ORIGIN                => 'Wrong origin value.',
+        self::WRONG_NODE_NAME             => 'Wrong node name value',
+        self::CONFLICT_RECORD_TYPES_ERROR => 'Conflict types records in node (A,NS,CNAME)',
+        self::SOA_ERROR                   => 'Multiple SOA or no SOA',
+        self::WRONG_NS_IN_ROOT            => 'Wrong ns records in root',
+        self::SOA_RECORD_NOT_IN_ROOT      => 'SOA record not in root',
+        self::MULTIPLE_CNAME_ERROR        => 'Multiple cname record',
+        self::NO_NS_IN_ROOT               => 'No NS records in root',
+        self::WRONG_TTL                   => 'Wrong value for TTL',
+        self::WRONG_IP_V4                 => 'Value must be IP v4',
+        self::WRONG_IP_V6                 => 'Value must be IP v6',
+        self::WRONG_DOMAIN_NAME           => 'Value must be correct domain name',
+        self::WRONG_INT16                 => 'Value must be int 16 bit',
+        self::WRONG_PTR_NAME              => 'Wrong PTR record name',
+        self::EMPTY_TXT                   => 'Empty txt record',
+        self::WRONG_INT32                 => 'Value must be int 32 bit',
     ];
 
     /**
@@ -83,6 +83,6 @@ class eErrorCode extends Enum
      */
     public function getText() : string
     {
-        return self::$textForCode[$this->getValue()];
+        return self::$textForCode[(int) $this->getValue()];
     }
 }

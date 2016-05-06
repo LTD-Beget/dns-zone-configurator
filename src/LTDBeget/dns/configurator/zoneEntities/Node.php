@@ -89,6 +89,16 @@ class Node
     }
 
     /**
+     * @param eRecordType|NULL $type
+     */
+    public function removeRecords(eRecordType $type = NULL)
+    {
+        foreach ($this->iterateRecords($type) as $record) {
+            $record->remove();
+        }
+    }
+
+    /**
      * @param eRecordType|null $type
      * @return Record[]
      */
@@ -100,13 +110,11 @@ class Node
     }
 
     /**
-     * @param eRecordType|NULL $type
+     * @return RecordsStore
      */
-    public function removeRecords(eRecordType $type = NULL)
+    protected function getRecordsStore() : RecordsStore
     {
-        foreach ($this->iterateRecords($type) as $record) {
-            $record->remove();
-        }
+        return $this->recordsStore;
     }
 
     /**
@@ -115,14 +123,6 @@ class Node
     public function isEmptyNode() : bool
     {
         return $this->getRecordsStore()->count() === 0;
-    }
-
-    /**
-     * @return RecordsStore
-     */
-    protected function getRecordsStore() : RecordsStore
-    {
-        return $this->recordsStore;
     }
 
     /**
@@ -171,14 +171,14 @@ class Node
             $errorsStore->add(ValidationError::makeNodeError($this, eErrorCode::MULTIPLE_CNAME_ERROR()));
         }
 
-        if ($this->getName() === "@" && ! SoaNumberCheck::validate($this)) {
+        if ($this->getName() === '@' && !SoaNumberCheck::validate($this)) {
             $errorsStore->add(ValidationError::makeNodeError($this, eErrorCode::SOA_ERROR()));
         }
 
         $isValidNodeName = DnsZoneDomainNameValidator::validate($this->getName());
         foreach ($this->iterateRecords() as $record) {
             if(!$isValidNodeName) {
-                $errorsStore->add(ValidationError::makeRecordError($record, eErrorCode::WRONG_NODE_NAME(), "name"));
+                $errorsStore->add(ValidationError::makeRecordError($record, eErrorCode::WRONG_NODE_NAME(), 'name'));
             }
             /** @noinspection PhpInternalEntityUsedInspection */
             $record->validate();

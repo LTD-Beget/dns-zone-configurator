@@ -19,7 +19,7 @@ use MabeEnum\Enum;
  */
 class eRecordNotification extends Enum
 {
-    const ADD    = "ADD";
-    const REMOVE = "REMOVE";
-    const CHANGE = "CHANGE";
+    const ADD    = 'ADD';
+    const REMOVE = 'REMOVE';
+    const CHANGE = 'CHANGE';
 }

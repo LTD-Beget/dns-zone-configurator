@@ -44,7 +44,7 @@ class CnameRecord extends Record
      */
     public function __toString() : string
     {
-        return $this->getMainRecordPart() . " " . $this->getCname();
+        return $this->getMainRecordPart() . ' ' . $this->getCname();
     }
 
     /**
@@ -61,7 +61,7 @@ class CnameRecord extends Record
      */
     public function setCname($cname) : CnameRecord
     {
-        return $this->setAttribute("cname", $cname);
+        return $this->setAttribute('cname', $cname);
     }
 
     /**
@@ -73,7 +73,7 @@ class CnameRecord extends Record
         $errorStorage = $this->getNode()->getZone()->getErrorsStore();
 
         if (!DnsZoneDomainNameValidator::validate($this->getCname())) {
-            $errorStorage->add(ValidationError::makeRecordError($this, eErrorCode::WRONG_DOMAIN_NAME(), "cname"));
+            $errorStorage->add(ValidationError::makeRecordError($this, eErrorCode::WRONG_DOMAIN_NAME(), 'cname'));
         }
 
         /** @noinspection PhpInternalEntityUsedInspection */
@@ -86,7 +86,7 @@ class CnameRecord extends Record
     protected function recordDataToArray() : array
     {
         return [
-            "CNAME" => $this->getCname()
+            'CNAME' => $this->getCname()
         ];
     }
 }

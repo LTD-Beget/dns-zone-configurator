@@ -61,7 +61,7 @@ class PtrRecord extends Record
      */
     public function setPtrDName(string $ptrDName)
     {
-        $this->setAttribute("ptrDName", $ptrDName);
+        $this->setAttribute('ptrDName', $ptrDName);
     }
 
     /**
@@ -73,11 +73,11 @@ class PtrRecord extends Record
         $errorStorage = $this->getNode()->getZone()->getErrorsStore();
 
         if (!PtrValidator::validate($this->getPtrValue())) {
-            $errorStorage->add(ValidationError::makeRecordError($this, eErrorCode::WRONG_PTR_NAME(), "ptrName"));
+            $errorStorage->add(ValidationError::makeRecordError($this, eErrorCode::WRONG_PTR_NAME(), 'ptrName'));
         }
 
         if (!DnsZoneDomainNameValidator::validate($this->getPtrDName())) {
-            $errorStorage->add(ValidationError::makeRecordError($this, eErrorCode::WRONG_DOMAIN_NAME(), "ptrDName"));
+            $errorStorage->add(ValidationError::makeRecordError($this, eErrorCode::WRONG_DOMAIN_NAME(), 'ptrDName'));
         }
 
         /** @noinspection PhpInternalEntityUsedInspection */
@@ -98,7 +98,7 @@ class PtrRecord extends Record
     protected function recordDataToArray() : array
     {
         return [
-            "PTRDNAME" => $this->getPtrDName()
+            'PTRDNAME' => $this->getPtrDName()
         ];
     }
 }

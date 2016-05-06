@@ -80,7 +80,7 @@ class Zone
             $records[] = (string) $record;
         }
 
-        return implode("\n", $records);
+        return (string) implode("\n", $records);
     }
 
     /**

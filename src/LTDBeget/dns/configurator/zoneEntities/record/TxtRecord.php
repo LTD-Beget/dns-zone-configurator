@@ -47,9 +47,16 @@ class TxtRecord extends Record
         $spited_with_quotes = array_map(function ($value) {
             return "\"$value\"";
         }, $spited_string);
+
         $char_sets          = implode("\n", $spited_with_quotes);
 
-        return $this->getMainRecordPart() . " " . "$char_sets";
+        if (count($spited_with_quotes) > 1) {
+            $rdataString = " ( \n" . $char_sets . "\n ) \n";
+        } else {
+            $rdataString = ' ' . $char_sets;
+        }
+
+        return $this->getMainRecordPart() . $rdataString;
     }
 
     /**
@@ -66,7 +73,7 @@ class TxtRecord extends Record
      */
     public function setTxtData(string $txtData) : TxtRecord
     {
-        return $this->setAttribute("txtData", $txtData);
+        return $this->setAttribute('txtData', $txtData);
     }
 
     /**
@@ -77,7 +84,7 @@ class TxtRecord extends Record
         $errorStorage = $this->getNode()->getZone()->getErrorsStore();
 
         if (strlen($this->getTxtData()) === 0) {
-            $errorStorage->add(ValidationError::makeRecordError($this, eErrorCode::EMPTY_TXT(), "txtData"));
+            $errorStorage->add(ValidationError::makeRecordError($this, eErrorCode::EMPTY_TXT(), 'txtData'));
         }
 
         /** @noinspection PhpInternalEntityUsedInspection */
@@ -90,7 +97,7 @@ class TxtRecord extends Record
     protected function recordDataToArray() : array
     {
         return [
-            "TXTDATA" => $this->getTxtData()
+            'TXTDATA' => $this->getTxtData()
         ];
     }
 }

@@ -85,7 +85,7 @@ class RecordsStore
     public function iterate(eRecordType $type = NULL)
     {
         foreach ($this->records as $record) {
-            if (is_null($type)) {
+            if (NULL === $type) {
                 yield $record;
             } elseif ($record->getType()->is($type)) {
                 yield $record;

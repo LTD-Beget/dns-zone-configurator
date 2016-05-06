@@ -60,7 +60,7 @@ class NsRecord extends Record
      */
     public function setNsdName(string $nsdName)
     {
-        $this->setAttribute("nsdName", $nsdName);
+        $this->setAttribute('nsdName', $nsdName);
     }
 
     /**
@@ -72,7 +72,7 @@ class NsRecord extends Record
         $errorStorage = $this->getNode()->getZone()->getErrorsStore();
 
         if (!DnsZoneDomainNameValidator::validate($this->getNsdName())) {
-            $errorStorage->add(ValidationError::makeRecordError($this, eErrorCode::WRONG_DOMAIN_NAME(), "nsdName"));
+            $errorStorage->add(ValidationError::makeRecordError($this, eErrorCode::WRONG_DOMAIN_NAME(), 'nsdName'));
         }
 
         /** @noinspection PhpInternalEntityUsedInspection */
@@ -85,7 +85,7 @@ class NsRecord extends Record
     protected function recordDataToArray() : array
     {
         return [
-            "NSDNAME" => $this->getNsdName()
+            'NSDNAME' => $this->getNsdName()
         ];
     }
 }

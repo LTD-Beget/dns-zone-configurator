@@ -92,7 +92,7 @@ class SoaRecord extends Record
      */
     public function __toString() : string
     {
-        return $this->getMainRecordPart() . " " . implode(" ", [
+        return $this->getMainRecordPart() . ' ' . implode(' ', [
             $this->getMName(),
             $this->getRName(),
             $this->getSerial(),
@@ -117,7 +117,7 @@ class SoaRecord extends Record
      */
     public function setMName(string $mName) : SoaRecord
     {
-        return $this->setAttribute("mName", $mName);
+        return $this->setAttribute('mName', $mName);
     }
 
     /**
@@ -134,7 +134,7 @@ class SoaRecord extends Record
      */
     public function setRName(string $rName) : SoaRecord
     {
-        return $this->setAttribute("rName", $rName);
+        return $this->setAttribute('rName', $rName);
     }
 
     /**
@@ -151,7 +151,7 @@ class SoaRecord extends Record
      */
     public function setSerial(int $serial) : SoaRecord
     {
-        return $this->setAttribute("serial", $serial);
+        return $this->setAttribute('serial', $serial);
     }
 
     /**
@@ -168,7 +168,7 @@ class SoaRecord extends Record
      */
     public function setRefresh(int $refresh) : SoaRecord
     {
-        return $this->setAttribute("refresh", $refresh);
+        return $this->setAttribute('refresh', $refresh);
     }
 
     /**
@@ -185,7 +185,7 @@ class SoaRecord extends Record
      */
     public function setRetry(int $retry) : SoaRecord
     {
-        return $this->setAttribute("retry", $retry);
+        return $this->setAttribute('retry', $retry);
     }
 
     /**
@@ -202,7 +202,7 @@ class SoaRecord extends Record
      */
     public function setExpire(int $expire) : SoaRecord
     {
-        return $this->setAttribute("expire", $expire);
+        return $this->setAttribute('expire', $expire);
     }
 
     /**
@@ -219,7 +219,7 @@ class SoaRecord extends Record
      */
     public function setMinimum(int $minimum) : SoaRecord
     {
-        return $this->setAttribute("minimum", $minimum);
+        return $this->setAttribute('minimum', $minimum);
     }
 
     /**
@@ -230,7 +230,7 @@ class SoaRecord extends Record
         $errorStorage = $this->getNode()->getZone()->getErrorsStore();
 
         if (!SoaNotInRootValidator::validate($this)) {
-            $errorStorage->add(ValidationError::makeRecordError($this, eErrorCode::SOA_RECORD_NOT_IN_ROOT(), "name"));
+            $errorStorage->add(ValidationError::makeRecordError($this, eErrorCode::SOA_RECORD_NOT_IN_ROOT(), 'name'));
         }
 
         $attributes = [
@@ -257,13 +257,13 @@ class SoaRecord extends Record
     protected function recordDataToArray() : array
     {
         return [
-            "MNAME"   => $this->getMName(),
-            "RNAME"   => $this->getRName(),
-            "SERIAL"  => $this->getSerial(),
-            "REFRESH" => $this->getRefresh(),
-            "RETRY"   => $this->getRetry(),
-            "EXPIRE"  => $this->getExpire(),
-            "MINIMUM" => $this->getMinimum()
+            'MNAME'   => $this->getMName(),
+            'RNAME'   => $this->getRName(),
+            'SERIAL'  => $this->getSerial(),
+            'REFRESH' => $this->getRefresh(),
+            'RETRY'   => $this->getRetry(),
+            'EXPIRE'  => $this->getExpire(),
+            'MINIMUM' => $this->getMinimum()
         ];
     }
 }

@@ -39,7 +39,7 @@ class ARecord extends Record
      */
     public function __toString() : string
     {
-        return $this->getMainRecordPart() . " " . $this->getAddress();
+        return $this->getMainRecordPart() . ' ' . $this->getAddress();
     }
 
     /**
@@ -56,7 +56,7 @@ class ARecord extends Record
      */
     public function setAddress($address)
     {
-        return $this->setAttribute("address", $address);
+        return $this->setAttribute('address', $address);
     }
 
     /**
@@ -68,7 +68,7 @@ class ARecord extends Record
         $errorStorage = $this->getNode()->getZone()->getErrorsStore();
 
         if (!Ip4Validator::validate($this->getAddress())) {
-            $errorStorage->add(ValidationError::makeRecordError($this, eErrorCode::WRONG_IP_V4(), "address"));
+            $errorStorage->add(ValidationError::makeRecordError($this, eErrorCode::WRONG_IP_V4(), 'address'));
         }
 
         /** @noinspection PhpInternalEntityUsedInspection */
@@ -81,7 +81,7 @@ class ARecord extends Record
     protected function recordDataToArray() : array
     {
         return [
-            "ADDRESS" => $this->getAddress()
+            'ADDRESS' => $this->getAddress()
         ];
     }
 }

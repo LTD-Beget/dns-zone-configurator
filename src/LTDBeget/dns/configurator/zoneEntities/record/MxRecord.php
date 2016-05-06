@@ -68,7 +68,7 @@ class MxRecord extends Record
      */
     public function setPreference(int $preference) : MxRecord
     {
-        return $this->setAttribute("preference", $preference);
+        return $this->setAttribute('preference', $preference);
     }
 
     /**
@@ -85,7 +85,7 @@ class MxRecord extends Record
      */
     public function setExchange(string $exchange) : MxRecord
     {
-        return $this->setAttribute("exchange", $exchange);
+        return $this->setAttribute('exchange', $exchange);
     }
 
     /**
@@ -97,11 +97,11 @@ class MxRecord extends Record
         $errorStorage = $this->getNode()->getZone()->getErrorsStore();
 
         if (!Int16Validator::validate($this->getPreference())) {
-            $errorStorage->add(ValidationError::makeRecordError($this, eErrorCode::WRONG_INT16(), "preference"));
+            $errorStorage->add(ValidationError::makeRecordError($this, eErrorCode::WRONG_INT16(), 'preference'));
         }
 
         if (!DnsZoneDomainNameValidator::validate($this->getExchange())) {
-            $errorStorage->add(ValidationError::makeRecordError($this, eErrorCode::WRONG_DOMAIN_NAME(), "exchange"));
+            $errorStorage->add(ValidationError::makeRecordError($this, eErrorCode::WRONG_DOMAIN_NAME(), 'exchange'));
         }
 
         /** @noinspection PhpInternalEntityUsedInspection */
@@ -114,8 +114,8 @@ class MxRecord extends Record
     protected function recordDataToArray() : array
     {
         return [
-            "EXCHANGE"   => $this->getExchange(),
-            "PREFERENCE" => $this->getPreference()
+            'EXCHANGE'   => $this->getExchange(),
+            'PREFERENCE' => $this->getPreference()
         ];
     }
 }

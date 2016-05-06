@@ -44,7 +44,7 @@ class AaaaRecord extends Record
      */
     public function __toString() : string
     {
-        return $this->getMainRecordPart() . " " . $this->getAddress();
+        return $this->getMainRecordPart() . ' ' . $this->getAddress();
     }
 
     /**
@@ -61,7 +61,7 @@ class AaaaRecord extends Record
      */
     public function setAddress(string $address) : AaaaRecord
     {
-        return $this->setAttribute("address", $address);
+        return $this->setAttribute('address', $address);
     }
 
     /**
@@ -73,7 +73,7 @@ class AaaaRecord extends Record
         $errorStorage = $this->getNode()->getZone()->getErrorsStore();
 
         if (!Ip6Validator::validate($this->getAddress())) {
-            $errorStorage->add(ValidationError::makeRecordError($this, eErrorCode::WRONG_IP_V6(), "address"));
+            $errorStorage->add(ValidationError::makeRecordError($this, eErrorCode::WRONG_IP_V6(), 'address'));
         }
 
         /** @noinspection PhpInternalEntityUsedInspection */
@@ -86,7 +86,7 @@ class AaaaRecord extends Record
     protected function recordDataToArray() : array
     {
         return [
-            "ADDRESS" => $this->getAddress()
+            'ADDRESS' => $this->getAddress()
         ];
     }
 }

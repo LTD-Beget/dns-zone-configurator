@@ -119,10 +119,10 @@ abstract class Record
     public function toArray() : array
     {
         return [
-            "NAME"  => $this->getNode()->getName(),
-            "TTL"   => $this->getTtl(),
-            "TYPE"  => (string) $this->getType(),
-            "RDATA" => $this->recordDataToArray()
+            'NAME'  => $this->getNode()->getName(),
+            'TTL'   => $this->getTtl(),
+            'TYPE'  => (string) $this->getType(),
+            'RDATA' => $this->recordDataToArray()
         ];
     }
 
@@ -139,7 +139,7 @@ abstract class Record
      */
     public function setTtl(int $value)
     {
-        $this->setAttribute("ttl", $value);
+        $this->setAttribute('ttl', $value);
     }
 
     /**
@@ -184,7 +184,7 @@ abstract class Record
         $errorStorage = $this->getNode()->getZone()->getErrorsStore();
 
         if (!TtlValidator::validate($this->getTtl())) {
-            $errorStorage->add(ValidationError::makeRecordError($this, eErrorCode::WRONG_TTL(), "ttl"));
+            $errorStorage->add(ValidationError::makeRecordError($this, eErrorCode::WRONG_TTL(), 'ttl'));
         }
 
         return !$errorStorage->isHasErrors();

@@ -22,15 +22,15 @@ class ValidationError
     /**
      * @var Zone
      */
-    private $zone = NULL;
+    private $zone;
     /**
      * @var Node
      */
-    private $node = NULL;
+    private $node;
     /**
      * @var Record
      */
-    private $record = NULL;
+    private $record;
     /**
      * @var eErrorCode
      */
@@ -38,7 +38,7 @@ class ValidationError
     /**
      * @var String
      */
-    private $checkedAttribute = NULL;
+    private $checkedAttribute;
 
     /**
      * closed. Make instance only via static methods
@@ -100,17 +100,17 @@ class ValidationError
     public function toArray() : array
     {
         $errorArray              = [];
-        $errorArray["code"]      = $this->errorCode->getValue();
-        $errorArray["errorText"] = $this->errorCode->getText();
-        $errorArray["origin"]    = $this->zone->getOrigin();
+        $errorArray['code']      = $this->errorCode->getValue();
+        $errorArray['errorText'] = $this->errorCode->getText();
+        $errorArray['origin']    = $this->zone->getOrigin();
 
-        if (!is_null($this->node)) {
-            $errorArray["node"] = $this->node->getName();
+        if (!NULL === $this->node) {
+            $errorArray['node'] = $this->node->getName();
         }
 
-        if (!is_null($this->record)) {
-            $errorArray["recordData"]       = $this->record->toArray();
-            $errorArray["checkedAttribute"] = $this->checkedAttribute;
+        if (!NULL === $this->record) {
+            $errorArray['recordData']       = $this->record->toArray();
+            $errorArray['checkedAttribute'] = $this->checkedAttribute;
         }
 
         return $errorArray;
@@ -130,7 +130,7 @@ class ValidationError
     public function getNode() : Node
     {
         if(! $this->isHasNode()) {
-            throw new \RuntimeException("ValidationError has no Node");
+            throw new \RuntimeException('ValidationError has no Node');
         }
         return $this->node;
     }
@@ -140,7 +140,7 @@ class ValidationError
      */
     public function isHasNode() : bool
     {
-        return !is_null($this->node);
+        return !NULL === $this->node;
     }
 
     /**
@@ -149,7 +149,7 @@ class ValidationError
     public function getRecord() : Record
     {
         if(! $this->isHasRecord()) {
-            throw new \RuntimeException("ValidationError has no Record");
+            throw new \RuntimeException('ValidationError has no Record');
         }
         return $this->record;
     }
@@ -159,6 +159,6 @@ class ValidationError
      */
     public function isHasRecord() : bool
     {
-        return !is_null($this->record);
+        return !NULL === $this->record;
     }
 }

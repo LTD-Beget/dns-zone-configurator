@@ -63,8 +63,8 @@ class SrvRecord extends Record
      */
     public function __toString() : string
     {
-        return $this->getMainRecordPart() . " " .
-        implode(" ", [
+        return $this->getMainRecordPart() . ' ' .
+        implode(' ', [
             $this->getPriority(),
             $this->getWeight(),
             $this->getPort(),
@@ -86,7 +86,7 @@ class SrvRecord extends Record
      */
     public function setPriority(int $priority) : SrvRecord
     {
-        return $this->setAttribute("priority", $priority);
+        return $this->setAttribute('priority', $priority);
     }
 
     /**
@@ -103,7 +103,7 @@ class SrvRecord extends Record
      */
     public function setWeight(int $weight) : SrvRecord
     {
-        return $this->setAttribute("weight", $weight);
+        return $this->setAttribute('weight', $weight);
     }
 
     /**
@@ -120,7 +120,7 @@ class SrvRecord extends Record
      */
     public function setPort(int $port) : SrvRecord
     {
-        return $this->setAttribute("port", $port);
+        return $this->setAttribute('port', $port);
     }
 
     /**
@@ -137,7 +137,7 @@ class SrvRecord extends Record
      */
     public function setTarget(string $target) : SrvRecord
     {
-        return $this->setAttribute("target", $target);
+        return $this->setAttribute('target', $target);
     }
 
     /**
@@ -148,7 +148,7 @@ class SrvRecord extends Record
         $errorStorage = $this->getNode()->getZone()->getErrorsStore();
 
         if (!DnsZoneDomainNameValidator::validate($this->getTarget())) {
-            $errorStorage->add(ValidationError::makeRecordError($this, eErrorCode::WRONG_DOMAIN_NAME(), "name"));
+            $errorStorage->add(ValidationError::makeRecordError($this, eErrorCode::WRONG_DOMAIN_NAME(), 'name'));
         }
 
         $attributes = [
@@ -173,10 +173,10 @@ class SrvRecord extends Record
     protected function recordDataToArray() : array
     {
         return [
-            "PRIORITY" => $this->getPriority(),
-            "WEIGHT"   => $this->getWeight(),
-            "PORT"     => $this->getPort(),
-            "TARGET"   => $this->getTarget()
+            'PRIORITY' => $this->getPriority(),
+            'WEIGHT'   => $this->getWeight(),
+            'PORT'     => $this->getPort(),
+            'TARGET'   => $this->getTarget()
         ];
     }
 }

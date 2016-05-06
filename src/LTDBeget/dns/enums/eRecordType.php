@@ -25,13 +25,13 @@ use MabeEnum\Enum;
  */
 class eRecordType extends Enum
 {
-    const SOA   = "SOA";
-    const A     = "A";
-    const AAAA  = "AAAA";
-    const CNAME = "CNAME";
-    const MX    = "MX";
-    const NS    = "NS";
-    const PTR   = "PTR";
-    const TXT   = "TXT";
-    const SRV   = "SRV";
+    const SOA   = 'SOA';
+    const A     = 'A';
+    const AAAA  = 'AAAA';
+    const CNAME = 'CNAME';
+    const MX    = 'MX';
+    const NS    = 'NS';
+    const PTR   = 'PTR';
+    const TXT   = 'TXT';
+    const SRV   = 'SRV';
 }

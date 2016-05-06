@@ -19,7 +19,7 @@ class HostnameValidator
     /**
      * @var HostnameValidator
      */
-    static private $instance = null;
+    static private $instance;
 
     /**
      * @var Hostname
