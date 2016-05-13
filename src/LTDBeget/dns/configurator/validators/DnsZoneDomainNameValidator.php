@@ -20,11 +20,15 @@ class DnsZoneDomainNameValidator
      */
     public static function validate(string $hostname) : bool 
     {
-        $hostname = preg_replace('/^\*\./', '', $hostname); // wild card allowed in hostname
-
-        if(in_array($hostname, ['@', '*', '.'])) {
+        if (in_array($hostname, ['@', '*'])) {
             return true;
         }
+
+        if (strpos($hostname, '@') !== false && strlen($hostname) > 1) {
+            return false;
+        }
+
+        $hostname = preg_replace('/^\*\./', '', $hostname); // wild card allowed in hostname
 
         $hostnameValidation = HostnameValidator::validate($hostname);
 

@@ -25,7 +25,7 @@ class ConflictTypesValidator
     {
         $conflictRecordsTypes = [];
         foreach ($node->iterateRecords() as $record) {
-            if (in_array((string) $record, [
+            if (in_array((string) $record->getType(), [
                 eRecordType::CNAME,
                 eRecordType::A,
                 eRecordType::NS
@@ -33,8 +33,9 @@ class ConflictTypesValidator
                 $conflictRecordsTypes[] = $record->getType();
             }
         }
-        $conflictRecordsTypes = array_unique($conflictRecordsTypes);
+        $conflictRecordsTypes  = array_unique($conflictRecordsTypes);
+        $conflictRecordsAmount = count($conflictRecordsTypes);
 
-        return count($conflictRecordsTypes) <= 1;
+        return $node->getName() === '@' ? $conflictRecordsAmount <= 2 : $conflictRecordsAmount <= 1;
     }
 }
