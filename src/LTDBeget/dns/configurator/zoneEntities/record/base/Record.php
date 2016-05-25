@@ -65,12 +65,7 @@ abstract class Record
      */
     protected function refreshHash()
     {
-        $this->hash = md5(implode('#', [
-            $this->getNode()->getName(),
-            (string) $this->getType(),
-            implode('#', $this->recordDataToArray()),
-            $this->getNode()->getZone()->getOrigin()
-        ]));
+        $this->hash = md5(((string) $this) . $this->getNode()->getZone()->getOrigin());
     }
 
     /**
@@ -80,19 +75,6 @@ abstract class Record
     {
         return $this->node;
     }
-
-    /**
-     * @return eRecordType
-     */
-    public function getType()
-    {
-        return $this->type;
-    }
-
-    /**
-     * @return array
-     */
-    abstract protected function recordDataToArray() : array;
 
     /**
      * Marks this record as needed to remove
@@ -159,6 +141,19 @@ abstract class Record
     {
         $this->setAttribute('ttl', $value);
     }
+
+    /**
+     * @return eRecordType
+     */
+    public function getType()
+    {
+        return $this->type;
+    }
+
+    /**
+     * @return array
+     */
+    abstract protected function recordDataToArray() : array;
 
     /**
      * @param $name
