@@ -24,34 +24,13 @@ class RecordsStore
 
     /**
      * @param Record $record
-     * @return bool
-     */
-    public function isContain(Record $record) : bool
-    {
-        return isset($this->records[$record->getHash()]);
-    }
-
-    /**
-     * @param Record $record
      * @return RecordsStore
      */
     public function remove(Record $record) : RecordsStore
     {
-        unset($this->records[$record->getHash()]);
-
-        return $this;
-    }
-
-    /**
-     * @param Record $record
-     * @return RecordsStore
-     */
-    public function change(Record $record) : RecordsStore
-    {
-        foreach ($this->records as $hash => $recordStored) {
-            if ($recordStored->isEqual($record)) {
-                unset($this->records[$hash]);
-                $this->append($record);
+        foreach ($this->records as $key => $recordStored) {
+            if ($recordStored === $record) {
+                unset($this->records[$key]);
                 break;
             }
         }
@@ -65,7 +44,7 @@ class RecordsStore
      */
     public function append(Record $record) : RecordsStore
     {
-        $this->records[$record->getHash()] = $record;
+        $this->records[] = $record;
 
         return $this;
     }

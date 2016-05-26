@@ -164,8 +164,6 @@ abstract class Record
     {
         $this->{$name} = $value;
         $this->refreshHash();
-        /** @noinspection PhpInternalEntityUsedInspection */
-        $this->getNode()->notify($this, eRecordNotification::CHANGE());
 
         return $this;
     }

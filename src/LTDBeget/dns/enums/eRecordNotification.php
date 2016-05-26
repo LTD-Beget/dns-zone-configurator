@@ -15,11 +15,9 @@ use MabeEnum\Enum;
  * @package LTDBeget\dns\enums
  * @method static eRecordNotification ADD()
  * @method static eRecordNotification REMOVE()
- * @method static eRecordNotification CHANGE()
  */
 class eRecordNotification extends Enum
 {
     const ADD    = 'ADD';
     const REMOVE = 'REMOVE';
-    const CHANGE = 'CHANGE';
 }

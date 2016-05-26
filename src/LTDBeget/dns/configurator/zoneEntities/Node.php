@@ -141,9 +141,6 @@ class Node
                 $this->recordsStore->remove($record);
                 $this->removedRecordsStore->append($record);
                 break;
-            case eRecordNotification::CHANGE:
-                $this->getRecordsStore()->change($record);
-                break;
         }
 
         return $this;
