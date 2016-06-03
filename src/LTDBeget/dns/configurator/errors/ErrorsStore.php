@@ -46,9 +46,9 @@ class ErrorsStore
     }
 
     /**
-     * @return ValidationError[]
+     * @return  \Generator|ValidationError[]
      */
-    public function iterate()
+    public function iterate() : \Generator
     {
         foreach ($this->errors as $error) {
             yield $error;

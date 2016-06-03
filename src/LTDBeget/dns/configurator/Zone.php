@@ -107,9 +107,9 @@ class Zone
     }
 
     /**
-     * @return Node[]
+     * @return \Generator|Node[]
      */
-    public function iterateNodes()
+    public function iterateNodes() : \Generator
     {
         foreach ($this->nodes as $node) {
             yield $node;
@@ -118,9 +118,9 @@ class Zone
 
     /**
      * @param eRecordType|null $type
-     * @return Record[]
+     * @return \Generator|Record[]
      */
-    public function iterateRecords(eRecordType $type = NULL)
+    public function iterateRecords(eRecordType $type = NULL) : \Generator
     {
         foreach ($this->iterateNodes() as $node) {
             foreach ($node->iterateRecords($type) as $record) {
