@@ -71,9 +71,9 @@ class Node
     }
 
     /**
-     * @return Record[]
+     * @return  \Generator|Record[]
      */
-    public function iterateRemoved()
+    public function iterateRemoved() : \Generator
     {
         foreach ($this->getRemovedRecordsStore()->iterate() as $record) {
             yield $record;
@@ -100,9 +100,9 @@ class Node
 
     /**
      * @param eRecordType|null $type
-     * @return Record[]
+     * @return  \Generator|Record[]
      */
-    public function iterateRecords(eRecordType $type = NULL)
+    public function iterateRecords(eRecordType $type = NULL) : \Generator
     {
         foreach ($this->getRecordsStore()->iterate($type) as $record) {
             yield $record;

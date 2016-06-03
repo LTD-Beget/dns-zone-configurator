@@ -59,9 +59,9 @@ class RecordsStore
 
     /**
      * @param eRecordType $type
-     * @return record\base\Record[]
+     * @return  \Generator|record\base\Record[]
      */
-    public function iterate(eRecordType $type = NULL)
+    public function iterate(eRecordType $type = NULL) : \Generator
     {
         foreach ($this->records as $record) {
             if (NULL === $type) {
