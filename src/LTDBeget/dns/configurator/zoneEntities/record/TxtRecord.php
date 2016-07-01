@@ -34,8 +34,22 @@ class TxtRecord extends Record
      */
     public function __construct(Node $node, int $ttl, string $txtData)
     {
-        $this->txtData = $txtData;
+        $this->txtData = $this->sanitizeTxtData($txtData);
         parent::__construct($node, eRecordType::TXT(), $ttl);
+    }
+
+    /**
+     * @param string $txtData
+     * @return string
+     */
+    private function sanitizeTxtData(string $txtData) : string
+    {
+        $txtDataArray = explode('\"', trim($txtData, '"'));
+        $txtDataArray = array_map(function ($value) {
+            return str_replace('"', '\"', $value);
+        }, $txtDataArray);
+
+        return implode('\"', $txtDataArray);
     }
 
     /**
@@ -73,7 +87,7 @@ class TxtRecord extends Record
      */
     public function setTxtData(string $txtData) : TxtRecord
     {
-        return $this->setAttribute('txtData', $txtData);
+        return $this->setAttribute('txtData', $this->sanitizeTxtData($txtData));
     }
 
     /**
