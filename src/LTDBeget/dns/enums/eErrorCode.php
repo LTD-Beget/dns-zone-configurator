@@ -11,8 +11,9 @@ use MabeEnum\Enum;
 
 /**
  * Class ErrorCode
- *
- * @package beget\lib\dns\lib\errors
+ 
+ * 
+*@package beget\lib\dns\lib\errors
  * @method static eErrorCode WRONG_ORIGIN()
  * @method static eErrorCode WRONG_NODE_NAME()
  * @method static eErrorCode CONFLICT_RECORD_TYPES_ERROR()
@@ -29,6 +30,7 @@ use MabeEnum\Enum;
  * @method static eErrorCode WRONG_PTR_NAME()
  * @method static eErrorCode EMPTY_TXT()
  * @method static eErrorCode WRONG_INT32()
+ * @method static eErrorCode CONTAINS_CONTROL_SYMBOLS()
  */
 class eErrorCode extends Enum
 {
@@ -53,6 +55,7 @@ class eErrorCode extends Enum
     const WRONG_PTR_NAME              = 14;
     const EMPTY_TXT                   = 15;
     const WRONG_INT32                 = 16;
+    const CONTAINS_CONTROL_SYMBOLS    = 17;
 
     /**
      * Preset text for known error codes
@@ -76,6 +79,7 @@ class eErrorCode extends Enum
         self::WRONG_PTR_NAME              => 'Wrong PTR record name',
         self::EMPTY_TXT                   => 'Empty txt record',
         self::WRONG_INT32                 => 'Value must be int 32 bit',
+        self::CONTAINS_CONTROL_SYMBOLS    => 'Value must contain only printable characters, not control',
     ];
 
     /**

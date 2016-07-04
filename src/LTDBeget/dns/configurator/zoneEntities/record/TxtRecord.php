@@ -101,6 +101,10 @@ class TxtRecord extends Record
             $errorStorage->add(ValidationError::makeRecordError($this, eErrorCode::EMPTY_TXT(), 'txtData'));
         }
 
+        if (!ctype_print($this->getTxtData())) {
+            $errorStorage->add(ValidationError::makeRecordError($this, eErrorCode::CONTAINS_CONTROL_SYMBOLS(), 'txtData'));
+        }
+
         /** @noinspection PhpInternalEntityUsedInspection */
         return parent::validate();
     }
