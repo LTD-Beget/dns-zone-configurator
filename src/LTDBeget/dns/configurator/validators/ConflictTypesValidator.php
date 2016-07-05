@@ -24,17 +24,24 @@ class ConflictTypesValidator
     public static function validate(Node $node) : bool 
     {
         $conflictRecordsTypes = [];
+        $allRecords           = [];
         foreach ($node->iterateRecords() as $record) {
             if (in_array((string) $record->getType(), [
                 eRecordType::CNAME,
                 eRecordType::A,
                 eRecordType::NS
             ])) {
-                $conflictRecordsTypes[] = $record->getType();
+                $conflictRecordsTypes[] = (string) $record->getType();
             }
+            $allRecords[] = (string) $record->getType();
+
         }
         $conflictRecordsTypes  = array_unique($conflictRecordsTypes);
         $conflictRecordsAmount = count($conflictRecordsTypes);
+
+        if (count($allRecords) > 1 && in_array(eRecordType::CNAME, $allRecords)) {
+            return false;
+        }
 
         return $node->getName() === '@' ? $conflictRecordsAmount <= 2 : $conflictRecordsAmount <= 1;
     }
