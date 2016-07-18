@@ -44,7 +44,7 @@ class TxtRecord extends Record
      */
     private function sanitizeTxtData(string $txtData) : string
     {
-        $txtDataArray = explode('\"', trim($txtData, '"'));
+        $txtDataArray = explode('\"', $txtData);
         $txtDataArray = array_map(function ($value) {
             return str_replace('"', '\"', $value);
         }, $txtDataArray);
