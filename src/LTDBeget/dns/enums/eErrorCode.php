@@ -11,8 +11,8 @@ use MabeEnum\Enum;
 
 /**
  * Class ErrorCode
- 
- * 
+
+*
 *@package beget\lib\dns\lib\errors
  * @method static eErrorCode WRONG_ORIGIN()
  * @method static eErrorCode WRONG_NODE_NAME()
@@ -31,6 +31,7 @@ use MabeEnum\Enum;
  * @method static eErrorCode EMPTY_TXT()
  * @method static eErrorCode WRONG_INT32()
  * @method static eErrorCode CONTAINS_CONTROL_SYMBOLS()
+ * @method static eErrorCode OUT_OF_ZONE_DATE()
  */
 class eErrorCode extends Enum
 {
@@ -56,6 +57,7 @@ class eErrorCode extends Enum
     const EMPTY_TXT                   = 15;
     const WRONG_INT32                 = 16;
     const CONTAINS_CONTROL_SYMBOLS    = 17;
+    const OUT_OF_ZONE_DATE            = 18;
 
     /**
      * Preset text for known error codes
@@ -80,6 +82,7 @@ class eErrorCode extends Enum
         self::EMPTY_TXT                   => 'Empty txt record',
         self::WRONG_INT32                 => 'Value must be int 32 bit',
         self::CONTAINS_CONTROL_SYMBOLS    => 'Value must contain only printable characters, not control',
+        self::OUT_OF_ZONE_DATE            => 'Out of zone data'
     ];
 
     /**

@@ -12,6 +12,7 @@ use LTDBeget\dns\configurator\traits\RecordsIterateTrait;
 use LTDBeget\dns\configurator\validators\CnameNumberCheck;
 use LTDBeget\dns\configurator\validators\ConflictTypesValidator;
 use LTDBeget\dns\configurator\validators\DnsZoneDomainNameValidator;
+use LTDBeget\dns\configurator\validators\OutOfZoneDataValidator;
 use LTDBeget\dns\configurator\validators\SoaNumberCheck;
 use LTDBeget\dns\configurator\Zone;
 use LTDBeget\dns\configurator\zoneEntities\record\base\Record;
@@ -170,6 +171,10 @@ class Node
 
         if ($this->getName() === '@' && !SoaNumberCheck::validate($this)) {
             $errorsStore->add(ValidationError::makeNodeError($this, eErrorCode::SOA_ERROR()));
+        }
+
+        if (!OutOfZoneDataValidator::validate($this)) {
+            $errorsStore->add(ValidationError::makeNodeError($this, eErrorCode::OUT_OF_ZONE_DATE()));
         }
 
         $isValidNodeName = DnsZoneDomainNameValidator::validate($this->getName());
