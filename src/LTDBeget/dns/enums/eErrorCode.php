@@ -32,6 +32,7 @@ use MabeEnum\Enum;
  * @method static eErrorCode WRONG_INT32()
  * @method static eErrorCode CONTAINS_CONTROL_SYMBOLS()
  * @method static eErrorCode OUT_OF_ZONE_DATE()
+ * @method static eErrorCode INCORRECT_ESCAPING()
  */
 class eErrorCode extends Enum
 {
@@ -58,6 +59,7 @@ class eErrorCode extends Enum
     const WRONG_INT32                 = 16;
     const CONTAINS_CONTROL_SYMBOLS    = 17;
     const OUT_OF_ZONE_DATE            = 18;
+    const INCORRECT_ESCAPING          = 19;
 
     /**
      * Preset text for known error codes
@@ -82,7 +84,8 @@ class eErrorCode extends Enum
         self::EMPTY_TXT                   => 'Empty txt record',
         self::WRONG_INT32                 => 'Value must be int 32 bit',
         self::CONTAINS_CONTROL_SYMBOLS    => 'Value must contain only printable characters, not control',
-        self::OUT_OF_ZONE_DATE            => 'Out of zone data'
+        self::OUT_OF_ZONE_DATE            => 'Out of zone data',
+        self::INCORRECT_ESCAPING          => 'Incorrect escaping at the end of line'
     ];
 
     /**
