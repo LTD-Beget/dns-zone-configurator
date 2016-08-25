@@ -49,60 +49,60 @@ class ArrayDeserializer
         switch ($record_type) {
             case eRecordType::A:
                 $recordAppender->appendARecord(
-                    $record_data['ADDRESS'],
-                    $record_ttl);
+                    (string) $record_data['ADDRESS'],
+                    (int) $record_ttl);
                 break;
             case eRecordType::AAAA:
                 $recordAppender->appendAaaaRecord(
-                    $record_data['ADDRESS'],
-                    $record_ttl);
+                    (string) $record_data['ADDRESS'],
+                    (int) $record_ttl);
                 break;
             case eRecordType::CNAME:
                 $recordAppender->appendCNameRecord(
-                    $record_data['CNAME'],
-                    $record_ttl);
+                    (string) $record_data['CNAME'],
+                    (int) $record_ttl);
                 break;
             case eRecordType::MX:
                 $recordAppender->appendMxRecord(
-                    $record_data['PREFERENCE'],
-                    $record_data['EXCHANGE'],
-                    $record_ttl);
+                    (string) $record_data['PREFERENCE'],
+                    (string) $record_data['EXCHANGE'],
+                    (int) $record_ttl);
                 break;
             case eRecordType::NS:
                 $recordAppender->appendNsRecord(
-                    $record_data['NSDNAME'],
-                    $record_ttl);
+                    (string) $record_data['NSDNAME'],
+                    (int) $record_ttl);
                 break;
             case eRecordType::PTR:
                 $recordAppender->appendPtrRecord(
-                    $record_data['PTRDNAME'],
-                    $record_ttl);
+                    (string) $record_data['PTRDNAME'],
+                    (int) $record_ttl);
                 break;
             case eRecordType::SOA:
                 $recordAppender->appendSoaRecord(
-                    $record_data['MNAME'],
-                    $record_data['RNAME'],
-                    $record_data['SERIAL'],
-                    $record_data['REFRESH'],
-                    $record_data['RETRY'],
-                    $record_data['EXPIRE'],
-                    $record_data['MINIMUM'],
-                    $record_ttl
+                    (string) $record_data['MNAME'],
+                    (string) $record_data['RNAME'],
+                    (int) $record_data['SERIAL'],
+                    (int) $record_data['REFRESH'],
+                    (int) $record_data['RETRY'],
+                    (int) $record_data['EXPIRE'],
+                    (int) $record_data['MINIMUM'],
+                    (int) $record_ttl
                 );
                 break;
             case eRecordType::SRV:
                 $recordAppender->appendSrvRecord(
-                    $record_data['PRIORITY'],
-                    $record_data['WEIGHT'],
-                    $record_data['PORT'],
-                    $record_data['TARGET'],
-                    $record_ttl
+                    (int) $record_data['PRIORITY'],
+                    (int) $record_data['WEIGHT'],
+                    (int) $record_data['PORT'],
+                    (string) $record_data['TARGET'],
+                    (int) $record_ttl
                 );
                 break;
             case eRecordType::TXT:
                 $recordAppender->appendTxtRecord(
-                    $record_data['TXTDATA'],
-                    $record_ttl
+                    (string) $record_data['TXTDATA'],
+                    (int) $record_ttl
                 );
                 break;
         }
