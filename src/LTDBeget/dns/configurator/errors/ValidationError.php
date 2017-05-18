@@ -104,11 +104,11 @@ class ValidationError
         $errorArray['errorText'] = $this->errorCode->getText();
         $errorArray['origin']    = $this->zone->getOrigin();
 
-        if (!NULL === $this->node) {
+        if (NULL !== $this->node) {
             $errorArray['node'] = $this->node->getName();
         }
 
-        if (!NULL === $this->record) {
+        if (NULL !== $this->record) {
             $errorArray['recordData']       = $this->record->toArray();
             $errorArray['checkedAttribute'] = $this->checkedAttribute;
         }
@@ -140,7 +140,7 @@ class ValidationError
      */
     public function isHasNode() : bool
     {
-        return !NULL === $this->node;
+        return NULL !== $this->node;
     }
 
     /**
@@ -159,6 +159,14 @@ class ValidationError
      */
     public function isHasRecord() : bool
     {
-        return !NULL === $this->record;
+        return NULL !== $this->record;
+    }
+
+    /**
+     * @return eErrorCode
+     */
+    public function getErrorCode(): eErrorCode
+    {
+        return $this->errorCode;
     }
 }
