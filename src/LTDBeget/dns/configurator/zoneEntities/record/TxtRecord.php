@@ -57,10 +57,10 @@ class TxtRecord extends Record
      */
     public function __toString() : string
     {
-        $spited_string      = str_split($this->getTxtData(), 255);
+        $splitted_string      = $this->splitTxtData();
         $spited_with_quotes = array_map(function ($value) {
             return "\"$value\"";
-        }, $spited_string);
+        }, $splitted_string);
 
         $char_sets          = implode("\n", $spited_with_quotes);
 
@@ -71,6 +71,21 @@ class TxtRecord extends Record
         }
 
         return $this->getMainRecordPart() . $rdataString;
+    }
+
+    /**
+     * @param int $length
+     * @return array
+     */
+    private function splitTxtData(int $length = 255) : array
+    {
+        $splitted_string = str_split($this->getTxtData(), $length);
+
+        if(count(array_filter($splitted_string, function (string $value) { return $value === '"';}))) {
+            $splitted_string = $this->splitTxtData(--$length);
+        }
+
+        return $splitted_string;
     }
 
     /**
