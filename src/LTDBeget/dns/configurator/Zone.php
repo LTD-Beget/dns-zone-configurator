@@ -98,8 +98,11 @@ class Zone
             }
         }
 
-        ksort($nodes);
-        $this->nodes = array_merge($_nodes, $nodes);
+        ksort($nodes, SORT_STRING);
+        foreach ($nodes as $name => $node) {
+            $_nodes[$name] = $node;
+        }
+        $this->nodes = $_nodes;
 
         foreach ($this->iterateNodes() as $node) {
             $node->sort();
@@ -148,7 +151,7 @@ class Zone
      */
     public function getNodeNames() : array
     {
-        return array_keys($this->nodes);
+        return array_map('strval', array_keys($this->nodes));
     }
 
     /**
