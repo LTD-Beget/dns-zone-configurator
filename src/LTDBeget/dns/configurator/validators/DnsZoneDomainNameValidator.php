@@ -28,6 +28,17 @@ class DnsZoneDomainNameValidator
             return false;
         }
 
+        foreach (explode('.', $hostname) as $hostPiece) {
+            /**
+             * RFC 3696
+             * Each DNS label must not exceed 63 characters and should consist of any combination of alphabetic characters
+             */
+            if (strlen($hostPiece) > 63)
+            {
+                return false;
+            }
+        }
+
         $hostname = preg_replace('/^\*\./', '', $hostname); // wild card allowed in hostname
 
         $hostnameValidation = HostnameValidator::validate($hostname);
