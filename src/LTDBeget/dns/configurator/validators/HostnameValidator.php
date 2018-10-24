@@ -50,7 +50,18 @@ class HostnameValidator
         /** @see https://www.ietf.org/rfc/rfc1033.txt */
         /** @see https://www.ietf.org/rfc/rfc1912.txt */
         $hostname = str_replace('_', '-', $hostname);
-        
+
+        foreach (explode('.', $hostname) as $hostPiece) {
+            /**
+             * @see https://www.ietf.org/rfc/rfc3696.txt
+             * Each DNS label must not exceed 63 characters and should consist of any combination of alphabetic characters
+             */
+            if (strlen($hostPiece) > 63)
+            {
+                return false;
+            }
+        }
+
         return self::getInstance()->validator->isValid($hostname);
     }
 
