@@ -10,6 +10,7 @@ namespace LTDBeget\dns\configurator\zoneEntities;
 use LTDBeget\dns\configurator\zoneEntities\record\AaaaRecord;
 use LTDBeget\dns\configurator\zoneEntities\record\ARecord;
 use LTDBeget\dns\configurator\zoneEntities\record\CnameRecord;
+use LTDBeget\dns\configurator\zoneEntities\record\CaaRecord;
 use LTDBeget\dns\configurator\zoneEntities\record\MxRecord;
 use LTDBeget\dns\configurator\zoneEntities\record\NsRecord;
 use LTDBeget\dns\configurator\zoneEntities\record\PtrRecord;
@@ -170,5 +171,18 @@ class RecordAppender
     public function appendTxtRecord(string $txtData, int $ttl = NULL) : TxtRecord
     {
         return new TxtRecord($this->node, $ttl ?? $this->defaultTtl, $txtData);
+    }
+
+    /**
+     * @param int      $flags
+     * @param string   $tag
+     * @param string   $value
+     * @param int|NULL $ttl
+     *
+     * @return CaaRecord
+     */
+    public function appendCaaRecord(int $flags, string $tag, string $value, int $ttl = NULL) : CaaRecord
+    {
+        return new CaaRecord($this->node, $ttl ?? $this->defaultTtl, $flags, $tag, $value);
     }
 }

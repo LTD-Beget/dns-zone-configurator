@@ -11,9 +11,8 @@ use MabeEnum\Enum;
 
 /**
  * Class ErrorCode
-
-*
-*@package beget\lib\dns\lib\errors
+ *
+ * @package beget\lib\dns\lib\errors
  * @method static eErrorCode WRONG_ORIGIN()
  * @method static eErrorCode WRONG_NODE_NAME()
  * @method static eErrorCode CONFLICT_RECORD_TYPES_ERROR()
@@ -33,6 +32,9 @@ use MabeEnum\Enum;
  * @method static eErrorCode CONTAINS_CONTROL_SYMBOLS()
  * @method static eErrorCode OUT_OF_ZONE_DATE()
  * @method static eErrorCode INCORRECT_ESCAPING()
+ * @method static eErrorCode WRONG_CAA_VALUE()
+ * @method static eErrorCode WRONG_CAA_FLAGS()
+ * @method static eErrorCode WRONG_CAA_TAG()
  */
 class eErrorCode extends Enum
 {
@@ -60,6 +62,9 @@ class eErrorCode extends Enum
     const CONTAINS_CONTROL_SYMBOLS    = 17;
     const OUT_OF_ZONE_DATE            = 18;
     const INCORRECT_ESCAPING          = 19;
+    const WRONG_CAA_VALUE             = 20;
+    const WRONG_CAA_FLAGS             = 21;
+    const WRONG_CAA_TAG               = 22;
 
     /**
      * Preset text for known error codes
@@ -85,14 +90,17 @@ class eErrorCode extends Enum
         self::WRONG_INT32                 => 'Value must be int 32 bit',
         self::CONTAINS_CONTROL_SYMBOLS    => 'Value must contain only printable characters, not control',
         self::OUT_OF_ZONE_DATE            => 'Out of zone data',
-        self::INCORRECT_ESCAPING          => 'Incorrect escaping at the end of line'
+        self::INCORRECT_ESCAPING          => 'Incorrect escaping at the end of line',
+        self::WRONG_CAA_VALUE             => 'Invalid value, check tag and RFC6844',
+        self::WRONG_CAA_FLAGS             => 'Flags must be greater than 0 and less than 128',
+        self::WRONG_CAA_TAG               => 'Invalid tag',
     ];
 
     /**
      * @return string
      */
-    public function getText() : string
+    public function getText(): string
     {
-        return self::$textForCode[(int) $this->getValue()];
+        return self::$textForCode[(int)$this->getValue()];
     }
 }

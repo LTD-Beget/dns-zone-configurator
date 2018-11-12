@@ -22,6 +22,7 @@ use MabeEnum\Enum;
  * @method static eRecordType PTR()
  * @method static eRecordType TXT()
  * @method static eRecordType SRV()
+ * @method static eRecordType CAA()
  */
 class eRecordType extends Enum
 {
@@ -34,4 +35,5 @@ class eRecordType extends Enum
     const PTR   = 'PTR';
     const TXT   = 'TXT';
     const SRV   = 'SRV';
+    const CAA   = 'CAA';
 }

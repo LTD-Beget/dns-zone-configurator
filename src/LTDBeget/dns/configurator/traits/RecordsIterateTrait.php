@@ -13,6 +13,7 @@ use LTDBeget\dns\configurator\zoneEntities\record\AaaaRecord;
 use LTDBeget\dns\configurator\zoneEntities\record\ARecord;
 use LTDBeget\dns\configurator\zoneEntities\record\base\Record;
 use LTDBeget\dns\configurator\zoneEntities\record\CnameRecord;
+use LTDBeget\dns\configurator\zoneEntities\record\CaaRecord;
 use LTDBeget\dns\configurator\zoneEntities\record\MxRecord;
 use LTDBeget\dns\configurator\zoneEntities\record\NsRecord;
 use LTDBeget\dns\configurator\zoneEntities\record\PtrRecord;
@@ -34,6 +35,7 @@ use LTDBeget\dns\enums\eRecordType;
  * @method SoaRecord[] iterateSoa()
  * @method SrvRecord[] iterateSrv()
  * @method TxtRecord[] iterateTxt()
+ * @method CaaRecord[] iterateCaa()
  */
 trait RecordsIterateTrait
 {
