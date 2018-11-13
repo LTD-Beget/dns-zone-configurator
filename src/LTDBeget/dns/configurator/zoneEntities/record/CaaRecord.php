@@ -135,8 +135,6 @@ class CaaRecord extends Record
     {
         $errorStorage = $this->getNode()->getZone()->getErrorsStore();
 
-        \Yii::error($this->getTag(), 'check');
-
         if (!in_array($this->tag, [self::TAG_ISSUE, self::TAG_ISSUEWILD, self::TAG_IODEF])) {
             $errorStorage->add(ValidationError::makeRecordError($this, eErrorCode::WRONG_CAA_TAG(), 'tag'));
         }
