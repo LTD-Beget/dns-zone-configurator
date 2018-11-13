@@ -17,11 +17,11 @@
     "php": ">=7.0",
     "marc-mabe/php-enum" : "~2.2",
     "zendframework/zend-validator" : "~2.7",
-    "ltd-beget/dns-zone-tokenizer": "~0.0.5"
+    "ltd-beget/dns-zone-tokenizer": "~0.0.6"
   },
   "require-dev": {
     "theseer/phpdox": "~0.8",
-    "phpunit/phpunit": "~5.2",
+    "phpunit/phpunit": "~7.3",
     "tideways/profiler": "~2.0"
   },
   "autoload": {

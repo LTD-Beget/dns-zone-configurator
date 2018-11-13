@@ -105,6 +105,14 @@ class ArrayDeserializer
                     (int) $record_ttl
                 );
                 break;
+            case eRecordType::CAA:
+                $recordAppender->appendCaaRecord(
+                    (int) $record_data['FLAGS'],
+                    (string) $record_data['TAG'],
+                    (string) $record_data['VALUE'],
+                    (int) $record_ttl
+                );
+                break;
         }
     }
 
