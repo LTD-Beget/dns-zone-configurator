@@ -22,8 +22,8 @@ class CaaRecord extends Record
     const TAG_ISSUEWILD = 'issuewild';
     /** @var string specifies a URL to which a certificate authority may report policy violations */
     const TAG_IODEF = 'iodef';
-    /** @var string  проверка по FQDN */
-    const PATTERN_FQDN = '/^([a-zа-яё0-9\_]([a-zа-яё0-9\-]{0,61}[a-zа-яё0-9])?\.)*([a-zа-яё0-9]([a-zа-яё0-9\-]{0,61}[a-zа-яё0-9])?\.)+[a-zа-яё0-9-]{2,30}$/i';
+    /** @var string  проверка по FQDN  rfc6844 5.2 */
+    const PATTERN_FQDN = '/^([a-z0-9\-]([a-z0-9\-]{0,61}[a-z0-9])?\.)*([a-z0-9]([a-z0-9\-]{0,61}[a-z0-9])?\.)+[a-z0-9-]{2,30}$/i';
 
     /**
      * @var Int
