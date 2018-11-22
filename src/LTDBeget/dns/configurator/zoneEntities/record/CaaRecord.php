@@ -140,7 +140,7 @@ class CaaRecord extends Record
         }
 
         if ($this->flags < 0 || $this->flags > 255) {
-            $errorStorage->add(ValidationError::makeRecordError($this, eErrorCode::WRONG_CAA_FLAG(), 'flag'));
+            $errorStorage->add(ValidationError::makeRecordError($this, eErrorCode::WRONG_CAA_FLAGS(), 'flag'));
         }
 
         if (!Int16Validator::validate($this->getFlags())) {
