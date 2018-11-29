@@ -92,7 +92,7 @@ class eErrorCode extends Enum
         self::OUT_OF_ZONE_DATE            => 'Out of zone data',
         self::INCORRECT_ESCAPING          => 'Incorrect escaping at the end of line',
         self::WRONG_CAA_VALUE             => 'Invalid value, check tag and RFC6844',
-        self::WRONG_CAA_FLAGS             => 'Flags must be greater than 0 and less than 128',
+        self::WRONG_CAA_FLAGS             => 'Flags must be greater than 0 and less than 255',
         self::WRONG_CAA_TAG               => 'Invalid tag',
     ];
 
