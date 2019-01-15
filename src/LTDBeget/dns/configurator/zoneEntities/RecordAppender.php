@@ -9,9 +9,10 @@ namespace LTDBeget\dns\configurator\zoneEntities;
 
 use LTDBeget\dns\configurator\zoneEntities\record\AaaaRecord;
 use LTDBeget\dns\configurator\zoneEntities\record\ARecord;
-use LTDBeget\dns\configurator\zoneEntities\record\CnameRecord;
 use LTDBeget\dns\configurator\zoneEntities\record\CaaRecord;
+use LTDBeget\dns\configurator\zoneEntities\record\CnameRecord;
 use LTDBeget\dns\configurator\zoneEntities\record\MxRecord;
+use LTDBeget\dns\configurator\zoneEntities\record\NaptrRecord;
 use LTDBeget\dns\configurator\zoneEntities\record\NsRecord;
 use LTDBeget\dns\configurator\zoneEntities\record\PtrRecord;
 use LTDBeget\dns\configurator\zoneEntities\record\SoaRecord;
@@ -184,5 +185,23 @@ class RecordAppender
     public function appendCaaRecord(int $flags, string $tag, string $value, int $ttl = NULL) : CaaRecord
     {
         return new CaaRecord($this->node, $ttl ?? $this->defaultTtl, $flags, $tag, $value);
+    }
+
+    /**
+     * @param int      $order
+     * @param int      $preference
+     * @param string   $flags
+     * @param string   $services
+     * @param string   $regexp
+     * @param string   $replacement
+     * @param int|NULL $ttl
+     *
+     * @return NaptrRecord
+     */
+    public function appendNaptrRecord(int $order, int $preference, string $flags, string $services,
+                                      string $regexp, string $replacement, int $ttl = NULL) : NaptrRecord
+    {
+        return new NaptrRecord($this->node, $ttl ?? $this->defaultTtl,
+            $order, $preference, $flags, $services, $regexp, $replacement);
     }
 }
