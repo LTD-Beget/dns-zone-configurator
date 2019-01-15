@@ -1,9 +1,4 @@
 <?php
-/**
- * @author: Viskov Sergey
- * @date  : 4/12/16
- * @time  : 1:00 PM
- */
 
 namespace LTDBeget\dns\configurator\zoneEntities\record;
 
