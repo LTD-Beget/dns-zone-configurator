@@ -113,6 +113,17 @@ class ArrayDeserializer
                     (int) $record_ttl
                 );
                 break;
+            case eRecordType::NAPTR:
+                $recordAppender->appendNaptrRecord(
+                    (int) $record_data['ORDER'],
+                    (int) $record_data['PREFERENCE'],
+                    (string) $record_data['FLAGS'],
+                    (string) $record_data['SERVICES'],
+                    (string) $record_data['REGEXP'],
+                    (string) $record_data['REPLACEMENT'],
+                    (int) $record_ttl
+                );
+                break;
         }
     }
 
