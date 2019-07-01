@@ -35,6 +35,7 @@ use MabeEnum\Enum;
  * @method static eErrorCode WRONG_CAA_VALUE()
  * @method static eErrorCode WRONG_CAA_FLAGS()
  * @method static eErrorCode WRONG_CAA_TAG()
+ * @method static eErrorCode DNS_BLOCKED()
  */
 class eErrorCode extends Enum
 {
@@ -65,6 +66,7 @@ class eErrorCode extends Enum
     const WRONG_CAA_VALUE             = 20;
     const WRONG_CAA_FLAGS             = 21;
     const WRONG_CAA_TAG               = 22;
+    const DNS_BLOCKED                 = 23;
 
     /**
      * Preset text for known error codes
@@ -94,6 +96,7 @@ class eErrorCode extends Enum
         self::WRONG_CAA_VALUE             => 'Invalid value, check tag and RFC6844',
         self::WRONG_CAA_FLAGS             => 'Flags must be greater than 0 and less than 255',
         self::WRONG_CAA_TAG               => 'Invalid tag',
+        self::DNS_BLOCKED                 => 'DNS changing is temporary blocked',
     ];
 
     /**
