@@ -39,6 +39,12 @@ class ArrayDeserializer
      */
     protected static function appendRecord(Zone $zone, $record)
     {
+        if (!eRecordType::has($record['TYPE'])) {
+            \Yii::warning("Unknown record type {$record['TYPE']}, skiping." . __CLASS__);
+
+            return;
+        }
+
         $node_mame      = $record['NAME'];
         $record_type    = eRecordType::get($record['TYPE']);
         $record_ttl     = $record['TTL'];
@@ -64,7 +70,7 @@ class ArrayDeserializer
                 break;
             case eRecordType::MX:
                 $recordAppender->appendMxRecord(
-                    (string) $record_data['PREFERENCE'],
+                    (int) $record_data['PREFERENCE'],
                     (string) $record_data['EXCHANGE'],
                     (int) $record_ttl);
                 break;
