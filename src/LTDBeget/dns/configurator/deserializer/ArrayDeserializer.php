@@ -64,7 +64,7 @@ class ArrayDeserializer
                 break;
             case eRecordType::MX:
                 $recordAppender->appendMxRecord(
-                    (string) $record_data['PREFERENCE'],
+                    (int) $record_data['PREFERENCE'],
                     (string) $record_data['EXCHANGE'],
                     (int) $record_ttl);
                 break;
