@@ -120,7 +120,8 @@ class TxtRecord extends Record
             $errorStorage->add(ValidationError::makeRecordError($this, eErrorCode::CONTAINS_CONTROL_SYMBOLS(), 'txtData'));
         }
 
-        if (substr($this->getTxtData(), -1) === '\\') {
+        // after NOT slash, NONE or EVEN slashes, ONE slash == ODD slashes
+        if (preg_match('/(?<!\\\\)(?:\\\\\\\\)*\\\\$/', $this->getTxtData()) === 1) {
             $errorStorage->add(ValidationError::makeRecordError($this, eErrorCode::INCORRECT_ESCAPING(), 'txtData'));
         }
 
