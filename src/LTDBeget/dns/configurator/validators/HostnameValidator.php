@@ -7,7 +7,7 @@
 
 namespace LTDBeget\dns\configurator\validators;
 
-use Zend\Validator\Hostname;
+use Laminas\Validator\Hostname;
 
 /**
  * Class HostnameValidator
