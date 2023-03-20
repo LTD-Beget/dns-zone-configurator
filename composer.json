@@ -14,14 +14,14 @@
     }
   ],
   "require": {
-    "php": ">=7.0",
-    "marc-mabe/php-enum" : "~2.2",
-    "zendframework/zend-validator" : "~2.7",
-    "ltd-beget/dns-zone-tokenizer": "~0.0.6"
+    "php": ">=8.0",
+    "marc-mabe/php-enum" : "^4.7.0",
+    "laminas/laminas-validator" : "^2.30.1",
+    "ltd-beget/dns-zone-tokenizer": "~0.0.6 | dev-BH-15288",
+    "laminas/laminas-stdlib": "^3.14"
   },
   "require-dev": {
-    "theseer/phpdox": "~0.8",
-    "phpunit/phpunit": "~7.3",
+    "phpunit/phpunit": "~8.5.33",
     "tideways/profiler": "~2.0"
   },
   "autoload": {
