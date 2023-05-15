@@ -15,10 +15,9 @@
   ],
   "require": {
     "php": ">=8.0",
-    "marc-mabe/php-enum" : "^4.7.0",
+    "marc-mabe/php-enum" : ">=2.2",
     "laminas/laminas-validator" : "^2.30.1",
-    "ltd-beget/dns-zone-tokenizer": "~0.0.6 | dev-BH-15288",
-    "laminas/laminas-stdlib": "^3.14"
+    "ltd-beget/dns-zone-tokenizer": "~0.0.10"
   },
   "require-dev": {
     "phpunit/phpunit": "~8.5.33",
