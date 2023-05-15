@@ -13,17 +13,19 @@ use MabeEnum\Enum;
  * Class eRecord
  *
  * @package LTDBeget\dns\enums
- * @method static eRecordType SOA()
- * @method static eRecordType A()
- * @method static eRecordType AAAA()
- * @method static eRecordType CNAME()
- * @method static eRecordType MX()
- * @method static eRecordType NS()
- * @method static eRecordType PTR()
- * @method static eRecordType TXT()
- * @method static eRecordType SRV()
- * @method static eRecordType CAA()
- * @method static eRecordType NAPTR()
+ * @method static static SOA()
+ * @method static static A()
+ * @method static static AAAA()
+ * @method static static CNAME()
+ * @method static static MX()
+ * @method static static NS()
+ * @method static static PTR()
+ * @method static static TXT()
+ * @method static static SRV()
+ * @method static static CAA()
+ * @method static static NAPTR()
+ * @method string getValue()
+ * @psalm-immutable
  */
 class eRecordType extends Enum
 {
