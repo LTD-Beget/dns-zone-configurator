@@ -42,7 +42,7 @@ class MxRecord extends Record
     public function __construct(Node $node, $ttl, int $preference, string $exchange)
     {
         $this->preference = $preference;
-        $this->exchange   = $exchange;
+        $this->exchange   = $exchange!=='.' ? $exchange : $node->getZone()->getOrigin();
         parent::__construct($node, eRecordType::MX(), $ttl);
     }
 
