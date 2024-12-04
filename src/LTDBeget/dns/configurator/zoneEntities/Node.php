@@ -92,7 +92,7 @@ class Node
     /**
      * @param eRecordType|NULL $type
      */
-    public function removeRecords(eRecordType $type = NULL)
+    public function removeRecords(?eRecordType $type = NULL)
     {
         foreach ($this->iterateRecords($type) as $record) {
             $record->remove();
@@ -103,7 +103,7 @@ class Node
      * @param eRecordType|null $type
      * @return  \Generator|Record[]
      */
-    public function iterateRecords(eRecordType $type = NULL) : \Generator
+    public function iterateRecords(?eRecordType $type = NULL) : \Generator
     {
         foreach ($this->getRecordsStore()->iterate($type) as $record) {
             yield $record;
