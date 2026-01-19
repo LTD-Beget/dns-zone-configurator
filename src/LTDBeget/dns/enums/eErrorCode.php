@@ -20,6 +20,7 @@ use MabeEnum\Enum;
  * @method static static WRONG_NS_IN_ROOT()
  * @method static static SOA_RECORD_NOT_IN_ROOT()
  * @method static static MULTIPLE_CNAME_ERROR()
+ * @method static static MULTIPLE_DNAME_ERROR()
  * @method static static NO_NS_IN_ROOT()
  * @method static static WRONG_TTL()
  * @method static static WRONG_IP_V4()
@@ -67,6 +68,8 @@ class eErrorCode extends Enum
     const WRONG_CAA_VALUE             = 20;
     const WRONG_CAA_FLAGS             = 21;
     const WRONG_CAA_TAG               = 22;
+    const MULTIPLE_DNAME_ERROR        = 23;
+
 
     /**
      * Preset text for known error codes
@@ -76,11 +79,12 @@ class eErrorCode extends Enum
     protected static $textForCode = [
         self::WRONG_ORIGIN                => 'Wrong origin value.',
         self::WRONG_NODE_NAME             => 'Wrong node name value',
-        self::CONFLICT_RECORD_TYPES_ERROR => 'Conflict types records in node (A,NS,CNAME)',
+        self::CONFLICT_RECORD_TYPES_ERROR => 'Conflict types records in node (A,NS,CNAME,DNAME)',
         self::SOA_ERROR                   => 'Multiple SOA or no SOA',
         self::WRONG_NS_IN_ROOT            => 'Wrong ns records in root',
         self::SOA_RECORD_NOT_IN_ROOT      => 'SOA record not in root',
         self::MULTIPLE_CNAME_ERROR        => 'Multiple cname record',
+        self::MULTIPLE_DNAME_ERROR        => 'Multiple dname record',
         self::NO_NS_IN_ROOT               => 'No NS records in root',
         self::WRONG_TTL                   => 'Wrong value for TTL',
         self::WRONG_IP_V4                 => 'Value must be IP v4',

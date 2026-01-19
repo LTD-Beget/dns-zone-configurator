@@ -11,6 +11,7 @@ use LTDBeget\dns\configurator\errors\ValidationError;
 use LTDBeget\dns\configurator\traits\RecordsIterateTrait;
 use LTDBeget\dns\configurator\validators\CnameNumberCheck;
 use LTDBeget\dns\configurator\validators\ConflictTypesValidator;
+use LTDBeget\dns\configurator\validators\DnameNumberCheck;
 use LTDBeget\dns\configurator\validators\DnsZoneDomainNameValidator;
 use LTDBeget\dns\configurator\validators\OutOfZoneDataValidator;
 use LTDBeget\dns\configurator\validators\SoaNumberCheck;
@@ -167,6 +168,10 @@ class Node
 
         if (!CnameNumberCheck::validate($this)) {
             $errorsStore->add(ValidationError::makeNodeError($this, eErrorCode::MULTIPLE_CNAME_ERROR()));
+        }
+
+        if (!DnameNumberCheck::validate($this)) {
+            $errorsStore->add(ValidationError::makeNodeError($this, eErrorCode::MULTIPLE_DNAME_ERROR()));
         }
 
         if ($this->getName() === '@' && !SoaNumberCheck::validate($this)) {

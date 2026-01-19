@@ -29,7 +29,8 @@ class ConflictTypesValidator
             if (in_array((string) $record->getType(), [
                 eRecordType::CNAME,
                 eRecordType::A,
-                eRecordType::NS
+                eRecordType::NS,
+                eRecordType::DNAME
             ])) {
                 $conflictRecordsTypes[] = (string) $record->getType();
             }
