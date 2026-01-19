@@ -124,6 +124,10 @@ class ArrayDeserializer
                     (int) $record_ttl
                 );
                 break;
+            case eRecordType::DNAME:
+                $recordAppender->appendDNameRecord(
+                    (string)$record_data['DNAME'],
+                    (int)$record_ttl);
         }
     }
 

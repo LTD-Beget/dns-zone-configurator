@@ -11,6 +11,8 @@ use LTDBeget\dns\configurator\zoneEntities\record\AaaaRecord;
 use LTDBeget\dns\configurator\zoneEntities\record\ARecord;
 use LTDBeget\dns\configurator\zoneEntities\record\CaaRecord;
 use LTDBeget\dns\configurator\zoneEntities\record\CnameRecord;
+use LTDBeget\dns\configurator\zoneEntities\record\DnameRecord;
+use LTDBeget\dns\configurator\zoneEntities\record\HttpsRecord;
 use LTDBeget\dns\configurator\zoneEntities\record\MxRecord;
 use LTDBeget\dns\configurator\zoneEntities\record\NaptrRecord;
 use LTDBeget\dns\configurator\zoneEntities\record\NsRecord;
@@ -48,62 +50,62 @@ class RecordAppender
     }
 
     /**
-     * @param string   $address
+     * @param string $address
      * @param int|null $ttl
      * @return ARecord
      */
-    public function appendARecord(string $address, ?int $ttl = NULL) : ARecord
+    public function appendARecord(string $address, ?int $ttl = NULL): ARecord
     {
         return new ARecord($this->node, $ttl ?? $this->defaultTtl, $address);
     }
 
     /**
-     * @param string   $address
+     * @param string $address
      * @param int|null $ttl
      * @return AaaaRecord
      */
-    public function appendAaaaRecord(string $address, ?int $ttl = NULL) : AaaaRecord
+    public function appendAaaaRecord(string $address, ?int $ttl = NULL): AaaaRecord
     {
         return new AaaaRecord($this->node, $ttl ?? $this->defaultTtl, $address);
     }
 
     /**
-     * @param string   $cname
+     * @param string $cname
      * @param int|null $ttl
      * @return CnameRecord
      */
-    public function appendCNameRecord(string $cname, ?int $ttl = NULL) : CnameRecord
+    public function appendCNameRecord(string $cname, ?int $ttl = NULL): CnameRecord
     {
         return new CnameRecord($this->node, $ttl ?? $this->defaultTtl, $cname);
     }
 
     /**
-     * @param int      $preference
-     * @param string   $exchange
+     * @param int $preference
+     * @param string $exchange
      * @param int|null $ttl
      * @return MxRecord
      */
-    public function appendMxRecord(int $preference, string $exchange, ?int $ttl = NULL) : MxRecord
+    public function appendMxRecord(int $preference, string $exchange, ?int $ttl = NULL): MxRecord
     {
         return new MxRecord($this->node, $ttl ?? $this->defaultTtl, $preference, $exchange);
     }
 
     /**
-     * @param string   $nsdName
+     * @param string $nsdName
      * @param int|null $ttl
      * @return NsRecord
      */
-    public function appendNsRecord(string $nsdName, ?int $ttl = NULL) : NsRecord
+    public function appendNsRecord(string $nsdName, ?int $ttl = NULL): NsRecord
     {
         return new NsRecord($this->node, $ttl ?? $this->defaultTtl, $nsdName);
     }
 
     /**
-     * @param string   $ptrDName
+     * @param string $ptrDName
      * @param int|null $ttl
      * @return PtrRecord
      */
-    public function appendPtrRecord(string $ptrDName, ?int $ttl = NULL) : PtrRecord
+    public function appendPtrRecord(string $ptrDName, ?int $ttl = NULL): PtrRecord
     {
         return new PtrRecord($this->node, $ttl ?? $this->defaultTtl, $ptrDName);
     }
@@ -123,13 +125,13 @@ class RecordAppender
     (
         string $mName,
         string $rName,
-        int $serial,
-        int $refresh,
-        int $retry,
-        int $expire,
-        int $minimum,
-        ?int $ttl = NULL
-    ) : SoaRecord
+        int    $serial,
+        int    $refresh,
+        int    $retry,
+        int    $expire,
+        int    $minimum,
+        ?int   $ttl = NULL
+    ): SoaRecord
     {
         return new SoaRecord(
             $this->node,
@@ -145,63 +147,73 @@ class RecordAppender
     }
 
     /**
-     * @param int      $priority
-     * @param int      $weight
-     * @param int      $port
-     * @param string   $target
+     * @param int $priority
+     * @param int $weight
+     * @param int $port
+     * @param string $target
      * @param int|null $ttl
      * @return SrvRecord
      */
     public function appendSrvRecord
     (
-        int $priority,
-        int $weight,
-        int $port,
+        int    $priority,
+        int    $weight,
+        int    $port,
         string $target,
-        ?int $ttl = NULL
-    ) : SrvRecord
+        ?int   $ttl = NULL
+    ): SrvRecord
     {
         return new SrvRecord($this->node, $ttl ?? $this->defaultTtl, $priority, $weight, $port, $target);
     }
 
     /**
-     * @param string   $txtData
+     * @param string $txtData
      * @param int|null $ttl
      * @return TxtRecord
      */
-    public function appendTxtRecord(string $txtData, ?int $ttl = NULL) : TxtRecord
+    public function appendTxtRecord(string $txtData, ?int $ttl = NULL): TxtRecord
     {
         return new TxtRecord($this->node, $ttl ?? $this->defaultTtl, $txtData);
     }
 
     /**
-     * @param int      $flags
-     * @param string   $tag
-     * @param string   $value
+     * @param int $flags
+     * @param string $tag
+     * @param string $value
      * @param int|NULL $ttl
      *
      * @return CaaRecord
      */
-    public function appendCaaRecord(int $flags, string $tag, string $value, ?int $ttl = NULL) : CaaRecord
+    public function appendCaaRecord(int $flags, string $tag, string $value, ?int $ttl = NULL): CaaRecord
     {
         return new CaaRecord($this->node, $ttl ?? $this->defaultTtl, $flags, $tag, $value);
     }
 
     /**
-     * @param int      $order
-     * @param int      $preference
-     * @param string   $flags
-     * @param string   $services
-     * @param string   $regexp
-     * @param string   $replacement
+     * @param int $order
+     * @param int $preference
+     * @param string $flags
+     * @param string $services
+     * @param string $regexp
+     * @param string $replacement
      * @param int|NULL $ttl
      *
      * @return NaptrRecord
      */
-    public function appendNaptrRecord(int $order, int $preference, string $flags, string $services,
-                                      string $regexp, string $replacement, ?int $ttl = NULL) : NaptrRecord
+    public function appendNaptrRecord(int    $order, int $preference, string $flags, string $services,
+                                      string $regexp, string $replacement, ?int $ttl = NULL): NaptrRecord
     {
         return new NaptrRecord($this->node, $ttl ?? $this->defaultTtl,
             $order, $preference, $flags, $services, $regexp, $replacement);
+    }
+
+    /**
+     * @param string $dname
+     * @param int|null $ttl
+     * @return DnameRecord
+     */
+    public function appendDNameRecord(string $dname, ?int $ttl = NULL): DnameRecord
+    {
+        return new DnameRecord($this->node, $ttl ?? $this->defaultTtl, $dname);
     }
 }

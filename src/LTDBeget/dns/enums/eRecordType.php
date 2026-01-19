@@ -24,6 +24,7 @@ use MabeEnum\Enum;
  * @method static static SRV()
  * @method static static CAA()
  * @method static static NAPTR()
+ * @method static static DNAME()
  * @method string getValue()
  * @psalm-immutable
  */
@@ -40,4 +41,5 @@ class eRecordType extends Enum
     const SRV   = 'SRV';
     const CAA   = 'CAA';
     const NAPTR = 'NAPTR';
+    const DNAME = 'DNAME';
 }
